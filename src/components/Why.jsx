@@ -35,10 +35,10 @@ export default function Component() {
       >
         <RandomRectangles />
       </svg>
-      <div className='container px-4 md:px-6 relative z-10'>
+      <div className='container mx-auto px-4 md:px-6 relative z-10'>
         <div className='flex flex-col items-center'>
           <div className='text-center max-w-3xl mx-auto space-y-4 mb-8'>
-            <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
+            <h2 className='text-gray-900 text-3xl font-bold tracking-tighter sm:text-5xl'>
               Why Choose Divine African Tours
             </h2>
             <p className='text-zinc-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400'>
@@ -87,17 +87,17 @@ export default function Component() {
             ].map((item, index) => (
               <div
                 key={index}
-                className='relative flex flex-col items-center p-6 group bg-[#FFD700] bg-opacity-80 border border-gray-100 transition-all duration-200 hover:border-[#FFA500]/20 hover:shadow-lg overflow-hidden'
+                className='relative flex flex-col items-center p-6 group bg-[#F4A460] bg-opacity-80 border border-gray-100 transition-all duration-200 hover:border-[#FFA500]/20 hover:shadow-lg overflow-hidden'
               >
                 <div className='absolute inset-0 bg-[#FFA500] opacity-10 blur-xl'></div>
                 <div className='relative z-10 flex flex-col items-center space-y-4'>
                   <div className='bg-[#4CAF50] p-3 rounded-full group-hover:bg-[#45a049] transition-colors duration-200'>
                     <item.icon className='h-8 w-8 text-white group-hover:text-[#FFD700] transition-colors duration-200' />
                   </div>
-                  <h3 className='text-xl font-bold text-center text-black'>
+                  <h3 className='text-xl font-bold text-center text-gray-900'>
                     {item.title}
                   </h3>
-                  <p className='text-sm text-black text-center'>
+                  <p className='text-sm text-gray-900 text-center'>
                     {item.description}
                   </p>
                 </div>
