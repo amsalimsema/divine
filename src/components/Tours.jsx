@@ -1,6 +1,4 @@
-'use client'
-
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Star,
@@ -80,7 +78,7 @@ const tourPackages = [
   },
 ]
 
-export default function Component() {
+export default function PopularTourPackages() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const containerRef = useRef(null)
   const navigate = useNavigate()
@@ -121,8 +119,8 @@ export default function Component() {
 
   return (
     <section className='w-full py-12 bg-[#F4A460]'>
-      <div className='container mx-auto px-2 sm:px-4'>
-        <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl mb-8 text-center text-gray-900'>
+      <div className='container mx-auto px-0'>
+        <h2 className='text-gray-900 text-3xl font-bold tracking-tighter sm:text-5xl mb-8 text-center'>
           Popular Tour Packages
         </h2>
         <div className='relative'>
@@ -134,7 +132,7 @@ export default function Component() {
             {tourPackages.map((tour, index) => (
               <div
                 key={index}
-                className='w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-1 sm:px-2 md:px-4'
+                className='w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4'
                 style={{ scrollSnapAlign: 'start' }}
               >
                 <div
@@ -148,38 +146,30 @@ export default function Component() {
                       className='w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110'
                     />
                   </div>
-                  <div className='p-3 sm:p-4'>
+                  <div className='p-4'>
                     <div className='flex justify-between items-start mb-2'>
-                      <h3 className='text-lg sm:text-xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis text-gray-900'>
+                      <h3 className='text-gray-900 text-xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis'>
                         {tour.title}
                       </h3>
-                      <span className='inline-flex items-center bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2'>
-                        <Star className='w-3 h-3 sm:w-4 sm:h-4 mr-1' />
+                      <span className='inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2 flex-shrink-0'>
+                        <Star className='w-4 h-4 mr-1 inline' />
                         {tour.rating}
                       </span>
                     </div>
-                    <p className='text-sm sm:text-base text-gray-900 mb-4'>
-                      {tour.description}
-                    </p>
+                    <p className='text-gray-900 mb-4'>{tour.description}</p>
                     <div className='flex justify-between items-center mb-4'>
                       <div className='flex items-center'>
-                        <Clock className='w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-gray-900' />
-                        <span className='text-xs sm:text-sm'>
-                          {tour.duration}
-                        </span>
+                        <Clock className='w-4 h-4 mr-2 text-gray-900' />
+                        <span className='text-sm'>{tour.duration}</span>
                       </div>
                       <div className='flex items-center'>
-                        <Users className='w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-gray-900' />
-                        <span className='text-xs sm:text-sm'>
-                          {tour.groupSize}
-                        </span>
+                        <Users className='w-4 h-4 mr-2 text-gray-900' />
+                        <span className='text-sm'>{tour.groupSize}</span>
                       </div>
                     </div>
                     <div className='flex items-center'>
-                      <MapPin className='w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-gray-900' />
-                      <span className='text-xs sm:text-sm'>
-                        {tour.location}
-                      </span>
+                      <MapPin className='w-4 h-4 mr-2 text-gray-900' />
+                      <span className='text-sm'>{tour.location}</span>
                     </div>
                   </div>
                 </div>
@@ -187,18 +177,16 @@ export default function Component() {
             ))}
           </div>
           <button
-            className='absolute left-0 top-1/3 -translate-y-1/3 bg-white p-2 rounded-md shadow-md hover:bg-gray-100 transition duration-300'
+            className='absolute left-0 top-[calc(50%-45px)] transform -translate-y-1/2 bg-white p-2 rounded-md shadow-md hover:bg-gray-100 transition duration-300'
             onClick={handlePrev}
           >
             <ChevronLeft className='h-6 w-6 text-gray-600' />
-            <span className='sr-only'>Previous</span>
           </button>
           <button
-            className='absolute right-0 top-1/3 -translate-y-1/3 bg-white p-2 rounded-md shadow-md hover:bg-gray-100 transition duration-300'
+            className='absolute right-0 top-[calc(50%-45px)] transform -translate-y-1/2 bg-white p-2 rounded-md shadow-md hover:bg-gray-100 transition duration-300'
             onClick={handleNext}
           >
             <ChevronRight className='h-6 w-6 text-gray-600' />
-            <span className='sr-only'>Next</span>
           </button>
         </div>
       </div>

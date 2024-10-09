@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -27,8 +28,15 @@ export default function NavMenu() {
       document.body.style.overflow = 'unset'
     }
 
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
     return () => {
       document.body.style.overflow = 'unset'
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [isOpen])
 
@@ -79,7 +87,11 @@ export default function NavMenu() {
 
   return (
     <>
-      <nav className='bg-[#4CAF50]/70 backdrop-blur-lg text-white fixed top-0 left-0 right-0 z-50'>
+      <nav
+        className={`bg-[#4CAF50]/70 backdrop-blur-lg text-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'shadow-md' : ''
+        }`}
+      >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-16'>
             <div className='flex-shrink-0'>
@@ -139,7 +151,9 @@ export default function NavMenu() {
                 aria-controls='mobile-menu'
                 aria-expanded={isOpen}
               >
-                <span className='sr-only'>Open main menu</span>
+                <span className='sr-only'>
+                  {isOpen ? 'Close main menu' : 'Open main menu'}
+                </span>
                 {isOpen ? (
                   <X className='block h-6 w-6' aria-hidden='true' />
                 ) : (
@@ -149,63 +163,64 @@ export default function NavMenu() {
             </div>
           </div>
         </div>
-
-        {isOpen && (
-          <div
-            className='md:hidden fixed inset-0 bg-green-800  z-50 overflow-y-auto'
-            id='mobile-menu'
-          >
-            <div className='px-4 pt-2 pb-3 space-y-1 sm:px-3'>
-              <div className='flex items-center justify-between mb-4'>
-                <Link to='/'>
-                  <img
-                    className='h-10 w-auto'
-                    src='https://cdn-icons-png.flaticon.com/128/281/281764.png'
-                    alt='Divine African Tours Logo'
-                  />
-                </Link>
-                <button
-                  onClick={closeMenu}
-                  type='button'
-                  className='inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white hover:bg-opacity-20 focus:outline-none'
-                >
-                  <span className='sr-only'>Close main menu</span>
-                  <X className='block h-6 w-6' aria-hidden='true' />
-                </button>
-              </div>
-              {menuItems.map((item, index) => (
-                <div key={item.name}>
-                  <button
-                    onClick={(e) =>
-                      item.dropdown ? toggleDropdown(index, e) : closeMenu()
-                    }
-                    className='w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-20 flex items-center justify-between'
-                  >
-                    <Link to={item.href} onClick={closeMenu}>
-                      {item.name}
-                    </Link>
-                    {item.dropdown && <ChevronDown className='ml-1 h-4 w-4' />}
-                  </button>
-                  {item.dropdown && activeDropdown === index && (
-                    <div className='pl-4'>
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className='block px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-20'
-                          onClick={closeMenu}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
+
+      {isOpen && (
+        <div className='fixed inset-0 z-50 md:hidden'>
+          <div
+            className='fixed inset-0 bg-black bg-opacity-25'
+            aria-hidden='true'
+            onClick={closeMenu}
+          ></div>
+          <nav className='fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-green-800 overflow-y-auto'>
+            <div className='flex items-center justify-between mb-8'>
+              <Link to='/' className='mr-8 flex-shrink-0' onClick={closeMenu}>
+                <img
+                  className='h-10 w-auto'
+                  src='https://cdn-icons-png.flaticon.com/128/281/281764.png'
+                  alt='Divine African Tours Logo'
+                />
+              </Link>
+              {/* Remove the close button here */}
+            </div>
+            <div className='mt-6'>
+              <div className='space-y-1'>
+                {menuItems.map((item, index) => (
+                  <div key={item.name}>
+                    <button
+                      onClick={(e) =>
+                        item.dropdown ? toggleDropdown(index, e) : closeMenu()
+                      }
+                      className='w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:bg-opacity-10 flex items-center justify-between'
+                    >
+                      <Link to={item.href} onClick={closeMenu}>
+                        {item.name}
+                      </Link>
+                      {item.dropdown && (
+                        <ChevronDown className='ml-1 h-4 w-4' />
+                      )}
+                    </button>
+                    {item.dropdown && activeDropdown === index && (
+                      <div className='pl-4 mt-2 space-y-2'>
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.href}
+                            className='block px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:bg-opacity-10'
+                            onClick={closeMenu}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </nav>
+        </div>
+      )}
     </>
   )
 }
