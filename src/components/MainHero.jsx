@@ -48,7 +48,7 @@ export default function HeroSection() {
       <div className='relative z-10 flex-grow flex flex-col justify-end items-start text-left'>
         <div className='container mx-auto px-4 sm:px-6 pb-16 md:pb-24'>
           <div className='max-w-xl'>
-            <motion.a
+            {/* <motion.a
               href='/'
               className='text-white text-3xl font-bold mb-8 inline-block'
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5 }}
             >
               Divine African Tours
-            </motion.a>
+            </motion.a> */}
             <AnimatePresence mode='wait'>
               <motion.div
                 key={currentIndex}

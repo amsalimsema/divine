@@ -120,7 +120,7 @@ export default function PopularTourPackages() {
   return (
     <section className='w-full py-12 bg-[#F4A460]'>
       <div className='container mx-auto px-0'>
-        <h2 className='text-gray-900 text-3xl font-bold tracking-tighter sm:text-5xl mb-8 text-center'>
+        <h2 className='text-3xl font-bold tracking-tighter mb-8 text-center text-gray-900'>
           Popular Tour Packages
         </h2>
         <div className='relative'>
