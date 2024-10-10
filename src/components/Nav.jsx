@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ExternalLink } from 'lucide-react'
 
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -88,11 +88,39 @@ export default function NavMenu() {
   return (
     <>
       <nav
-        className={`bg-[#4CAF50]/70 backdrop-blur-lg text-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`bg-black/40 backdrop-blur-lg text-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? 'shadow-md' : ''
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          {/* Contact information bar */}
+          <div className='hidden md:flex justify-between items-center py-2 text-sm'>
+            <div className='flex items-center space-x-4'>
+              <a
+                href='tel:+256759650705'
+                className='flex items-center hover:text-gray-200'
+              >
+                <Phone className='w-4 h-4 mr-1' />
+                +256 759 650705
+              </a>
+              <a
+                href='mailto:info@divineafricantours.com'
+                className='flex items-center hover:text-gray-200'
+              >
+                <Mail className='w-4 h-4 mr-1' />
+                info@divineafricantours.com
+              </a>
+            </div>
+            <a
+              href='https://booking.divineafricantours.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center px-4 py-1 bg-white text-green-700 rounded-full font-semibold hover:bg-green-100 transition-colors duration-300'
+            >
+              Book Online
+              <ExternalLink className='w-4 h-4 ml-1' />
+            </a>
+          </div>
           <div className='flex items-center justify-between h-16'>
             <div className='flex-shrink-0'>
               <Link to='/'>
@@ -103,8 +131,8 @@ export default function NavMenu() {
                 />
               </Link>
             </div>
-            <div className='hidden md:block flex-grow'>
-              <div className='flex justify-end items-baseline space-x-4'>
+            <div className='hidden md:flex flex-grow items-center justify-end'>
+              <div className='flex items-baseline space-x-4'>
                 {menuItems.map((item, index) => (
                   <div key={item.name} className='relative'>
                     <button
@@ -142,8 +170,20 @@ export default function NavMenu() {
                   </div>
                 ))}
               </div>
+              <Link
+                to='/enquire'
+                className='ml-4 px-4 py-2 rounded-md text-sm font-medium bg-yellow-400 text-green-800 hover:bg-yellow-300 transition-colors duration-300'
+              >
+                Enquire Now
+              </Link>
             </div>
-            <div className='flex md:hidden'>
+            <div className='flex items-center md:hidden'>
+              <Link
+                to='/enquire'
+                className='mr-2 px-4 py-2 rounded-md text-sm font-medium bg-yellow-400 text-green-800 hover:bg-yellow-300 transition-colors duration-300'
+              >
+                Enquire Now
+              </Link>
               <button
                 onClick={toggleMenu}
                 type='button'
@@ -181,7 +221,6 @@ export default function NavMenu() {
                   alt='Divine African Tours Logo'
                 />
               </Link>
-              {/* Remove the close button here */}
             </div>
             <div className='mt-6'>
               <div className='space-y-1'>
@@ -216,6 +255,23 @@ export default function NavMenu() {
                     )}
                   </div>
                 ))}
+                <Link
+                  to='/enquire'
+                  className='block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-yellow-400 text-green-800 hover:bg-yellow-300 transition-colors duration-300'
+                  onClick={closeMenu}
+                >
+                  Enquire
+                </Link>
+                <a
+                  href='https://booking.divineafricantours.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-white text-green-700 hover:bg-green-100 transition-colors duration-300'
+                  onClick={closeMenu}
+                >
+                  Book Online
+                  <ExternalLink className='inline-block w-4 h-4 ml-1' />
+                </a>
               </div>
             </div>
           </nav>

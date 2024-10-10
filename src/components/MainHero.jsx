@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Import images from assets folder
-import wildAfricaImage from '../assets/Divine-African-Tours-1.jpg'
-import ancientCulturesImage from '../assets/Divine-African-Tours-2.jpg'
-import luxuryAdventureImage from '../assets/Divine-Tours-3.jpg'
+import wildAfricaImage from '../assets/Divine-African-Tours-1.webp'
+import ancientCulturesImage from '../assets/Divine-African-Tours-2.webp'
+import luxuryAdventureImage from '../assets/Divine-Tours-3.webp'
 
 const heroContent = [
   {
