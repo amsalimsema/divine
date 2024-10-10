@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Import primary (WebP) images
@@ -37,16 +37,25 @@ const heroContent = [
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [nextIndex, setNextIndex] = useState(1)
   const [imageLoadError, setImageLoadError] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
-      setImageLoadError(false) // Reset error state when changing images
-    }, 5000) // Change every 5 seconds
+      setNextIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
+    }, 4500) // Change slightly before the transition to preload the next image
 
     return () => clearInterval(timer)
   }, [])
+
+  useEffect(() => {
+    const transitionTimer = setTimeout(() => {
+      setCurrentIndex(nextIndex)
+      setImageLoadError(false) // Reset error state when changing images
+    }, 5000)
+
+    return () => clearTimeout(transitionTimer)
+  }, [nextIndex])
 
   const handleImageError = () => {
     setImageLoadError(true)
@@ -56,22 +65,38 @@ export default function HeroSection() {
     ? heroContent[currentIndex].fallbackImage
     : heroContent[currentIndex].image
 
-  return (
-    <div
-      className='relative min-h-screen bg-cover bg-center flex flex-col transition-all duration-1000 ease-in-out'
-      style={{ backgroundImage: `url(${currentImage})` }}
-    >
-      <div className='absolute inset-0 bg-black bg-opacity-5'></div>
+  const nextImage = imageLoadError
+    ? heroContent[nextIndex].fallbackImage
+    : heroContent[nextIndex].image
 
-      {/* Preload image */}
+  return (
+    <div className='relative min-h-screen overflow-hidden'>
+      {/* Current Image */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: `url(${currentImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'opacity 1s ease-in-out',
+        }}
+      />
+
+      {/* Preload Next Image */}
       <img
-        src={currentImage}
+        src={nextImage}
         alt=''
-        className='hidden'
+        style={{ display: 'none' }}
         onError={handleImageError}
       />
 
-      <div className='relative z-10 flex-grow flex flex-col justify-end items-start text-left'>
+      <div className='absolute inset-0 bg-black bg-opacity-5'></div>
+
+      <div className='relative z-10 flex-grow flex flex-col justify-end items-start text-left min-h-screen'>
         <div className='container mx-auto px-4 sm:px-6 pb-16 md:pb-24'>
           <div className='max-w-xl'>
             <AnimatePresence mode='wait'>
@@ -101,7 +126,7 @@ export default function HeroSection() {
               </motion.div>
             </AnimatePresence>
             <motion.button
-              className='bg-green-600/40 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded text-lg transition duration-300'
+              className='bg-green-600/40 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
