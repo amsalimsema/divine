@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 // Import primary (WebP) images
 import wildAfricaImageWebp from '../assets/Divine-African-Tours-1.webp'
@@ -38,65 +39,75 @@ const heroContent = [
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [nextIndex, setNextIndex] = useState(1)
-  const [imageLoadError, setImageLoadError] = useState(false)
+  const [opacity, setOpacity] = useState(1)
+  const fadeInterval = useRef(null)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setNextIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
-    }, 3500) // Change slightly before the transition to preload the next image
+    const transitionInterval = 5000 // 5 seconds
+    const fadeSteps = 100
+    const fadeStepDuration = 20 // 20ms per step
 
-    return () => clearInterval(timer)
-  }, [])
+    const intervalId = setInterval(() => {
+      // Start fading out
+      let currentOpacity = 1
+      fadeInterval.current = setInterval(() => {
+        currentOpacity -= 1 / fadeSteps
+        setOpacity(Math.max(currentOpacity, 0))
 
-  useEffect(() => {
-    const transitionTimer = setTimeout(() => {
-      setCurrentIndex(nextIndex)
-      setImageLoadError(false) // Reset error state when changing images
-    }, 2000)
+        if (currentOpacity <= 0) {
+          clearInterval(fadeInterval.current)
+          setCurrentIndex(nextIndex)
+          setNextIndex((nextIndex + 1) % heroContent.length)
+          setOpacity(1) // Reset opacity for next image
+        }
+      }, fadeStepDuration)
+    }, transitionInterval)
 
-    return () => clearTimeout(transitionTimer)
+    return () => {
+      clearInterval(intervalId)
+      if (fadeInterval.current) clearInterval(fadeInterval.current)
+    }
   }, [nextIndex])
 
-  const handleImageError = () => {
-    setImageLoadError(true)
-  }
-
-  const currentImage = imageLoadError
-    ? heroContent[currentIndex].fallbackImage
-    : heroContent[currentIndex].image
-
-  const nextImage = imageLoadError
-    ? heroContent[nextIndex].fallbackImage
-    : heroContent[nextIndex].image
+  const BackgroundImage = ({ src, fallbackSrc, opacity, zIndex }) => (
+    <div
+      className='absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out'
+      style={{
+        backgroundImage: `url(${src})`,
+        opacity: opacity,
+        zIndex: zIndex,
+      }}
+    >
+      <img
+        src={src}
+        onError={(e) => {
+          e.target.onerror = null
+          e.target.src = fallbackSrc
+        }}
+        alt=''
+        className='w-full h-full object-cover'
+      />
+    </div>
+  )
 
   return (
     <div className='relative min-h-screen overflow-hidden'>
-      {/* Current Image */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: `url(${currentImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transition: 'opacity 1s ease-in-out',
-        }}
+      <BackgroundImage
+        src={heroContent[nextIndex].image}
+        fallbackSrc={heroContent[nextIndex].fallbackImage}
+        opacity={1}
+        zIndex={1}
+      />
+      <BackgroundImage
+        src={heroContent[currentIndex].image}
+        fallbackSrc={heroContent[currentIndex].fallbackImage}
+        opacity={opacity}
+        zIndex={2}
       />
 
-      {/* Preload Next Image */}
-      <img
-        src={nextImage}
-        alt=''
-        style={{ display: 'none' }}
-        onError={handleImageError}
-      />
+      <div className='absolute inset-0 bg-black bg-opacity-50 z-10'></div>
 
-      <div className='absolute inset-0 bg-black bg-opacity-5'></div>
-
-      <div className='relative z-10 flex-grow flex flex-col justify-end items-start text-left min-h-screen'>
+      <div className='relative z-20 flex flex-col justify-end items-start text-left min-h-screen'>
         <div className='container mx-auto px-4 sm:px-6 pb-16 md:pb-24'>
           <div className='max-w-xl'>
             <AnimatePresence mode='wait'>
@@ -125,13 +136,12 @@ export default function HeroSection() {
                 </motion.p>
               </motion.div>
             </AnimatePresence>
-            <motion.button
-              className='bg-green-600/40 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300'
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <Link
+              to='/'
+              className='inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded text-lg transition-colors duration-300'
             >
               Start Your Adventure
-            </motion.button>
+            </Link>
           </div>
         </div>
       </div>
