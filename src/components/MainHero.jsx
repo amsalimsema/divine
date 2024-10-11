@@ -43,7 +43,7 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setNextIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
-    }, 4500) // Change slightly before the transition to preload the next image
+    }, 3500) // Change slightly before the transition to preload the next image
 
     return () => clearInterval(timer)
   }, [])
@@ -52,7 +52,7 @@ export default function HeroSection() {
     const transitionTimer = setTimeout(() => {
       setCurrentIndex(nextIndex)
       setImageLoadError(false) // Reset error state when changing images
-    }, 5000)
+    }, 2000)
 
     return () => clearTimeout(transitionTimer)
   }, [nextIndex])
