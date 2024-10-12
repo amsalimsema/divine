@@ -267,7 +267,7 @@ export default function NavMenu() {
                   href='https://booking.divineafricantours.com'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='block w-full text-center mt-6 px-3 py-2 rounded-md text-base font-medium bg-white text-green-700 hover:bg-green-100 transition-colors duration-300'
+                  className='block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-white text-green-700 hover:bg-green-100 transition-colors duration-300'
                   onClick={closeMenu}
                 >
                   Book Online
