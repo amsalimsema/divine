@@ -2,34 +2,26 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-// Import primary (WebP) images
-import wildAfricaImageWebp from '../assets/Divine-African-Tours-1.webp'
-import ancientCulturesImageWebp from '../assets/Divine-African-Tours-2.webp'
-import luxuryAdventureImageWebp from '../assets/Divine-Tours-3.webp'
-
-// Import fallback (JPG) images
-import wildAfricaImageJpg from '../assets/Divine-African-Tours-1.jpg'
-import ancientCulturesImageJpg from '../assets/Divine-African-Tours-2.jpg'
-import luxuryAdventureImageJpg from '../assets/Divine-Tours-3.jpg'
+// Import JPG images
+import wildAfricaImage from '../assets/Divine-African-Tours-1.jpg'
+import ancientCulturesImage from '../assets/Divine-African-Tours-2.jpg'
+import luxuryAdventureImage from '../assets/Divine-Tours-3.jpg'
 
 const heroContent = [
   {
-    image: wildAfricaImageWebp,
-    fallbackImage: wildAfricaImageJpg,
+    image: wildAfricaImage,
     title: 'Discover the Wild Heart of Africa',
     description:
       "Embark on unforgettable safaris across the breathtaking landscapes of Africa. Experience nature's grandeur up close.",
   },
   {
-    image: ancientCulturesImageWebp,
-    fallbackImage: ancientCulturesImageJpg,
+    image: ancientCulturesImage,
     title: 'Explore Ancient Cultures and Traditions',
     description:
       'Immerse yourself in the rich heritage of African tribes. Witness age-old customs and vibrant celebrations.',
   },
   {
-    image: luxuryAdventureImageWebp,
-    fallbackImage: luxuryAdventureImageJpg,
+    image: luxuryAdventureImage,
     title: 'Luxury Meets Adventure',
     description:
       'Experience the perfect blend of comfort and excitement. Our tours offer premium accommodations amidst wild terrains.',
@@ -69,7 +61,7 @@ export default function HeroSection() {
     }
   }, [nextIndex])
 
-  const BackgroundImage = ({ src, fallbackSrc, opacity, zIndex }) => (
+  const BackgroundImage = ({ src, opacity, zIndex }) => (
     <div
       className='absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out'
       style={{
@@ -78,15 +70,7 @@ export default function HeroSection() {
         zIndex: zIndex,
       }}
     >
-      <img
-        src={src}
-        onError={(e) => {
-          e.target.onerror = null
-          e.target.src = fallbackSrc
-        }}
-        alt=''
-        className='w-full h-full object-cover'
-      />
+      <img src={src} alt='' className='w-full h-full object-cover' />
     </div>
   )
 
@@ -94,13 +78,11 @@ export default function HeroSection() {
     <div className='relative min-h-screen overflow-hidden'>
       <BackgroundImage
         src={heroContent[nextIndex].image}
-        fallbackSrc={heroContent[nextIndex].fallbackImage}
         opacity={1}
         zIndex={1}
       />
       <BackgroundImage
         src={heroContent[currentIndex].image}
-        fallbackSrc={heroContent[currentIndex].fallbackImage}
         opacity={opacity}
         zIndex={2}
       />
