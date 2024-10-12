@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -30,62 +30,31 @@ const heroContent = [
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [nextIndex, setNextIndex] = useState(1)
-  const [opacity, setOpacity] = useState(1)
-  const fadeInterval = useRef(null)
 
   useEffect(() => {
     const transitionInterval = 5000 // 5 seconds
-    const fadeSteps = 100
-    const fadeStepDuration = 20 // 20ms per step
 
     const intervalId = setInterval(() => {
-      // Start fading out
-      let currentOpacity = 1
-      fadeInterval.current = setInterval(() => {
-        currentOpacity -= 1 / fadeSteps
-        setOpacity(Math.max(currentOpacity, 0))
-
-        if (currentOpacity <= 0) {
-          clearInterval(fadeInterval.current)
-          setCurrentIndex(nextIndex)
-          setNextIndex((nextIndex + 1) % heroContent.length)
-          setOpacity(1) // Reset opacity for next image
-        }
-      }, fadeStepDuration)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContent.length)
     }, transitionInterval)
 
-    return () => {
-      clearInterval(intervalId)
-      if (fadeInterval.current) clearInterval(fadeInterval.current)
-    }
-  }, [nextIndex])
-
-  const BackgroundImage = ({ src, opacity, zIndex }) => (
-    <div
-      className='absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out'
-      style={{
-        backgroundImage: `url(${src})`,
-        opacity: opacity,
-        zIndex: zIndex,
-      }}
-    >
-      <img src={src} alt='' className='w-full h-full object-cover' />
-    </div>
-  )
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <div className='relative min-h-screen overflow-hidden'>
-      <BackgroundImage
-        src={heroContent[nextIndex].image}
-        opacity={1}
-        zIndex={1}
-      />
-      <BackgroundImage
-        src={heroContent[currentIndex].image}
-        opacity={opacity}
-        zIndex={2}
-      />
+      <div
+        className='absolute inset-0 bg-cover bg-center transition-all duration-300'
+        style={{
+          backgroundImage: `url(${heroContent[currentIndex].image})`,
+        }}
+      >
+        <img
+          src={heroContent[currentIndex].image}
+          alt=''
+          className='w-full h-full object-cover'
+        />
+      </div>
 
       <div className='absolute inset-0 bg-black bg-opacity-50 z-10'></div>
 
