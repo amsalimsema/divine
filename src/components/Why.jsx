@@ -10,6 +10,11 @@ const features = [
     description: 'Handpicked African wonders await you.',
   },
   {
+    icon: DollarSign,
+    title: 'Unbeatable Value',
+    description: 'Premium experiences at competitive prices.',
+  },
+  {
     icon: HeartHandshake,
     title: 'Great Customer Care',
     description: 'Personalized attention, exceptional service always.',
@@ -18,11 +23,6 @@ const features = [
     icon: Zap,
     title: 'Easy Booking Process',
     description: 'Effortless reservations, instant confirmations.',
-  },
-  {
-    icon: DollarSign,
-    title: 'Unbeatable Value',
-    description: 'Premium experiences at competitive prices.',
   },
 ]
 
@@ -34,15 +34,13 @@ const FeatureCard = ({ icon: Icon, title, description, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className='flex flex-col items-center md:items-start md:flex-row md:justify-start mb-2'>
+      <div className='flex flex-col items-start'>
         <Icon
-          className='w-8 h-8 md:w-6 md:h-6 text-amber-600 mb-2 md:mb-0 md:mr-3 flex-shrink-0'
+          className='w-6 h-6 text-amber-600 mb-2 flex-shrink-0'
           aria-hidden='true'
         />
-        <div className='text-center md:text-left'>
-          <h3 className='text-lg font-semibold text-gray-900'>{title}</h3>
-          <p className='text-sm text-gray-600 mt-1'>{description}</p>
-        </div>
+        <h3 className='text-lg font-semibold text-gray-900 mb-1'>{title}</h3>
+        <p className='text-sm text-gray-600'>{description}</p>
       </div>
     </motion.div>
   )
