@@ -1,31 +1,28 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { Sunrise, Users, Shield, Heart } from 'lucide-react'
+import { MapPin, HeartHandshake, Zap, DollarSign } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const features = [
   {
-    icon: Sunrise,
-    title: 'Unforgettable Experiences',
-    description:
-      'Curated itineraries that showcase the best of African wildlife and cultures.',
+    icon: MapPin,
+    title: 'Best Destinations',
+    description: 'Handpicked African wonders await you.',
   },
   {
-    icon: Users,
-    title: 'Expert Local Guides',
-    description: "Knowledgeable guides who bring Africa's wonders to life.",
+    icon: HeartHandshake,
+    title: 'Great Customer Care',
+    description: 'Personalized attention, exceptional service always.',
   },
   {
-    icon: Shield,
-    title: 'Safety First',
-    description:
-      'Your well-being is our top priority with strict safety measures.',
+    icon: Zap,
+    title: 'Easy Booking Process',
+    description: 'Effortless reservations, instant confirmations.',
   },
   {
-    icon: Heart,
-    title: 'Responsible Tourism',
-    description:
-      'Committed to sustainable practices and supporting local communities.',
+    icon: DollarSign,
+    title: 'Unbeatable Value',
+    description: 'Premium experiences at competitive prices.',
   },
 ]
 
@@ -37,14 +34,16 @@ const FeatureCard = ({ icon: Icon, title, description, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className='flex items-start mb-3'>
+      <div className='flex flex-col items-center md:items-start md:flex-row md:justify-start mb-2'>
         <Icon
-          className='w-6 h-6 text-amber-600 mr-3 flex-shrink-0'
+          className='w-8 h-8 md:w-6 md:h-6 text-amber-600 mb-2 md:mb-0 md:mr-3 flex-shrink-0'
           aria-hidden='true'
         />
-        <h3 className='text-lg font-semibold text-gray-900'>{title}</h3>
+        <div className='text-center md:text-left'>
+          <h3 className='text-lg font-semibold text-gray-900'>{title}</h3>
+          <p className='text-sm text-gray-600 mt-1'>{description}</p>
+        </div>
       </div>
-      <p className='text-sm text-gray-600 mt-2'>{description}</p>
     </motion.div>
   )
 }
@@ -65,7 +64,6 @@ export default function WhyChooseUs() {
         >
           Why Choose Divine African Tours
         </motion.h2>
-
         <div className='flex flex-col lg:flex-row gap-8'>
           <div className='lg:w-1/2'>
             <div className='grid grid-cols-2 gap-4 h-full'>
