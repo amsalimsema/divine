@@ -1,121 +1,150 @@
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Sunrise, Users, Shield, Layers, Heart, UserPlus } from 'lucide-react'
+import { Sunrise, Users, Shield, Heart } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const features = [
   {
     icon: Sunrise,
     title: 'Unforgettable Experiences',
     description:
-      'Curated itineraries that showcase the best of African wildlife, landscapes, and cultures.',
+      'Curated itineraries that showcase the best of African wildlife and cultures.',
   },
   {
     icon: Users,
     title: 'Expert Local Guides',
-    description:
-      "Knowledgeable and passionate guides who bring Africa's wonders to life.",
+    description: "Knowledgeable guides who bring Africa's wonders to life.",
   },
   {
     icon: Shield,
     title: 'Safety First',
     description:
-      'Your well-being is our top priority, with strict safety measures in place.',
-  },
-  {
-    icon: Layers,
-    title: 'Unbeatable Value',
-    description:
-      "Experience Africa's wonders without breaking the bank. Quality adventures at fair prices.",
+      'Your well-being is our top priority with strict safety measures.',
   },
   {
     icon: Heart,
     title: 'Responsible Tourism',
     description:
-      "We're committed to sustainable practices and supporting local communities.",
-  },
-  {
-    icon: UserPlus,
-    title: 'Personalized Service',
-    description:
-      'Tailored experiences to meet your unique preferences and requirements.',
+      'Committed to sustainable practices and supporting local communities.',
   },
 ]
 
-function RandomRectangles() {
-  const rectangles = useMemo(() => {
-    const rects = []
-    for (let i = 0; i < 50; i++) {
-      const x = `${Math.random() * 100}%`
-      const y = `${Math.random() * 100}%`
-      const width = Math.random() * 20 + 10
-      const height = Math.random() * 30 + 20
-      const color = Math.random() > 0.5 ? '#FFA500' : '#D2691E'
-      rects.push(
-        <rect
-          key={i}
-          x={x}
-          y={y}
-          width={width}
-          height={height}
-          fill={color}
-          opacity='0.2'
-        />
-      )
-    }
-    return rects
-  }, [])
-
-  return rectangles
-}
-
-function FeatureCard({ icon: Icon, title, description }) {
+const FeatureCard = ({ icon: Icon, title, description, index }) => {
   return (
-    <div className='relative p-6 bg-[#F4A460] bg-opacity-80 rounded-lg overflow-hidden group'>
-      <div
-        className='absolute inset-0 bg-[#FFA500] opacity-10 blur-xl'
-        aria-hidden='true'
-      ></div>
-      <div className='relative z-10'>
-        <div className='flex items-center mb-4'>
-          <Icon
-            className='w-8 h-8 text-[#4CAF50] group-hover:text-white transition-colors duration-300 mr-3'
-            aria-hidden='true'
-          />
-          <h3 className='text-xl font-semibold text-gray-900'>{title}</h3>
-        </div>
-        <p className='text-gray-700'>{description}</p>
+    <motion.div
+      className='p-4 bg-white rounded-lg shadow-sm transition-all duration-300 hover:shadow-md flex flex-col h-full'
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <div className='flex items-start mb-3'>
+        <Icon
+          className='w-6 h-6 text-amber-600 mr-3 flex-shrink-0'
+          aria-hidden='true'
+        />
+        <h3 className='text-lg font-semibold text-gray-900'>{title}</h3>
       </div>
-    </div>
+      <p className='text-sm text-gray-600 mt-2'>{description}</p>
+    </motion.div>
   )
 }
 
 export default function WhyChooseUs() {
   return (
-    <section className='w-full py-12 md:py-24 lg:py-32 relative overflow-hidden'>
-      <svg
-        className='absolute inset-0 w-full h-full'
-        xmlns='http://www.w3.org/2000/svg'
-        aria-hidden='true'
-      >
-        <RandomRectangles />
-      </svg>
-      <div className='container mx-auto px-4 relative z-10'>
-        <h2 className='text-3xl font-bold text-center mb-8 text-gray-900'>
+    <section
+      className='w-full py-16 md:py-24 bg-gray-50'
+      aria-labelledby='why-choose-us-title'
+    >
+      <div className='container mx-auto px-4 md:px-6'>
+        <motion.h2
+          id='why-choose-us-title'
+          className='text-3xl font-bold text-center mb-12 text-gray-900'
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           Why Choose Divine African Tours
-        </h2>
-        <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-          {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
-          ))}
-        </div>
-        <div className='text-center mt-8'>
-          <Link
-            to='/'
-            className='inline-block px-6 py-3 bg-[#4CAF50] text-white rounded-md font-semibold hover:bg-[#45a049] transition-colors duration-200'
+        </motion.h2>
+
+        <div className='flex flex-col lg:flex-row gap-8'>
+          <div className='lg:w-1/2'>
+            <div className='grid grid-cols-2 gap-4 h-full'>
+              {features.map((feature, index) => (
+                <FeatureCard key={index} {...feature} index={index} />
+              ))}
+            </div>
+          </div>
+          <motion.div
+            className='lg:w-1/2'
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Book Your Adventure
-          </Link>
+            <div className='bg-white rounded-lg shadow-sm p-6 h-full flex flex-col justify-between relative overflow-hidden'>
+              <motion.div
+                className='absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-400 to-amber-600'
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              />
+              <div className='space-y-4'>
+                <motion.p
+                  className='text-gray-600'
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                >
+                  At{' '}
+                  <span className='font-semibold text-amber-600'>
+                    Divine African Tours
+                  </span>
+                  , we bring the magic of Africa to life. With over 20 years of
+                  experience, our passionate team crafts unforgettable safari
+                  adventures that showcase the continent's breathtaking
+                  landscapes and diverse wildlife.
+                </motion.p>
+                <motion.p
+                  className='text-gray-600'
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                >
+                  We're committed to sustainable tourism, ensuring that your
+                  journey not only creates lasting memories but also positively
+                  impacts local communities and conservation efforts. Choose
+                  Divine African Tours for an authentic and responsible African
+                  experience.
+                </motion.p>
+              </div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to='/about'
+                  className='text-amber-600 hover:text-amber-700 font-semibold inline-block mt-4'
+                >
+                  Learn More About Us
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
+        <motion.div
+          className='text-center mt-12'
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to='/book'
+              className='inline-block px-6 py-3 bg-amber-600 text-white rounded-md font-semibold hover:bg-amber-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600'
+            >
+              Book Your Safari Adventure
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
