@@ -46,10 +46,10 @@ export default function NavMenu() {
       name: 'ABOUT',
       href: '/about',
       dropdown: [
-        { name: 'Our Story', href: '/about/our-story' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Mission', href: '/about/mission' },
-        { name: 'Vision', href: '/about/vision' },
+        { name: 'Our Story', href: '/about' },
+        { name: 'Team', href: '/about' },
+        { name: 'Mission', href: '/about' },
+        { name: 'Vision', href: '/about' },
       ],
     },
     {

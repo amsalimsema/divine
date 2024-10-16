@@ -1,52 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
-const HeroWithSafariImages = () => {
+export default function Hero() {
+  const [circles, setCircles] = useState([])
+
+  useEffect(() => {
+    const colors = ['bg-amber-800', 'bg-green-800', 'bg-yellow-400']
+    const newCircles = Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      size: Math.random() * 200 + 50,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      color: colors[Math.floor(Math.random() * colors.length)],
+    }))
+    setCircles(newCircles)
+  }, [])
+
   return (
-    <section className='relative h-[35vh] overflow-hidden'>
-      <div className='absolute inset-0 flex'>
-        <div className='w-1/5 relative'>
-          <img
-            src='https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=900&q=80'
-            alt='Sunrise over Serengeti'
-            className='absolute inset-0 w-full h-full object-cover'
-          />
-        </div>
-        <div className='w-1/5 relative'>
-          <img
-            src='https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600&q=80'
-            alt='Elephants in African savanna'
-            className='absolute inset-0 w-full h-full object-cover'
-          />
-        </div>
-        <div className='w-1/5 relative'>
-          <img
-            src='https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=750&q=80'
-            alt='Silverback gorilla in the forest'
-            className='absolute inset-0 w-full h-full object-cover'
-          />
-        </div>
-        <div className='w-1/5 relative'>
-          <img
-            src='https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=825&q=80'
-            alt='Zebras in the wild'
-            className='absolute inset-0 w-full h-full object-cover'
-          />
-        </div>
-        <div className='w-1/5 relative'>
-          <img
-            src='https://images.unsplash.com/photo-1547970810-dc1eac37d174?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=700&q=80'
-            alt='Giraffe on the African plains'
-            className='absolute inset-0 w-full h-full object-cover'
-          />
-        </div>
-      </div>
-      <div className='absolute inset-0 bg-black bg-opacity-40 flex items-end justify-center pb-8'>
-        <h1 className='text-2xl md:text-4xl font-bold text-white text-center'>
-          Discover Africa's Majestic Wildlife
-        </h1>
+    <section className='relative h-40% w-full overflow-hidden'>
+      {circles.map((circle) => (
+        <div
+          key={circle.id}
+          className={`absolute rounded-full opacity-20 ${circle.color}`}
+          style={{
+            width: `${circle.size}px`,
+            height: `${circle.size}px`,
+            left: `${circle.x}%`,
+            top: `${circle.y}%`,
+          }}
+        />
+      ))}
+      <div className='absolute inset-0 bg-black bg-opacity-50' />
+      <div className='relative z-10 flex h-full flex-col items-center justify-center pt-24 md:pt-32 lg:pt-40'>
+        <motion.p
+          className='mt-4 text-center lead text-white pb-6'
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+        >
+          WHO WE ARE
+        </motion.p>
       </div>
     </section>
   )
 }
-
-export default HeroWithSafariImages

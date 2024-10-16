@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import './App.css'
 import TourDetails from './components/TourDetails'
 import { useEffect } from 'react'
+import About from './components/About'
 
 function App() {
   //ScrollToTop component to handle scrolling on route change
@@ -31,6 +32,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
 
           <Route path='/tour/:tourName' element={<TourDetails />} />
         </Routes>
