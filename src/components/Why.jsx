@@ -187,9 +187,7 @@ export function SafariAnimals() {
         </h2>
         <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
           We are dedicated and committed to giving the best tour experience of
-          your lifetime. Our pre-built packages have been summarized down into 4
-          destinations/countries, and you can now explore tours by these
-          destinations.
+          your lifetime.
         </p>
       </div>
       <div className='w-full overflow-hidden'>
