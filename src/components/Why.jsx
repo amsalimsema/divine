@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MapPin, HeartHandshake, Zap, DollarSign } from 'lucide-react'
 import { motion } from 'framer-motion'
 
+// why choose us
 const features = [
   {
     icon: MapPin,
@@ -26,6 +27,9 @@ const features = [
   },
 ]
 
+// destinations
+
+// for choose us
 const FeatureCard = ({ icon: Icon, title, description, index }) => {
   return (
     <motion.div
@@ -46,7 +50,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }) => {
   )
 }
 
-export default function WhyChooseUs() {
+export function WhyChooseUs() {
   return (
     <section
       className='w-full py-16 md:py-24 bg-gray-50'
@@ -135,7 +139,7 @@ export default function WhyChooseUs() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               to='/book'
-              className='inline-block px-6 py-3 bg-amber-600 text-white rounded-md font-semibold hover:bg-amber-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600'
+              className='inline-block px-6 py-3 bg-amber-600 text-white rounded-md font-semibold hover:bg-green-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600'
             >
               Book Your Safari Adventure
             </Link>
@@ -143,5 +147,91 @@ export default function WhyChooseUs() {
         </motion.div>
       </div>
     </section>
+  )
+}
+
+// destinations
+export function SafariAnimals() {
+  const animals = [
+    {
+      src: 'https://images.unsplash.com/photo-1665072155564-6a05c28bbaa3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Lion in the savanna',
+      country: 'Uganda',
+      tours: 15,
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1590692995082-fa3106c0de20?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Elephant in the wild',
+      country: 'Kenya',
+      tours: 12,
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1579172342894-e6d751ec390c?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Zebras grazing',
+      country: 'Tanzania',
+      tours: 18,
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1543716778-1b10caf74fb8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Giraffe close-up',
+      country: 'Rwanda',
+      tours: 10,
+    },
+  ]
+
+  return (
+    <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <div className='text-center mb-12'>
+        <h2 className='text-3xl font-bold text-center text-gray-900 mb-4'>
+          Explore Destinations
+        </h2>
+        <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+          We are dedicated and committed to giving the best tour experience of
+          your lifetime. Our pre-built packages have been summarized down into 4
+          destinations/countries, and you can now explore tours by these
+          destinations.
+        </p>
+      </div>
+      <div className='w-full overflow-hidden'>
+        <div className='flex flex-wrap'>
+          {animals.map((animal, index) => (
+            <div
+              key={index}
+              className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative group overflow-hidden'
+            >
+              <div className='aspect-square'>
+                <img
+                  src={animal.src}
+                  alt={animal.alt}
+                  className='w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110'
+                />
+                <div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 ease-in-out'></div>
+                <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 flex flex-col justify-between transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-1'>
+                  <div className='flex justify-between items-center'>
+                    <div className='flex items-center'>
+                      <MapPin size={16} className='mr-1' />
+                      <span className='text-xs sm:text-sm'>
+                        {animal.country}
+                      </span>
+                    </div>
+                    <span className='text-xs sm:text-sm'>
+                      {animal.tours} tours
+                    </span>
+                  </div>
+                  <div className='overflow-hidden h-0 group-hover:h-8 transition-all duration-300 ease-in-out'>
+                    <Link
+                      to='/'
+                      className='text-xs sm:text-sm font-semibold block text-left py-1 pl-2 text-white hover:text-yellow-300'
+                    >
+                      View all tours
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }

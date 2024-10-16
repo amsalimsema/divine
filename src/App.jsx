@@ -7,6 +7,7 @@ import {
 
 import Nav from './components/Nav'
 import Home from './pages/Home'
+import Footer from './components/Footer'
 
 import './App.css'
 import TourDetails from './components/TourDetails'
@@ -33,6 +34,7 @@ function App() {
 
           <Route path='/tour/:tourName' element={<TourDetails />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   )

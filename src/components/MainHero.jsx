@@ -110,7 +110,7 @@ export default function HeroSection() {
             </AnimatePresence>
             <Link
               to='/'
-              className='inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded text-base sm:text-lg transition-colors duration-300'
+              className='inline-block bg-green-800 hover:bg-amber-600 text-white font-normal py-2 px-6 sm:py-3 sm:px-8 rounded text-base sm:text-lg transition-colors duration-300'
             >
               Start Your Adventure
             </Link>

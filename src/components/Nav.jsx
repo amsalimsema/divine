@@ -41,9 +41,9 @@ export default function NavMenu() {
   }, [isOpen])
 
   const menuItems = [
-    { name: 'Home', href: '/' },
+    { name: 'HOME', href: '/' },
     {
-      name: 'About',
+      name: 'ABOUT',
       href: '/about',
       dropdown: [
         { name: 'Our Story', href: '/about/our-story' },
@@ -53,7 +53,7 @@ export default function NavMenu() {
       ],
     },
     {
-      name: 'Destinations',
+      name: 'DESTINATIONS',
       href: '/destinations',
       dropdown: [
         { name: 'Kenya', href: '/destinations/kenya' },
@@ -63,7 +63,7 @@ export default function NavMenu() {
       ],
     },
     {
-      name: 'Tours',
+      name: 'TOURS',
       href: '/tours',
       dropdown: [
         { name: 'Safari Tours', href: '/tours/safari' },
@@ -73,7 +73,7 @@ export default function NavMenu() {
       ],
     },
     {
-      name: 'Car Hire',
+      name: 'CAR HIRE',
       href: '/car-hire',
       dropdown: [
         { name: '4x4 Vehicles', href: '/car-hire/4x4' },
@@ -82,7 +82,7 @@ export default function NavMenu() {
         { name: 'Motorcycles', href: '/car-hire/motorcycles' },
       ],
     },
-    { name: 'Contact', href: '/contact' },
+    { name: 'CONTACT', href: '/contact' },
   ]
 
   return (
@@ -172,7 +172,7 @@ export default function NavMenu() {
               </div>
               <Link
                 to='/enquire'
-                className='ml-4 px-4 py-2 rounded-md text-sm font-medium bg-yellow-400 text-green-800 hover:bg-yellow-300 transition-colors duration-300'
+                className='ml-4 px-4 py-2 rounded-md text-sm font-medium bg-amber-600 text-white hover:bg-green-800 transition-colors duration-300'
               >
                 Enquire Now
               </Link>
@@ -180,7 +180,7 @@ export default function NavMenu() {
             <div className='flex items-center md:hidden'>
               <Link
                 to='/enquire'
-                className='mr-2 px-4 py-2 rounded-md text-sm font-medium bg-yellow-400 text-green-800 hover:bg-yellow-300 transition-colors duration-300'
+                className='mr-2 px-4 py-2 rounded-md text-sm font-medium bg-amber-600 text-white hover:bg-green-800 transition-colors duration-300'
               >
                 Enquire Now
               </Link>
