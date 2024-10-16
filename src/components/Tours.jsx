@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
 
@@ -128,12 +129,17 @@ export default function TourPackageGallery() {
                   isMobile ? 'w-full' : 'w-1/3'
                 } flex-shrink-0 px-2`}
               >
-                <div className='bg-amber-600/20 rounded-lg shadow-md overflow-hidden h-full flex flex-col'>
-                  <img
-                    src={pkg.image}
-                    alt={pkg.title}
-                    className='w-full h-48 sm:h-56 object-cover'
-                  />
+                <Link
+                  to={`/tour/${encodeURIComponent(pkg.title)}`}
+                  className='bg-amber-600/20 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition-transform duration-300 ease-in-out hover:scale-101'
+                >
+                  <div className='relative overflow-hidden'>
+                    <img
+                      src={pkg.image}
+                      alt={pkg.title}
+                      className='w-full h-48 sm:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110'
+                    />
+                  </div>
                   <div className='p-4 flex flex-col flex-grow'>
                     <h3 className='text-lg sm:text-xl font-semibold mb-2'>
                       {pkg.title}
@@ -156,7 +162,7 @@ export default function TourPackageGallery() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

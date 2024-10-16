@@ -151,6 +151,7 @@ export function WhyChooseUs() {
 }
 
 // destinations
+
 export function SafariAnimals() {
   const animals = [
     {
@@ -166,7 +167,7 @@ export function SafariAnimals() {
       tours: 12,
     },
     {
-      src: 'https://images.unsplash.com/photo-1579172342894-e6d751ec390c?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: 'https://images.unsplash.com/photo-1700238030285-ae1749d41e8c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Zebras grazing',
       country: 'Tanzania',
       tours: 18,
@@ -180,12 +181,12 @@ export function SafariAnimals() {
   ]
 
   return (
-    <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+    <div className='w-full max-w-7xl mx-auto sm:px-6 lg:px-8 py-12'>
       <div className='text-center mb-12'>
         <h2 className='text-3xl font-bold text-center text-gray-900 mb-4'>
           Explore Destinations
         </h2>
-        <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+        <p className='text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-0'>
           We are dedicated and committed to giving the best tour experience of
           your lifetime.
         </p>
@@ -204,22 +205,22 @@ export function SafariAnimals() {
                   className='w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110'
                 />
                 <div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 ease-in-out'></div>
-                <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 flex flex-col justify-between transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-1'>
+                <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3 flex flex-col justify-between transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-1'>
                   <div className='flex justify-between items-center'>
                     <div className='flex items-center'>
-                      <MapPin size={16} className='mr-1' />
-                      <span className='text-xs sm:text-sm'>
+                      <MapPin size={18} className='mr-1' />
+                      <span className='text-sm sm:text-base font-medium'>
                         {animal.country}
                       </span>
                     </div>
-                    <span className='text-xs sm:text-sm'>
+                    <span className='text-sm sm:text-base font-medium'>
                       {animal.tours} tours
                     </span>
                   </div>
-                  <div className='overflow-hidden h-0 group-hover:h-8 transition-all duration-300 ease-in-out'>
+                  <div className='overflow-hidden h-0 group-hover:h-10 transition-all duration-300 ease-in-out'>
                     <Link
                       to='/'
-                      className='text-xs sm:text-sm font-semibold block text-left py-1 pl-2 text-white hover:text-yellow-300'
+                      className='text-sm sm:text-base font-semibold block text-left py-2 text-white hover:text-yellow-300'
                     >
                       View all tours
                     </Link>
