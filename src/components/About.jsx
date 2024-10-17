@@ -24,7 +24,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <Hero />
+      <Hero title=' WHO WE ARE' />
       <div className='min-h-screen bg-gradient-to-b from-green-100 to-amber-100 text-gray-800'>
         <main className='container mx-auto px-4 py-12 sm:px-6 lg:px-8'>
           <motion.h2

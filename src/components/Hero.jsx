@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-export default function Hero() {
+export default function Hero({ title }) {
   const [circles, setCircles] = useState([])
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
         >
-          WHO WE ARE
+          {title}
         </motion.p>
       </div>
     </section>

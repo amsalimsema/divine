@@ -45,12 +45,6 @@ export default function NavMenu() {
     {
       name: 'ABOUT',
       href: '/about',
-      dropdown: [
-        { name: 'Our Story', href: '/about' },
-        { name: 'Team', href: '/about' },
-        { name: 'Mission', href: '/about' },
-        { name: 'Vision', href: '/about' },
-      ],
     },
     {
       name: 'DESTINATIONS',
@@ -75,12 +69,6 @@ export default function NavMenu() {
     {
       name: 'CAR HIRE',
       href: '/car-hire',
-      dropdown: [
-        { name: '4x4 Vehicles', href: '/car-hire/4x4' },
-        { name: 'Luxury Cars', href: '/car-hire/luxury' },
-        { name: 'Vans', href: '/car-hire/vans' },
-        { name: 'Motorcycles', href: '/car-hire/motorcycles' },
-      ],
     },
     { name: 'CONTACT', href: '/contact' },
   ]

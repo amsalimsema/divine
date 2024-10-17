@@ -13,6 +13,7 @@ import './App.css'
 import TourDetails from './components/TourDetails'
 import { useEffect } from 'react'
 import About from './components/About'
+import CarHire from './components/CarHire'
 
 function App() {
   //ScrollToTop component to handle scrolling on route change
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/car-hire' element={<CarHire />} />
 
           <Route path='/tour/:tourName' element={<TourDetails />} />
         </Routes>
