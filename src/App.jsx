@@ -35,8 +35,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/car-hire' element={<CarHire />} />
-
-          <Route path='/tour/:tourName' element={<TourDetails />} />
+          <Route path='/tour/:slug' element={<TourDetails />} />
         </Routes>
         <Footer />
       </Router>

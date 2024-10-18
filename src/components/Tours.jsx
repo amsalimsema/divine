@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
 
@@ -72,9 +72,10 @@ const tourPackages = [
   },
 ]
 
-export default function TourPackageGallery() {
+export default function Component() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const checkMobile = () => {
@@ -105,12 +106,20 @@ export default function TourPackageGallery() {
     )
   }
 
+  const handleTourClick = (tourTitle) => {
+    const slug = tourTitle
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '')
+    navigate(`/tour/${slug}`)
+  }
+
   const visiblePackages = isMobile ? 1 : 3
 
   return (
     <div className='bg-gradient-to-b from-amber-300 to-amber-100'>
       <div className='relative max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-gray-900'>
-        <h2 className='text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 '>
+        <h2 className='text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8'>
           Our Tour Packages
         </h2>
         <div className='overflow-hidden' {...handlers}>
@@ -129,9 +138,9 @@ export default function TourPackageGallery() {
                   isMobile ? 'w-full' : 'w-1/3'
                 } flex-shrink-0 px-2`}
               >
-                <Link
-                  to={`/tour/${encodeURIComponent(pkg.title)}`}
-                  className='bg-amber-600/20 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition-transform duration-300 ease-in-out hover:scale-101'
+                <div
+                  onClick={() => handleTourClick(pkg.title)}
+                  className='bg-amber-600/20 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition-transform duration-300 ease-in-out hover:scale-101 cursor-pointer'
                 >
                   <div className='relative overflow-hidden'>
                     <img
@@ -162,7 +171,7 @@ export default function TourPackageGallery() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
           </div>
