@@ -298,7 +298,7 @@ export default function TourDetails() {
         />
         <div className='absolute inset-0 bg-black bg-opacity-40 flex items-end'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full'>
-            <h1 className='text-4xl sm:text-5xl font-bold text-white mb-4'>
+            <h1 className='text-4xl sm:text-5xl font-semibold text-white mb-4'>
               {tour.title}
             </h1>
             <div className='flex flex-wrap gap-4 text-white'>
@@ -359,7 +359,7 @@ export default function TourDetails() {
                   {tour.tourDetails.map((detail, index) => (
                     <div
                       key={index}
-                      className='bg-gray-50 rounded-lg p-6 flex items-start'
+                      className='bg-gray-50 rounded-lg p-2 flex items-start'
                     >
                       <div className='flex-shrink-0 mr-4'>
                         <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
@@ -384,7 +384,7 @@ export default function TourDetails() {
                 </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   {tour.itinerary.map((day, index) => (
-                    <div key={index} className='bg-gray-50 rounded-lg p-6'>
+                    <div key={index} className='bg-gray-50 rounded-lg p-2'>
                       <div className='flex items-center mb-4'>
                         <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
                           <Calendar className='w-6 h-6 text-green-600' />
