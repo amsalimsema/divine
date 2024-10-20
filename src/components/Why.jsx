@@ -153,7 +153,7 @@ export function WhyChooseUs() {
 // destinations
 
 export function SafariAnimals() {
-  const animals = [
+  const destinations = [
     {
       src: 'https://images.unsplash.com/photo-1665072155564-6a05c28bbaa3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Lion in the savanna',
@@ -197,12 +197,12 @@ export function SafariAnimals() {
       </div>
       <div className='w-full overflow-hidden'>
         <div className='flex flex-wrap -m-1'>
-          {animals.map((animal, index) => (
+          {destinations.map((destination, index) => (
             <div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1'>
               <div className='aspect-square relative overflow-hidden group rounded-lg'>
                 <img
-                  src={animal.src}
-                  alt={animal.alt}
+                  src={destination.src}
+                  alt={destination.alt}
                   className='absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-lg'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 transition-opacity duration-500 ease-in-out' />
@@ -211,16 +211,16 @@ export function SafariAnimals() {
                     <div className='flex items-center'>
                       <MapPin size={18} className='mr-1' />
                       <span className='text-sm sm:text-base font-medium'>
-                        {animal.country}
+                        {destination.country}
                       </span>
                     </div>
                     <span className='text-sm sm:text-base font-medium'>
-                      {animal.tours} tours
+                      {destination.tours} tours
                     </span>
                   </div>
                   <div className='overflow-hidden h-0 group-hover:h-8 transition-all duration-500 ease-in-out'>
                     <Link
-                      to={`/tours/${animal.slug}`}
+                      to={`/tours/${destination.slug}`}
                       className='text-sm sm:text-base font-semibold block text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out'
                     >
                       View all tours
