@@ -135,7 +135,7 @@ export default function NavMenu() {
                       )}
                     </button>
                     {item.dropdown && activeDropdown === index && (
-                      <div className='absolute left-0 mt-2 w-48 rounded-md bg-white/30 backdrop-blur-lg shadow-lg ring-1 ring-black ring-opacity-5 z-50'>
+                      <div className='absolute left-0 mt-2 w-48 rounded-md bg-green-800/90 backdrop-blur-lg shadow-lg ring-1 ring-black ring-opacity-5 z-50'>
                         <div
                           className='py-1'
                           role='menu'

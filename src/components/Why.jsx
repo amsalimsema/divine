@@ -159,24 +159,28 @@ export function SafariAnimals() {
       alt: 'Lion in the savanna',
       country: 'Uganda',
       tours: 15,
+      slug: 'uganda-safari',
     },
     {
       src: 'https://images.unsplash.com/photo-1590692995082-fa3106c0de20?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Elephant in the wild',
       country: 'Kenya',
       tours: 12,
+      slug: 'kenya-wildlife',
     },
     {
       src: 'https://images.unsplash.com/photo-1700238030285-ae1749d41e8c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Zebras grazing',
       country: 'Tanzania',
       tours: 18,
+      slug: 'tanzania-adventure',
     },
     {
       src: 'https://images.unsplash.com/photo-1543716778-1b10caf74fb8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Giraffe close-up',
       country: 'Rwanda',
       tours: 10,
+      slug: 'rwanda-expedition',
     },
   ]
 
@@ -192,21 +196,18 @@ export function SafariAnimals() {
         </p>
       </div>
       <div className='w-full overflow-hidden'>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap -m-1'>
           {animals.map((animal, index) => (
-            <div
-              key={index}
-              className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative group overflow-hidden'
-            >
-              <div className='aspect-square'>
+            <div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1'>
+              <div className='aspect-square relative overflow-hidden group rounded-lg'>
                 <img
                   src={animal.src}
                   alt={animal.alt}
-                  className='w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110'
+                  className='absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-lg'
                 />
-                <div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 ease-in-out'></div>
-                <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3 flex flex-col justify-between transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-1'>
-                  <div className='flex justify-between items-center'>
+                <div className='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 transition-opacity duration-500 ease-in-out' />
+                <div className='absolute inset-x-0 bottom-0 p-4'>
+                  <div className='flex justify-between items-center text-white mb-2'>
                     <div className='flex items-center'>
                       <MapPin size={18} className='mr-1' />
                       <span className='text-sm sm:text-base font-medium'>
@@ -217,10 +218,10 @@ export function SafariAnimals() {
                       {animal.tours} tours
                     </span>
                   </div>
-                  <div className='overflow-hidden h-0 group-hover:h-10 transition-all duration-300 ease-in-out'>
+                  <div className='overflow-hidden h-0 group-hover:h-8 transition-all duration-500 ease-in-out'>
                     <Link
-                      to='/'
-                      className='text-sm sm:text-base font-semibold block text-left py-2 text-white hover:text-yellow-300'
+                      to={`/tours/${animal.slug}`}
+                      className='text-sm sm:text-base font-semibold block text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out'
                     >
                       View all tours
                     </Link>
