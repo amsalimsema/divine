@@ -1,5 +1,6 @@
 import React from 'react'
-import { WhyChooseUs, SafariAnimals } from '../components/Why'
+import { WhyChooseUs } from '../components/Why'
+import SafariAnimals from '../components/Why'
 import Tours from '../components/Tours'
 import MainHero from '../components/MainHero'
 
