@@ -1,8 +1,9 @@
 import React from 'react'
 import { WhyChooseUs } from '../components/Why'
-import SafariAnimals from '../components/Why'
+
 import Tours from '../components/Tours'
 import MainHero from '../components/MainHero'
+import Destinations from '../components/Destinations'
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
       <MainHero />
       <WhyChooseUs />
       <Tours />
-      <SafariAnimals />
+      <Destinations />
     </>
   )
 }
