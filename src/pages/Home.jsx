@@ -1,5 +1,5 @@
 import React from 'react'
-import { WhyChooseUs } from '../components/Why'
+import { WhyChooseUs, SafariAnimals } from '../components/Why'
 
 import Tours from '../components/Tours'
 import MainHero from '../components/MainHero'
@@ -11,6 +11,7 @@ function Home() {
       <MainHero />
       <WhyChooseUs />
       <Tours />
+      <SafariAnimals />
       <Destinations />
     </>
   )

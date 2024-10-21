@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import { MapPin, HeartHandshake, Zap, DollarSign } from 'lucide-react'
 import { motion } from 'framer-motion'
 
+//images for safari
+import ugandaLion from '../assets/Divine-Tours-3.jpg'
+import kenyaElephant from '../assets/Divine-Tours-3.jpg'
+import tanzaniaZebras from '../assets/Divine-Tours-3.jpg'
+import rwandaGiraffe from '../assets/Divine-Tours-3.jpg'
+
 // why choose us
 const features = [
   {
@@ -152,31 +158,31 @@ export function WhyChooseUs() {
 
 // destinations
 
-export default function SafariAnimals() {
+export function SafariAnimals() {
   const destinations = [
     {
-      src: 'https://images.unsplash.com/photo-1665072155564-6a05c28bbaa3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: ugandaLion,
       alt: 'Lion in the savanna',
       country: 'Uganda',
       tours: 15,
       slug: 'uganda-safari',
     },
     {
-      src: 'https://images.unsplash.com/photo-1590692995082-fa3106c0de20?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: kenyaElephant,
       alt: 'Elephant in the wild',
       country: 'Kenya',
       tours: 12,
       slug: 'kenya-wildlife',
     },
     {
-      src: 'https://images.unsplash.com/photo-1700238030285-ae1749d41e8c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: tanzaniaZebras,
       alt: 'Zebras grazing',
       country: 'Tanzania',
       tours: 18,
       slug: 'tanzania-adventure',
     },
     {
-      src: 'https://images.unsplash.com/photo-1543716778-1b10caf74fb8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: rwandaGiraffe,
       alt: 'Giraffe close-up',
       country: 'Rwanda',
       tours: 10,
@@ -198,7 +204,7 @@ export default function SafariAnimals() {
       <div className='w-full overflow-hidden'>
         <div className='flex flex-wrap -m-1'>
           {destinations.map((destination, index) => (
-            <div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-1'>
+            <div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2'>
               <div className='aspect-square relative overflow-hidden group rounded-lg'>
                 <img
                   src={destination.src}
