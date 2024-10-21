@@ -8,6 +8,7 @@ import {
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 import './App.css'
 import TourDetails from './components/TourDetails'
@@ -34,6 +35,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/car-hire' element={<CarHire />} />
           <Route path='/tour/:slug' element={<TourDetails />} />
