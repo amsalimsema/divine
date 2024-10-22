@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { MapPin, HeartHandshake, Zap, DollarSign } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -190,6 +190,14 @@ export function SafariAnimals() {
     },
   ]
 
+  useEffect(() => {
+    // Preload the first image (assuming it's above the fold)
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = destinations[0].src
+    document.head.appendChild(link)
+  }, [])
   return (
     <div className='w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
       <div className='text-center mb-12'>
@@ -212,6 +220,7 @@ export function SafariAnimals() {
                 <img
                   src={destination.src}
                   alt={destination.alt}
+                  loading={index === 0 ? 'eager' : 'lazy'}
                   className='w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-lg'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-100 transition-opacity duration-500 ease-in-out' />

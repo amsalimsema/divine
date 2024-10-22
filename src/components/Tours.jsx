@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
@@ -15,6 +15,7 @@ const tourPackages = [
     image:
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
   },
+  ,
   {
     id: 2,
     title: 'Maasai Cultural Immersion',
@@ -76,6 +77,7 @@ export default function Component() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
   const navigate = useNavigate()
+  const imageRefs = useRef([])
 
   useEffect(() => {
     const checkMobile = () => {
@@ -84,6 +86,41 @@ export default function Component() {
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    }
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target
+          img.src = img.dataset.src
+          img.classList.remove('lazy')
+          observer.unobserve(img)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    imageRefs.current.forEach((img) => {
+      if (img) {
+        observer.observe(img)
+      }
+    })
+
+    return () => {
+      imageRefs.current.forEach((img) => {
+        if (img) {
+          observer.unobserve(img)
+        }
+      })
+    }
   }, [])
 
   const handlers = useSwipeable({
@@ -131,7 +168,7 @@ export default function Component() {
               }%)`,
             }}
           >
-            {tourPackages.map((pkg) => (
+            {tourPackages.map((pkg, index) => (
               <div
                 key={pkg.id}
                 className={`${
@@ -144,9 +181,13 @@ export default function Component() {
                 >
                   <div className='relative overflow-hidden'>
                     <img
-                      src={pkg.image}
+                      ref={(el) => (imageRefs.current[index] = el)}
+                      data-src={pkg.image}
                       alt={pkg.title}
-                      className='w-full h-48 sm:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110'
+                      className='lazy w-full h-48 sm:h-56 object-cover transition-transform duration-300 ease-in-out hover:scale-110'
+                      width='800'
+                      height='600'
+                      loading={index < 3 ? 'eager' : 'lazy'}
                     />
                   </div>
                   <div className='p-4 flex flex-col flex-grow'>

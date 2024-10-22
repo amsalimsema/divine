@@ -3,7 +3,6 @@ import { WhyChooseUs, SafariAnimals } from '../components/Why'
 
 import Tours from '../components/Tours'
 import MainHero from '../components/MainHero'
-import Destinations from '../components/Destinations'
 
 function Home() {
   return (
@@ -12,8 +11,6 @@ function Home() {
       <WhyChooseUs />
       <Tours />
       <SafariAnimals />
-
-      <Destinations />
     </>
   )
 }
