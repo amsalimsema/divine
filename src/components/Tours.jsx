@@ -6,35 +6,35 @@ import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
 const tourPackages = [
   {
     id: 1,
-    title: 'Serengeti Safari Adventure',
+    title: 'Bwindi Gorilla Tracking',
     description:
-      'Experience the breathtaking wildlife of the Serengeti on this unforgettable safari tour.',
-    duration: '7 days',
+      'The safari begins in Rwanda, the "Land of a Thousand Hills," and leads you to Bwindi Impenetrable National Park, the famous home of the majestic Mountain Gorillas.',
+    duration: '3 days',
     groupSize: '6-12 people',
-    location: 'Tanzania',
+    location: 'Bwindi Impenetrable National Park ',
     image:
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
   },
   ,
   {
     id: 2,
-    title: 'Maasai Cultural Immersion',
+    title: 'Primate Safari',
     description:
-      'Immerse yourself in the rich traditions of the Maasai people in this cultural expedition.',
-    duration: '5 days',
+      'This safari offers unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys, starting in Uganda and continuing into Rwanda. Deeply rewarding experience.',
+    duration: '6 days',
     groupSize: '4-8 people',
-    location: 'Kenya',
+    location: 'Uganda | Rwanda',
     image:
       'https://images.unsplash.com/photo-1449104573673-83d90bf3484f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 3,
-    title: 'Nile River Cruise',
+    title: 'Volcanoes Gorilla Tracking',
     description:
-      'Sail down the legendary Nile River, exploring ancient Egyptian wonders along the way.',
-    duration: '10 days',
+      'This 2-day Gorilla Safari, starts and ends in Rwanda, explores Volcanoes National Park in northwestern Rwanda, home to endangered Mountain Gorillas and rare Golden Monkeys.',
+    duration: '2 days',
     groupSize: '10-20 people',
-    location: 'Egypt',
+    location: 'Volcanoes National Park',
     image:
       'https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
   },

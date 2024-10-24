@@ -33,8 +33,6 @@ const features = [
   },
 ]
 
-// destinations
-
 // for choose us
 const FeatureCard = ({ icon: Icon, title, description, index }) => {
   return (
@@ -104,10 +102,13 @@ export function WhyChooseUs() {
                   <span className='font-semibold text-amber-600'>
                     Divine African Tours
                   </span>
-                  , we bring the magic of Africa to life. With over 20 years of
-                  experience, our passionate team crafts unforgettable safari
-                  adventures that showcase the continent's breathtaking
-                  landscapes and diverse wildlife.
+                  , we craft exceptional safari experiences that capture the
+                  beauty and diversity of East Africa. With deep local
+                  expertise, we offer tailor-made adventures that respect the
+                  environment and the cultural heritage of the communities we
+                  visit. Whether you're exploring majestic landscapes or
+                  encountering wildlife up close, our team ensures every journey
+                  is immersive and eco-conscious.
                 </motion.p>
                 <motion.p
                   className='text-gray-600'

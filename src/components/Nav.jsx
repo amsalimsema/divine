@@ -52,7 +52,7 @@ export default function NavMenu() {
       dropdown: [
         { name: 'Kenya', href: '/destinations/kenya' },
         { name: 'Tanzania', href: '/destinations/tanzania' },
-        { name: 'Uganda', href: '/destinations/uganda' },
+        { name: 'Uganda', href: '/tours/uganda-safari' },
         { name: 'Rwanda', href: '/destinations/rwanda' },
       ],
     },

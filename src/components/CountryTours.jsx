@@ -6,19 +6,19 @@ const toursData = {
   'uganda-safari': {
     name: 'Uganda',
     image:
-      'https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&q=80&w=1469&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1672932238132-3cf53963c73c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tours: [
       {
         id: 1,
-        name: 'Gorilla Trekking Adventure',
+        name: 'Bwindi Gorilla Tracking',
         duration: '3 days',
         groupSize: '8',
         price: 1500,
         image:
-          'https://images.unsplash.com/photo-1598880940371-c756e015faf1?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1536327327725-804520febf13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         description:
           'Get up close with mountain gorillas in their natural habitat.',
-        link: '/tours/uganda/gorilla-trekking',
+        link: '/tour/bwindi-gorilla-tracking',
       },
       {
         id: 2,
