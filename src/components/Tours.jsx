@@ -3,6 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
 
+import GB from '../assets/Gorilla.jpg'
+import Monkey from '../assets/Monkey.jpg'
+import GV from '../assets/Gorilla_Volcano.jpg'
+import GR from '../assets/Gorilla_rwanda.jpg'
+
 const tourPackages = [
   {
     id: 1,
@@ -12,8 +17,7 @@ const tourPackages = [
     duration: '3 days',
     groupSize: '6-12 people',
     location: 'Bwindi Impenetrable National Park ',
-    image:
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: GB,
   },
   ,
   {
@@ -24,8 +28,7 @@ const tourPackages = [
     duration: '6 days',
     groupSize: '4-8 people',
     location: 'Uganda | Rwanda',
-    image:
-      'https://images.unsplash.com/photo-1449104573673-83d90bf3484f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: Monkey,
   },
   {
     id: 3,
@@ -35,19 +38,17 @@ const tourPackages = [
     duration: '2 days',
     groupSize: '10-20 people',
     location: 'Volcanoes National Park',
-    image:
-      'https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: GV,
   },
   {
     id: 4,
-    title: 'Moroccan Desert Expedition',
+    title: 'Gorilla & Golden Monkey Tracking',
     description:
-      'Journey through the Sahara on camelback and sleep under the stars in luxury desert camps.',
+      'This adventure starts in Entebbe and ends in Kigali. It explores two beautiful countries Uganda & Rwanda',
     duration: '8 days',
     groupSize: '6-10 people',
-    location: 'Morocco',
-    image:
-      'https://images.unsplash.com/photo-1449104573673-83d90bf3484f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    location: 'Uganda | Rwanda',
+    image: GR,
   },
   {
     id: 5,

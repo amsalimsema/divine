@@ -8,6 +8,7 @@ import {
   Clock,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import PesaPal from '../assets/pesapal.png'
 
 export default function Footer() {
   return (
@@ -191,7 +192,7 @@ export default function Footer() {
         <div className='mt-8 pt-8 border-t border-gray-300'>
           <div className='flex justify-center mb-4'>
             <a
-              href='https://www.visa.com'
+              href='https://payments.pesapal.com/divineafricantours'
               target='_blank'
               rel='noopener noreferrer'
               className='p-2 hover:text-white'
@@ -203,7 +204,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href='https://www.mastercard.com'
+              href='https://payments.pesapal.com/divineafricantours'
               target='_blank'
               rel='noopener noreferrer'
               className='p-2'
@@ -215,19 +216,19 @@ export default function Footer() {
               />
             </a>
             <a
-              href='https://www.paypal.com'
+              href='https://payments.pesapal.com/divineafricantours'
               target='_blank'
               rel='noopener noreferrer'
               className='p-2'
             >
               <img
                 src='https://cdn-icons-png.flaticon.com/128/349/349230.png'
-                alt='PayPal'
+                alt='Discover'
                 className='w-12'
               />
             </a>
             <a
-              href='https://www.americanexpress.com'
+              href='https://payments.pesapal.com/divineafricantours'
               target='_blank'
               rel='noopener noreferrer'
               className='p-2'
@@ -237,6 +238,14 @@ export default function Footer() {
                 alt='American Express'
                 className='w-12'
               />
+            </a>
+            <a
+              href='https://payments.pesapal.com/divineafricantours'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='p-2'
+            >
+              <img src={PesaPal} alt='Pesapal' className='h-10 w-30' />
             </a>
           </div>
           <p className='text-center'>

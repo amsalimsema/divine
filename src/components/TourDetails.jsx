@@ -15,6 +15,9 @@ import {
   Music,
   Leaf,
 } from 'lucide-react'
+import GGMT from '../assets/golden_tracking.jpg'
+import BGT from '../assets/bwindi_gorilla.jpg'
+import PG from '../assets/primate_hero.jpg'
 
 const tourPackages = [
   {
@@ -26,8 +29,7 @@ const tourPackages = [
     groupSize: '6-12 people',
     location: 'Rwanda',
     Price: '1500',
-    image:
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: BGT,
     fullDescription: `The safari begins in Rwanda, known as the "Land of a Thousand Hills," and takes you to Bwindi Impenetrable National Park, the renowned habitat of the majestic Mountain Gorillas.It offers an exciting and adventurous encounter with the gentle giants - the endangered Mountain Gorillas.`,
     tourDetails: [
       {
@@ -153,8 +155,7 @@ const tourPackages = [
     groupSize: '4-10 people',
     location: 'Uganda | Rwanda',
     Price: '2300',
-    image:
-      'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: PG,
     fullDescription: `This safari offers thrilling encounters with endangered Mountain Gorillas and the rare, beautiful Golden Monkeys. Beginning in Uganda, "The Pearl of Africa," and continuing into Rwanda, "The Land of a Thousand Hills," tracking these primates can be challenging, but the experience of meeting them in their natural habitat is truly rewarding.`,
     tourDetails: [
       {
@@ -266,13 +267,128 @@ const tourPackages = [
     title: 'Volcanoes Gorilla Tracking',
     description:
       'This 2-day Gorilla Safari, starts and ends in Rwanda, explores Volcanoes National Park in northwestern Rwanda, home to endangered Mountain Gorillas and rare Golden Monkeys.',
-    duration: '6 days',
+    duration: '2 days',
     groupSize: '4-10 people',
     location: 'Rwanda',
     Price: '2300',
-    image:
-      'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+    image: PG,
     fullDescription: `This 2-day Gorilla Safari begins and ends in Rwanda, taking you to Volcanoes National Park in northwestern Rwanda. Spanning 160 square kilometers of lush rainforest, the park encompasses eight volcanoes in the Virunga Mountain range, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo. Home to the endangered Mountain Gorillas and the rare, striking Golden Monkeys, it offers a truly unique wildlife experience.`,
+    tourDetails: [
+      {
+        title: 'Local Maasai Guides',
+        description:
+          'Our experienced Maasai guides will share their deep knowledge of their culture, traditions, and the local ecosystem.',
+        icon: Users,
+      },
+      {
+        title: 'Traditional Accommodations',
+        description:
+          'Stay in traditional Maasai-style accommodations, specially adapted for visitors while maintaining authenticity.',
+        icon: Tent,
+      },
+      {
+        title: 'Cultural Activities',
+        description:
+          'Participate in a wide range of cultural activities, from traditional dances to craft-making and herding.',
+        icon: Music,
+      },
+      {
+        title: 'Small Groups',
+        description:
+          'With a maximum of 10 participants, you are guaranteed an intimate and personalized cultural experience.',
+        icon: Users,
+      },
+      {
+        title: 'Wildlife Encounters',
+        description:
+          'Learn about the Maasais relationship with wildlife and potentially spot animals on guided walks.',
+        icon: Camera,
+      },
+      {
+        title: 'Sustainable Tourism',
+        description:
+          'This tour directly benefits the local Maasai community and supports sustainable cultural tourism practices.',
+        icon: Leaf,
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival and Welcome Ceremony',
+        activities: [
+          'Arrival at Maasai Mara and transfer to the Maasai village',
+          'Traditional Maasai welcome ceremony',
+          'Introduction to your host family and accommodation',
+          'Evening bonfire with storytelling and star gazing',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Daily Life and Customs',
+        activities: [
+          'Early morning livestock activities with Maasai herders',
+          'Traditional beadwork and jewelry making workshop',
+          'Afternoon nature walk with Maasai warriors, learning about medicinal plants',
+          'Evening lessons in Maasai language and dance',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Maasai Traditions and Skills',
+        activities: [
+          'Participate in preparing a traditional Maasai feast',
+          'Learn spear throwing and other traditional Maasai games',
+          'Visit to a local Maasai school and community project',
+          'Participate in a traditional Maasai ceremony',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Wildlife and Conservation',
+        activities: [
+          'Early morning wildlife spotting walk with Maasai guides',
+          'Learn about Maasai wildlife conservation efforts',
+          'Afternoon visit to a Maasai-run wildlife sanctuary',
+          'Evening traditional music and dance performance',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Reflection and Departure',
+        activities: [
+          'Morning meditation and reflection with Maasai elders',
+          'Participate in a farewell blessing ceremony',
+          'Final traditional meal with your host family',
+          'Departure from Maasai Mara',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+        title: 'Maasai Warriors',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1511282491208-41dae29a0c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+        title: 'Traditional Maasai Village',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1591376496140-90aebc9f8c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+        title: 'Maasai Beadwork',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Gorilla & Golden Monkey Tracking',
+    description:
+      'This adventure starts in Entebbe and ends in Kigali. It explores two beautiful countries Uganda & Rwanda',
+    duration: '8 days',
+    groupSize: '4-10 people',
+    location: 'Uganda | Rwanda',
+    Price: '2300',
+    image: GGMT,
+    fullDescription: `This adventure starts in Entebbe and ends in Kigali, exploring two beautiful and richly endowed countries. The lush, green rolling hills create breathtaking scenic beauty. From encountering the endangered mountain gorilla and the golden monkey to visiting Dian Fossey's grave, this journey provides a deep appreciation for the work of this renowned primatologist. Her contributions have enabled generations to continue tracking and studying the mountain gorilla.`,
     tourDetails: [
       {
         title: 'Local Maasai Guides',

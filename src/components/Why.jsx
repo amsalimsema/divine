@@ -4,10 +4,10 @@ import { MapPin, HeartHandshake, Zap, DollarSign } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 //images for safari
-import ugandaLion from '../assets/Divine-Tours-3.jpg'
-import kenyaElephant from '../assets/Divine-Tours-3.jpg'
-import tanzaniaZebras from '../assets/Divine-Tours-3.jpg'
-import rwandaGiraffe from '../assets/Divine-Tours-3.jpg'
+import UGTours from '../assets/UgandaTours.jpg'
+import TzTours from '../assets/TzTours.jpg'
+import RwTours from '../assets/RwTours.jpg'
+import KTours from '../assets/KTours.jpg'
 
 // why choose us
 const features = [
@@ -162,29 +162,29 @@ export function WhyChooseUs() {
 export function SafariAnimals() {
   const destinations = [
     {
-      src: ugandaLion,
+      src: UGTours,
       alt: 'Lion in the savanna',
       country: 'Uganda',
       tours: 15,
       slug: 'uganda-safari',
     },
     {
-      src: kenyaElephant,
+      src: KTours,
       alt: 'Elephant in the wild',
       country: 'Kenya',
       tours: 12,
       slug: 'kenya-wildlife',
     },
     {
-      src: tanzaniaZebras,
+      src: TzTours,
       alt: 'Zebras grazing',
       country: 'Tanzania',
       tours: 18,
       slug: 'tanzania-adventure',
     },
     {
-      src: rwandaGiraffe,
-      alt: 'Giraffe close-up',
+      src: RwTours,
+      alt: 'Gorilla close-up',
       country: 'Rwanda',
       tours: 10,
       slug: 'rwanda-expedition',

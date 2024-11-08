@@ -100,7 +100,7 @@ export default function NavMenu() {
               </a>
             </div>
             <a
-              href='https://booking.divineafricantours.com'
+              href='https://payments.pesapal.com/divineafricantours'
               target='_blank'
               rel='noopener noreferrer'
               className='flex items-center px-4 py-1 bg-white text-green-700 rounded-full font-semibold hover:bg-green-100 transition-colors duration-300'

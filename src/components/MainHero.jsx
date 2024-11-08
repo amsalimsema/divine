@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 // Import desktop images
-import wildAfricaDesktop from '../assets/Divine-Tours-3.webp'
-import ancientCulturesDesktop from '../assets/Divine-African-Tours-1.webp'
+import wildAfricaDesktop from '../assets/UgandaTours.jpg'
+import ancientCulturesDesktop from '../assets/Gorilla_rwanda.jpg'
 import luxuryAdventureDesktop from '../assets/divine.jpg'
 
 // Import mobile images

@@ -1,12 +1,17 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Clock, Users } from 'lucide-react'
 
+import UGTours from '../assets/Gorilla.jpg'
+import UgandaTours from '../assets/UgandaTours.jpg'
+import TzTours from '../assets/TzTours.jpg'
+import RwTours from '../assets/RwTours.jpg'
+import KTours from '../assets/KTours.jpg'
+
 // Mock data for tours
 const toursData = {
   'uganda-safari': {
     name: 'Uganda',
-    image:
-      'https://images.unsplash.com/photo-1672932238132-3cf53963c73c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: UgandaTours,
     tours: [
       {
         id: 1,
@@ -14,8 +19,7 @@ const toursData = {
         duration: '3 days',
         groupSize: '8',
         price: 1500,
-        image:
-          'https://images.unsplash.com/photo-1536327327725-804520febf13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: UGTours,
         description:
           'Get up close with mountain gorillas in their natural habitat.',
         link: '/tour/bwindi-gorilla-tracking',
@@ -47,8 +51,7 @@ const toursData = {
   },
   'kenya-wildlife': {
     name: 'Kenya',
-    image:
-      'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&q=80&w=1467&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: KTours,
     tours: [
       {
         id: 1,
@@ -89,8 +92,7 @@ const toursData = {
   },
   'tanzania-adventure': {
     name: 'Tanzania',
-    image:
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1468&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: TzTours,
     tours: [
       {
         id: 1,
@@ -98,8 +100,7 @@ const toursData = {
         duration: '5 days',
         groupSize: '8',
         price: 2000,
-        image:
-          'https://images.unsplash.com/photo-1535430187717-2a5c3abe9ac2?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3',
+        image: TzTours,
         description: 'Follow the great migration through the Serengeti plains.',
         link: '/tours/tanzania/serengeti-migration',
       },
@@ -130,8 +131,7 @@ const toursData = {
   },
   'rwanda-expedition': {
     name: 'Rwanda',
-    image:
-      'https://images.unsplash.com/photo-1619451683327-8d6fed1ee21a?auto=format&fit=crop&q=80&w=1471&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: RwTours,
     tours: [
       {
         id: 1,
