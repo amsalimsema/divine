@@ -72,7 +72,7 @@ const tourPackages = [
     itinerary: [
       {
         day: 1,
-        title: 'KAMPALA - BWINDI IMPENETRABLE NATIONAL PARK',
+        title: 'Kampala - Bwindi Impenetrable National Park',
         activities: [
           'An experienced tour driver/guide will pick you up from the airport for transfer to Bwindi Impenetrable National Park.',
           'Enjoy a stop at the equator to stand in both the Northern and Southern hemispheres and take photos.',
@@ -83,7 +83,7 @@ const tourPackages = [
       },
       {
         day: 2,
-        title: 'GORILLA TRACKING AND BATWA CULTURAL EXPERIENCE',
+        title: 'Gorilla Tracking and Batwa cultural Experience',
         activities: [
           'Start with an early breakfast, then proceed to the park headquarters for a briefing on gorilla trekking guidelines.',
           'Rangers will lead you into the rainforest to begin your search for the gorillas, a challenging but unforgettable experience.',
@@ -100,7 +100,7 @@ const tourPackages = [
       },
       {
         day: 3,
-        title: 'BWINDI IMPENETRABLE NATIONAL PARK – KAMPALA',
+        title: 'Bwindi Impenetrable National Park - Kampala',
         activities: [
           'Early breakfast and depart for Kampala.',
           'Stop for lunch en route.',
