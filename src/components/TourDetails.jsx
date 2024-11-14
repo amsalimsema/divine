@@ -592,7 +592,7 @@ export default function TourDetails() {
                         </div>
                         <div>
                           <h3 className='text-lg font-medium text-gray-800'>
-                            DAY {day.day}
+                            Day {day.day}
                           </h3>
                           <p className='text-base text-gray-800 font-bold'>
                             {day.title}
