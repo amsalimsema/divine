@@ -78,7 +78,9 @@ const tourPackages = [
       {
         title: 'Tour Cost',
         icon: DollarSign,
-        items: ['Rate per person sharing in a twin/ Double room - $1640'],
+        items: [
+          'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
+        ],
       },
       {
         title: 'Price Includes',
@@ -121,7 +123,7 @@ const tourPackages = [
           'An experienced tour driver/guide will pick you up from the airport for transfer to Bwindi Impenetrable National Park.',
           'Enjoy a stop at the equator to stand in both the Northern and Southern hemispheres and take photos.',
           'Continue the journey with a lunch stop in Mbarara.',
-          'Dinner and overnight stay at Gorilla Mist Lodge.',
+          'Dinner and an overnight stay at a prebooked lodge of your choice.',
           'Meal plan includes breakfast, lunch, and dinner.',
         ],
       },
