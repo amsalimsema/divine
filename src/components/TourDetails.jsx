@@ -8,12 +8,16 @@ import {
   Calendar,
   Check,
   Camera,
-  Compass,
+  //Compass,
   Coffee,
+  Circle,
   Tent,
+  CircleOff,
   // DollarSign,
   Music,
   Leaf,
+  Eye,
+  DollarSign,
 } from 'lucide-react'
 import GGMT from '../assets/golden_tracking.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
@@ -31,42 +35,82 @@ const tourPackages = [
     // Price: '',
     image: BGT,
     fullDescription: `Bwindi Impenetrable National park is one of the most popular gorilla trekking destinations sheltering more than half the World's surviving population  of mountain gorillas in more than 40 families, 20 of which are habituated for trekking. Bwindi forest was gazetted into a National park in 1991 and was later declared a UNESCO world heritage site in 1994.`,
+
+    // tourDetails: [
+    //   {
+    //     title: 'Tour Cost',
+    //     description:
+    //       'Our experienced local guides are passionate about wildlife and have in-depth knowledge of the Serengeti ecosystem.',
+    //     icon: Compass,
+    //   },
+    //   {
+    //     title: 'Price Includes',
+    //     description:
+    //       'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide, full board accommodation, gorilla tracking permit, entrance fees, and the Batwa cultural experience.',
+    //     icon: Tent,
+    //   },
+    //   {
+    //     title: 'Game Drives',
+    //     description:
+    //       'Enjoy daily game drives in custom-designed 4x4 vehicles, offering unobstructed views of the wildlife.',
+    //     icon: Camera,
+    //   },
+    //   {
+    //     title: 'Small Groups',
+    //     description:
+    //       "With a maximum of 12 participants, you're guaranteed a personalized experience and ample opportunity to interact with your guide.",
+    //     icon: Users,
+    //   },
+    //   {
+    //     title: 'Cultural Encounters',
+    //     description:
+    //       'Visit a Maasai village to learn about their traditional way of life and how they coexist with wildlife.',
+    //     icon: Coffee,
+    //   },
+    //   {
+    //     title: 'Photographic Opportunities',
+    //     description:
+    //       "Whether you're a professional or amateur photographer, you'll have plenty of chances to capture stunning wildlife and landscape shots.",
+    //     icon: Camera,
+    //   },
+    // ],
     tourDetails: [
       {
-        title: 'Expert Guides',
-        description:
-          'Our experienced local guides are passionate about wildlife and have in-depth knowledge of the Serengeti ecosystem.',
-        icon: Compass,
+        title: 'Tour Cost',
+        icon: DollarSign,
+        items: ['Rate per person sharing in a twin/ Double room - $1640'],
       },
       {
-        title: 'Comfortable Accommodations',
-        description:
-          'Stay in a mix of lodges and luxury tented camps, carefully selected for their comfort, location, and sustainability practices.',
-        icon: Tent,
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide',
+          'Full Board accomodation',
+          'Gorilla tracking permit',
+          'The Batwa cultural experience',
+          'Entrance Fee',
+        ],
       },
       {
-        title: 'Game Drives',
-        description:
-          'Enjoy daily game drives in custom-designed 4x4 vehicles, offering unobstructed views of the wildlife.',
-        icon: Camera,
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Laundry services',
+          'Any Private Expenses',
+          'Tips to the local guides',
+        ],
       },
       {
-        title: 'Small Groups',
-        description:
-          "With a maximum of 12 participants, you're guaranteed a personalized experience and ample opportunity to interact with your guide.",
-        icon: Users,
-      },
-      {
-        title: 'Cultural Encounters',
-        description:
-          'Visit a Maasai village to learn about their traditional way of life and how they coexist with wildlife.',
-        icon: Coffee,
-      },
-      {
-        title: 'Photographic Opportunities',
-        description:
-          "Whether you're a professional or amateur photographer, you'll have plenty of chances to capture stunning wildlife and landscape shots.",
-        icon: Camera,
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Encounter with the Gorillas',
+          'The Batwa cultural experience',
+          'Hospitable people',
+          'Breathtaking scenic beauty',
+          'Professional & knowledgeable safari guide',
+        ],
       },
     ],
     itinerary: [
@@ -571,11 +615,45 @@ export default function TourDetails() {
                         <h3 className='text-lg font-semibold text-gray-800 mb-2'>
                           {detail.title}
                         </h3>
-                        <p className='text-gray-600'>{detail.description}</p>
+
+                        <ul className='space-y-2'>
+                          {detail.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className='flex items-start'>
+                              <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
+                              <span className='text-gray-700'>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   ))}
                 </div>
+
+                {/*
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                  {tour.tourDetails.map((detail, index) => (
+                    <div
+                      key={index}
+                      className='bg-gray-50 rounded-lg p-2 flex items-start'
+                    >
+                      <div className='flex-shrink-0 mr-4'>
+                        <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
+                          <detail.icon className='w-6 h-6 text-green-600' />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className='text-lg font-semibold text-gray-800 mb-2'>
+                          {detail.title}
+                        </h3>
+                        <p className='text-gray-600'>{detail.description}</p>
+                        <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
+                        <span className='text-gray-700'>
+                          {detail.description}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div> */}
               </div>
             )}
             {activeTab === 'itinerary' && (
@@ -583,6 +661,12 @@ export default function TourDetails() {
                 <h2 className='text-2xl font-semibold mb-6 text-gray-800'>
                   Itinerary
                 </h2>
+                {/* <img
+                  src={tour.image}
+                  alt={tour.title}
+                  className='w-full h-64 object-cover rounded'
+                /> */}
+
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   {tour.itinerary.map((day, index) => (
                     <div key={index} className='bg-gray-50 rounded-lg p-2'>
