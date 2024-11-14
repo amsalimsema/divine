@@ -11,7 +11,7 @@ import {
   Compass,
   Coffee,
   Tent,
-  DollarSign,
+  // DollarSign,
   Music,
   Leaf,
 } from 'lucide-react'
@@ -26,11 +26,11 @@ const tourPackages = [
     description:
       'The safari starts in Rwanda “the land of a thousand hills” to Bwindi Impenetrable National Park - home to the Mountain Gorilla',
     duration: '3 days',
-    groupSize: '6-12 people',
-    location: 'Rwanda',
-    Price: '1500',
+    // groupSize: '',
+    location: 'Bwindi Impenetrable National Park - Uganda',
+    // Price: '',
     image: BGT,
-    fullDescription: `The safari begins in Rwanda, known as the "Land of a Thousand Hills," and takes you to Bwindi Impenetrable National Park, the renowned habitat of the majestic Mountain Gorillas.It offers an exciting and adventurous encounter with the gentle giants - the endangered Mountain Gorillas.`,
+    fullDescription: `Bwindi Impenetrable National park is one of the most popular gorilla trekking destinations sheltering more than half the World's surviving population  of mountain gorillas in more than 40 families, 20 of which are habituated for trekking. Bwindi forest was gazetted into a National park in 1991 and was later declared a UNESCO world heritage site in 1994.`,
     tourDetails: [
       {
         title: 'Expert Guides',
@@ -72,76 +72,47 @@ const tourPackages = [
     itinerary: [
       {
         day: 1,
-        title: 'Arrival in Arusha',
+        title: 'KAMPALA - BWINDI IMPENETRABLE NATIONAL PARK',
         activities: [
-          'Airport pickup and transfer to your hotel',
-          'Welcome dinner and trip briefing',
+          'An experienced tour driver/guide will pick you up from the airport for transfer to Bwindi Impenetrable National Park.',
+          'Enjoy a stop at the equator to stand in both the Northern and Southern hemispheres and take photos.',
+          'Continue the journey with a lunch stop in Mbarara.',
+          'Dinner and overnight stay at Gorilla Mist Lodge.',
+          'Meal plan includes breakfast, lunch, and dinner.',
         ],
       },
       {
         day: 2,
-        title: 'Arusha to Serengeti National Park',
+        title: 'GORILLA TRACKING AND BATWA CULTURAL EXPERIENCE',
         activities: [
-          'Morning flight to Serengeti National Park',
-          'Afternoon game drive',
-          'Overnight at Serengeti lodge',
+          'Start with an early breakfast, then proceed to the park headquarters for a briefing on gorilla trekking guidelines.',
+          'Rangers will lead you into the rainforest to begin your search for the gorillas, a challenging but unforgettable experience.',
+          'Carry raincoats and boots due to unpredictable weather.',
+          'Porters are available for a small fee to assist with carrying luggage.',
+          'On encountering gorillas, maintain a 6-meter distance as guided by rangers.',
+          'Tracking duration is unpredictable, typically taking 2 to 8 hours depending on gorilla locations.',
+          'Physical fitness is recommended for trekkers.',
+          'After the trek, return to the lodge for lunch.',
+          'Optionally, visit the Batwa community in the afternoon to enjoy cultural performances.',
+          'Dinner and overnight stay at Gorilla Mist Lodge.',
+          'Meal plan includes breakfast, lunch, and dinner.',
         ],
       },
       {
         day: 3,
-        title: 'Serengeti National Park',
+        title: 'BWINDI IMPENETRABLE NATIONAL PARK – KAMPALA',
         activities: [
-          'Full day of game drives in different areas of the Serengeti',
-          'Optional hot air balloon safari (additional cost)',
-          'Evening at luxury tented camp',
-        ],
-      },
-      {
-        day: 4,
-        title: 'Serengeti National Park',
-        activities: [
-          'Full day of game drives in different areas of the Serengeti',
-          'Evening at luxury tented camp',
-        ],
-      },
-      {
-        day: 5,
-        title: 'Serengeti National Park',
-        activities: [
-          'Full day of game drives in different areas of the Serengeti',
-          'Evening at luxury tented camp',
-        ],
-      },
-      {
-        day: 6,
-        title: 'Serengeti to Ngorongoro Crater',
-        activities: [
-          'Morning game drive in Serengeti',
-          'Afternoon transfer to Ngorongoro Crater',
-          'Overnight at crater rim lodge',
-        ],
-      },
-      {
-        day: 7,
-        title: 'Ngorongoro Crater and Departure',
-        activities: [
-          'Early morning crater descent for game viewing',
-          'Afternoon transfer to Arusha for departure flights',
+          'Early breakfast and depart for Kampala.',
+          'Stop for lunch en route.',
+          'Continue to Kampala, then transfer to Entebbe International Airport.',
+          'Arrive at the airport in time for your return flight, depending on flight schedule.',
         ],
       },
     ],
     photos: [
       {
-        url: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Serengeti Landscape',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Lions in the Wild',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Elephant Herd',
+        url: BGT,
+        title: 'Mountain Gorilla',
       },
     ],
   },
@@ -536,18 +507,18 @@ export default function TourDetails() {
                 <Clock className='w-5 h-5 mr-2' />
                 <span>{tour.duration}</span>
               </div>
-              <div className='flex items-center'>
+              {/* <div className='flex items-center'>
                 <Users className='w-5 h-5 mr-2' />
                 <span>{tour.groupSize}</span>
-              </div>
+              </div> */}
               <div className='flex items-center'>
                 <MapPin className='w-5 h-5 mr-2' />
                 <span>{tour.location}</span>
               </div>
-              <div className='flex items-center'>
+              {/* <div className='flex items-center'>
                 <DollarSign className='w-5 h-5 mr-0' />
                 <span>{tour.Price}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -620,10 +591,12 @@ export default function TourDetails() {
                           <Calendar className='w-6 h-6 text-green-600' />
                         </div>
                         <div>
-                          <h3 className='text-lg font-semibold text-gray-800'>
-                            Day {day.day}
+                          <h3 className='text-lg font-medium text-gray-800'>
+                            DAY {day.day}
                           </h3>
-                          <p className='text-sm text-gray-600'>{day.title}</p>
+                          <p className='text-base text-gray-800 font-bold'>
+                            {day.title}
+                          </p>
                         </div>
                       </div>
                       <ul className='space-y-2'>

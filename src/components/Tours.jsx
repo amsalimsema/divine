@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
-import { ChevronLeft, ChevronRight, Clock, Users, MapPin } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Clock, MapPin } from 'lucide-react'
 
 import GB from '../assets/Gorilla.jpg'
 import Monkey from '../assets/Monkey.jpg'
@@ -13,10 +13,9 @@ const tourPackages = [
     id: 1,
     title: 'Bwindi Gorilla Tracking',
     description:
-      'The safari begins in Rwanda, the "Land of a Thousand Hills," and leads you to Bwindi Impenetrable National Park, the famous home of the majestic Mountain Gorillas.',
+      'Bwindi Impenetrable National Park, a UNESCO site, is renowned for housing over half of the world’s mountain gorillas, with 20 families available for trekking.',
     duration: '3 days',
-    groupSize: '6-12 people',
-    location: 'Bwindi Impenetrable National Park ',
+    location: 'Bwindi Impenetrable National Park',
     image: GB,
   },
   ,
@@ -203,10 +202,10 @@ export default function Component() {
                         <Clock className='w-4 h-4 mr-2 flex-shrink-0' />
                         <span>{pkg.duration}</span>
                       </div>
-                      <div className='flex items-center text-sm text-gray-900'>
+                      {/* <div className='flex items-center text-sm text-gray-900'>
                         <Users className='w-4 h-4 mr-2 flex-shrink-0' />
                         <span>{pkg.groupSize}</span>
-                      </div>
+                      </div> */}
                       <div className='flex items-center text-sm text-gray-900'>
                         <MapPin className='w-4 h-4 mr-2 flex-shrink-0' />
                         <span>{pkg.location}</span>
