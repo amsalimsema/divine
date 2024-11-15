@@ -75,6 +75,7 @@ const tourPackages = [
         title: 'Tour Cost',
         icon: DollarSign,
         items: [
+          '$1650',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
         ],
       },
