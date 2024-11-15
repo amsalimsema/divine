@@ -31,45 +31,6 @@ const tourPackages = [
     // Price: '',
     image: BGT,
     fullDescription: `Bwindi Impenetrable National park is one of the most popular gorilla trekking destinations sheltering more than half the World's surviving population  of mountain gorillas in more than 40 families, 20 of which are habituated for trekking. Bwindi forest was gazetted into a National park in 1991 and was later declared a UNESCO world heritage site in 1994.`,
-
-    // tourDetails: [
-    //   {
-    //     title: 'Tour Cost',
-    //     description:
-    //       'Our experienced local guides are passionate about wildlife and have in-depth knowledge of the Serengeti ecosystem.',
-    //     icon: Compass,
-    //   },
-    //   {
-    //     title: 'Price Includes',
-    //     description:
-    //       'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide, full board accommodation, gorilla tracking permit, entrance fees, and the Batwa cultural experience.',
-    //     icon: Tent,
-    //   },
-    //   {
-    //     title: 'Game Drives',
-    //     description:
-    //       'Enjoy daily game drives in custom-designed 4x4 vehicles, offering unobstructed views of the wildlife.',
-    //     icon: Camera,
-    //   },
-    //   {
-    //     title: 'Small Groups',
-    //     description:
-    //       "With a maximum of 12 participants, you're guaranteed a personalized experience and ample opportunity to interact with your guide.",
-    //     icon: Users,
-    //   },
-    //   {
-    //     title: 'Cultural Encounters',
-    //     description:
-    //       'Visit a Maasai village to learn about their traditional way of life and how they coexist with wildlife.',
-    //     icon: Coffee,
-    //   },
-    //   {
-    //     title: 'Photographic Opportunities',
-    //     description:
-    //       "Whether you're a professional or amateur photographer, you'll have plenty of chances to capture stunning wildlife and landscape shots.",
-    //     icon: Camera,
-    //   },
-    // ],
     tourDetails: [
       {
         title: 'Tour Cost',
@@ -159,352 +120,106 @@ const tourPackages = [
       },
     ],
   },
-
   {
     id: 2,
     title: 'Primate Safari',
-    description:
-      'Experience the rich traditions and daily life of the Maasai people in this immersive cultural adventure.',
+    description: ' ',
     duration: '6 days',
-    groupSize: '4-10 people',
-    location: 'Uganda | Rwanda',
-    Price: '2300',
-    image: PG,
-    fullDescription: `This safari offers thrilling encounters with endangered Mountain Gorillas and the rare, beautiful Golden Monkeys. Beginning in Uganda, "The Pearl of Africa," and continuing into Rwanda, "The Land of a Thousand Hills," tracking these primates can be challenging, but the experience of meeting them in their natural habitat is truly rewarding.`,
-    tourDetails: [
-      {
-        title: 'Local Maasai Guides',
-        description:
-          'Our experienced Maasai guides will share their deep knowledge of their culture, traditions, and the local ecosystem.',
-        icon: Users,
-      },
-      {
-        title: 'Traditional Accommodations',
-        description:
-          'Stay in traditional Maasai-style accommodations, specially adapted for visitors while maintaining authenticity.',
-        icon: Tent,
-      },
-      {
-        title: 'Cultural Activities',
-        description:
-          'Participate in a wide range of cultural activities, from traditional dances to craft-making and herding.',
-        icon: Music,
-      },
-      {
-        title: 'Small Groups',
-        description:
-          'With a maximum of 10 participants, you are guaranteed an intimate and personalized cultural experience.',
-        icon: Users,
-      },
-      {
-        title: 'Wildlife Encounters',
-        description:
-          'Learn about the Maasais relationship with wildlife and potentially spot animals on guided walks.',
-        icon: Camera,
-      },
-      {
-        title: 'Sustainable Tourism',
-        description:
-          'This tour directly benefits the local Maasai community and supports sustainable cultural tourism practices.',
-        icon: Leaf,
-      },
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arrival and Welcome Ceremony',
-        activities: [
-          'Arrival at Maasai Mara and transfer to the Maasai village',
-          'Traditional Maasai welcome ceremony',
-          'Introduction to your host family and accommodation',
-          'Evening bonfire with storytelling and star gazing',
-        ],
-      },
-      {
-        day: 2,
-        title: 'Daily Life and Customs',
-        activities: [
-          'Early morning livestock activities with Maasai herders',
-          'Traditional beadwork and jewelry making workshop',
-          'Afternoon nature walk with Maasai warriors, learning about medicinal plants',
-          'Evening lessons in Maasai language and dance',
-        ],
-      },
-      {
-        day: 3,
-        title: 'Maasai Traditions and Skills',
-        activities: [
-          'Participate in preparing a traditional Maasai feast',
-          'Learn spear throwing and other traditional Maasai games',
-          'Visit to a local Maasai school and community project',
-          'Participate in a traditional Maasai ceremony',
-        ],
-      },
-      {
-        day: 4,
-        title: 'Wildlife and Conservation',
-        activities: [
-          'Early morning wildlife spotting walk with Maasai guides',
-          'Learn about Maasai wildlife conservation efforts',
-          'Afternoon visit to a Maasai-run wildlife sanctuary',
-          'Evening traditional music and dance performance',
-        ],
-      },
-      {
-        day: 5,
-        title: 'Reflection and Departure',
-        activities: [
-          'Morning meditation and reflection with Maasai elders',
-          'Participate in a farewell blessing ceremony',
-          'Final traditional meal with your host family',
-          'Departure from Maasai Mara',
-        ],
-      },
-    ],
-    photos: [
-      {
-        url: 'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Warriors',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1511282491208-41dae29a0c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Traditional Maasai Village',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1591376496140-90aebc9f8c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Beadwork',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Volcanoes Gorilla Tracking',
-    description:
-      'This 2-day Gorilla Safari, starts and ends in Rwanda, explores Volcanoes National Park in northwestern Rwanda, home to endangered Mountain Gorillas and rare Golden Monkeys.',
-    duration: '2 days',
-    groupSize: '4-10 people',
-    location: 'Rwanda',
-    Price: '2300',
-    image: PG,
-    fullDescription: `This 2-day Gorilla Safari begins and ends in Rwanda, taking you to Volcanoes National Park in northwestern Rwanda. Spanning 160 square kilometers of lush rainforest, the park encompasses eight volcanoes in the Virunga Mountain range, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo. Home to the endangered Mountain Gorillas and the rare, striking Golden Monkeys, it offers a truly unique wildlife experience.`,
-    tourDetails: [
-      {
-        title: 'Local Maasai Guides',
-        description:
-          'Our experienced Maasai guides will share their deep knowledge of their culture, traditions, and the local ecosystem.',
-        icon: Users,
-      },
-      {
-        title: 'Traditional Accommodations',
-        description:
-          'Stay in traditional Maasai-style accommodations, specially adapted for visitors while maintaining authenticity.',
-        icon: Tent,
-      },
-      {
-        title: 'Cultural Activities',
-        description:
-          'Participate in a wide range of cultural activities, from traditional dances to craft-making and herding.',
-        icon: Music,
-      },
-      {
-        title: 'Small Groups',
-        description:
-          'With a maximum of 10 participants, you are guaranteed an intimate and personalized cultural experience.',
-        icon: Users,
-      },
-      {
-        title: 'Wildlife Encounters',
-        description:
-          'Learn about the Maasais relationship with wildlife and potentially spot animals on guided walks.',
-        icon: Camera,
-      },
-      {
-        title: 'Sustainable Tourism',
-        description:
-          'This tour directly benefits the local Maasai community and supports sustainable cultural tourism practices.',
-        icon: Leaf,
-      },
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arrival and Welcome Ceremony',
-        activities: [
-          'Arrival at Maasai Mara and transfer to the Maasai village',
-          'Traditional Maasai welcome ceremony',
-          'Introduction to your host family and accommodation',
-          'Evening bonfire with storytelling and star gazing',
-        ],
-      },
-      {
-        day: 2,
-        title: 'Daily Life and Customs',
-        activities: [
-          'Early morning livestock activities with Maasai herders',
-          'Traditional beadwork and jewelry making workshop',
-          'Afternoon nature walk with Maasai warriors, learning about medicinal plants',
-          'Evening lessons in Maasai language and dance',
-        ],
-      },
-      {
-        day: 3,
-        title: 'Maasai Traditions and Skills',
-        activities: [
-          'Participate in preparing a traditional Maasai feast',
-          'Learn spear throwing and other traditional Maasai games',
-          'Visit to a local Maasai school and community project',
-          'Participate in a traditional Maasai ceremony',
-        ],
-      },
-      {
-        day: 4,
-        title: 'Wildlife and Conservation',
-        activities: [
-          'Early morning wildlife spotting walk with Maasai guides',
-          'Learn about Maasai wildlife conservation efforts',
-          'Afternoon visit to a Maasai-run wildlife sanctuary',
-          'Evening traditional music and dance performance',
-        ],
-      },
-      {
-        day: 5,
-        title: 'Reflection and Departure',
-        activities: [
-          'Morning meditation and reflection with Maasai elders',
-          'Participate in a farewell blessing ceremony',
-          'Final traditional meal with your host family',
-          'Departure from Maasai Mara',
-        ],
-      },
-    ],
-    photos: [
-      {
-        url: 'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Warriors',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1511282491208-41dae29a0c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Traditional Maasai Village',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1591376496140-90aebc9f8c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Beadwork',
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: 'Gorilla & Golden Monkey Tracking',
-    description:
-      'This adventure starts in Entebbe and ends in Kigali. It explores two beautiful countries Uganda & Rwanda',
-    duration: '8 days',
-    groupSize: '4-10 people',
-    location: 'Uganda | Rwanda',
-    Price: '2300',
+    // groupSize: '',
+    location: 'Bwindi Impenetrable & Volcanoes National Park',
+    // Price: '',
     image: GGMT,
-    fullDescription: `This adventure starts in Entebbe and ends in Kigali, exploring two beautiful and richly endowed countries. The lush, green rolling hills create breathtaking scenic beauty. From encountering the endangered mountain gorilla and the golden monkey to visiting Dian Fossey's grave, this journey provides a deep appreciation for the work of this renowned primatologist. Her contributions have enabled generations to continue tracking and studying the mountain gorilla.`,
+    fullDescription: `Embark on a thrilling journey to encounter two of the world's most fascinating primates—the endangered Mountain Gorilla and the elusive, stunning Golden Monkey. Your adventure begins in Uganda, fondly known as "The Pearl of Africa," and takes you into Rwanda, the picturesque "Land of a Thousand Hills." While tracking these remarkable creatures can be challenging, the reward is beyond measure—standing face-to-face with these rare primates is a moment that will stay with you forever.`,
     tourDetails: [
       {
-        title: 'Local Maasai Guides',
-        description:
-          'Our experienced Maasai guides will share their deep knowledge of their culture, traditions, and the local ecosystem.',
-        icon: Users,
+        title: 'Tour Cost',
+        icon: DollarSign,
+        items: [
+          '$1650',
+          'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
+        ],
       },
       {
-        title: 'Traditional Accommodations',
-        description:
-          'Stay in traditional Maasai-style accommodations, specially adapted for visitors while maintaining authenticity.',
-        icon: Tent,
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide',
+          'Full Board accomodation',
+          'Gorilla tracking permit',
+          'Golden Monkey tracking permit',
+          'City tour',
+        ],
       },
       {
-        title: 'Cultural Activities',
-        description:
-          'Participate in a wide range of cultural activities, from traditional dances to craft-making and herding.',
-        icon: Music,
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Laundry services',
+          'Any Private Expenses',
+          'Tips to the local guides',
+        ],
       },
       {
-        title: 'Small Groups',
-        description:
-          'With a maximum of 10 participants, you are guaranteed an intimate and personalized cultural experience.',
-        icon: Users,
-      },
-      {
-        title: 'Wildlife Encounters',
-        description:
-          'Learn about the Maasais relationship with wildlife and potentially spot animals on guided walks.',
-        icon: Camera,
-      },
-      {
-        title: 'Sustainable Tourism',
-        description:
-          'This tour directly benefits the local Maasai community and supports sustainable cultural tourism practices.',
-        icon: Leaf,
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Encounter with the Gorillas',
+          'Golden monkey tracking',
+          'Hospitable people',
+          'Breathtaking scenic beauty',
+          'Professional & knowledgeable safari guide',
+        ],
       },
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Arrival and Welcome Ceremony',
+        title: 'Arrival',
         activities: [
-          'Arrival at Maasai Mara and transfer to the Maasai village',
-          'Traditional Maasai welcome ceremony',
-          'Introduction to your host family and accommodation',
-          'Evening bonfire with storytelling and star gazing',
+          'Upon arrival at Entebbe International Airport, you will be welcomed by the tour guide and transferred to your hotel, where you will check in and receive a safari briefing.',
         ],
       },
       {
         day: 2,
-        title: 'Daily Life and Customs',
+        title: 'Transfer to Bwindi Impenetrable National Park ',
         activities: [
-          'Early morning livestock activities with Maasai herders',
-          'Traditional beadwork and jewelry making workshop',
-          'Afternoon nature walk with Maasai warriors, learning about medicinal plants',
-          'Evening lessons in Maasai language and dance',
+          "After an early breakfast, transfer to Bwindi Impenetrable National Park with a stop at the equator to stand in both hemispheres and observe water's anti-clockwise movement And take photographs. Enjoy a lunch break in Mbarara and breathtaking scenery along the way",
         ],
       },
       {
         day: 3,
-        title: 'Maasai Traditions and Skills',
+        title: 'Gorilla Tracking',
         activities: [
-          'Participate in preparing a traditional Maasai feast',
-          'Learn spear throwing and other traditional Maasai games',
-          'Visit to a local Maasai school and community project',
-          'Participate in a traditional Maasai ceremony',
+          'After an early breakfast, head to the park headquarters for a Gorilla trekking briefing, where rangers explain the dos and don’ts. Accompanied by rangers, begin your trek through the rainforest in search of these gentle giants. Though challenging, the experience is rewarding, offering one hour to observe the Gorillas from a safe 6-meter distance as they play. Trekkers are advised to be physically fit, carry raincoats and boots due to unpredictable weather, and can hire porters for luggage at a small fee.',
         ],
       },
       {
         day: 4,
-        title: 'Wildlife and Conservation',
+        title: 'Transfer to Volcanoes National Park',
         activities: [
-          'Early morning wildlife spotting walk with Maasai guides',
-          'Learn about Maasai wildlife conservation efforts',
-          'Afternoon visit to a Maasai-run wildlife sanctuary',
-          'Evening traditional music and dance performance',
+          'Volcanoes National Park in northwestern Rwanda, home to the Virunga Mountain range and eight volcanoes, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo, is known for its stunning landscapes and natural beauty. It also serves as a sanctuary for endangered Mountain Gorillas and the rare Golden Monkey, making it a must-visit destination for nature lovers and adventurers.',
         ],
       },
       {
         day: 5,
-        title: 'Reflection and Departure',
+        title: 'Tracking Golden Monkeys',
         activities: [
-          'Morning meditation and reflection with Maasai elders',
-          'Participate in a farewell blessing ceremony',
-          'Final traditional meal with your host family',
-          'Departure from Maasai Mara',
+          'After breakfast, head to the park headquarters for a briefing on Golden Monkey tracking, then enjoy the rare opportunity to see these beautiful primates, found only in Uganda and Rwanda.',
+        ],
+      },
+      {
+        day: 6,
+        title: 'City Tour And Departure',
+        activities: [
+          'Depending on your flight time, you may tour Kigali, visiting the Genocide Memorial Museum, local craft shops, and markets before being dropped off at Kigali International Airport for your flight home.',
         ],
       },
     ],
     photos: [
       {
-        url: 'https://images.unsplash.com/photo-1489367874814-f5d040621dd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Warriors',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1511282491208-41dae29a0c6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Traditional Maasai Village',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1591376496140-90aebc9f8c2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
-        title: 'Maasai Beadwork',
+        url: GGMT,
+        title: 'Golden Monkey',
       },
     ],
   },

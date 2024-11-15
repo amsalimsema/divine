@@ -5,8 +5,8 @@ import { ChevronLeft, ChevronRight, Clock, MapPin } from 'lucide-react'
 
 import GB from '../assets/Gorilla.jpg'
 import Monkey from '../assets/Monkey.jpg'
-import GV from '../assets/Gorilla_Volcano.jpg'
-import GR from '../assets/Gorilla_rwanda.jpg'
+// import GV from '../assets/Gorilla_Volcano.jpg'
+// import GR from '../assets/Gorilla_rwanda.jpg'
 
 const tourPackages = [
   {
@@ -18,58 +18,14 @@ const tourPackages = [
     location: 'Bwindi Impenetrable National Park',
     image: GB,
   },
-  ,
   {
     id: 2,
     title: 'Primate Safari',
     description:
       'This safari offers unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys, starting in Uganda and continuing into Rwanda. Deeply rewarding experience.',
     duration: '6 days',
-    groupSize: '4-8 people',
     location: 'Uganda | Rwanda',
     image: Monkey,
-  },
-  {
-    id: 3,
-    title: 'Volcanoes Gorilla Tracking',
-    description:
-      'This 2-day Gorilla Safari, starts and ends in Rwanda, explores Volcanoes National Park in northwestern Rwanda, home to endangered Mountain Gorillas and rare Golden Monkeys.',
-    duration: '2 days',
-    groupSize: '10-20 people',
-    location: 'Volcanoes National Park',
-    image: GV,
-  },
-  {
-    id: 4,
-    title: 'Gorilla & Golden Monkey Tracking',
-    description:
-      'This adventure starts in Entebbe and ends in Kigali. It explores two beautiful countries Uganda & Rwanda',
-    duration: '8 days',
-    groupSize: '6-10 people',
-    location: 'Uganda | Rwanda',
-    image: GR,
-  },
-  {
-    id: 5,
-    title: 'Victoria Falls Adventure',
-    description:
-      'Witness the power of Victoria Falls and enjoy thrilling activities in the surrounding area.',
-    duration: '6 days',
-    groupSize: '8-16 people',
-    location: 'Zimbabwe/Zambia',
-    image:
-      'https://images.unsplash.com/photo-1449104573673-83d90bf3484f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-    id: 6,
-    title: 'Gorilla Trekking Expedition',
-    description:
-      'Trek through lush forests to encounter magnificent mountain gorillas in their natural habitat.',
-    duration: '4 days',
-    groupSize: '4-8 people',
-    location: 'Uganda',
-    image:
-      'https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
   },
 ]
 
