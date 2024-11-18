@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
-  Users,
   MapPin,
   ArrowLeft,
   Calendar,
   Check,
-  Camera,
   Circle,
-  Tent,
   CircleOff,
-  Music,
-  Leaf,
   Eye,
   DollarSign,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react'
 import GGMT from '../assets/golden_tracking.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
+import GM from '../assets/GoldenMonkey.jpg'
 
 const tourPackages = [
   {
@@ -26,9 +25,7 @@ const tourPackages = [
     title: 'Bwindi Gorilla Tracking',
     description: ' ',
     duration: '3 days',
-    // groupSize: '',
     location: 'Bwindi Impenetrable National Park - Uganda',
-    // Price: '',
     image: BGT,
     fullDescription: `Bwindi Impenetrable National park is one of the most popular gorilla trekking destinations sheltering more than half the World's surviving population  of mountain gorillas in more than 40 families, 20 of which are habituated for trekking. Bwindi forest was gazetted into a National park in 1991 and was later declared a UNESCO world heritage site in 1994.`,
     tourDetails: [
@@ -125,11 +122,9 @@ const tourPackages = [
     title: 'Primate Safari',
     description: ' ',
     duration: '6 days',
-    // groupSize: '',
-    location: 'Bwindi Impenetrable & Volcanoes National Park',
-    // Price: '',
-    image: GGMT,
-    fullDescription: `Embark on a thrilling journey to encounter two of the world's most fascinating primates—the endangered Mountain Gorilla and the elusive, stunning Golden Monkey. Your adventure begins in Uganda, fondly known as "The Pearl of Africa," and takes you into Rwanda, the picturesque "Land of a Thousand Hills." While tracking these remarkable creatures can be challenging, the reward is beyond measure—standing face-to-face with these rare primates is a moment that will stay with you forever.`,
+    location: 'Uganda | Rwanda',
+    image: GM,
+    fullDescription: `Embark on a safari that promises unforgettable encounters with the endangered Mountain Gorillas and the rare, stunning Golden Monkeys. Your journey begins in Uganda, "The Pearl of Africa," and takes you into Rwanda, "The Land of a Thousand Hills." While tracking these remarkable primates can be physically demanding, the reward of witnessing them in their natural habitat is truly unparalleled.`,
     tourDetails: [
       {
         title: 'Tour Cost',
@@ -146,8 +141,8 @@ const tourPackages = [
           'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide',
           'Full Board accomodation',
           'Gorilla tracking permit',
-          'Golden Monkey tracking permit',
-          'City tour',
+          'The Batwa cultural experience',
+          'Entrance Fee',
         ],
       },
       {
@@ -165,7 +160,7 @@ const tourPackages = [
         icon: Eye,
         items: [
           'Encounter with the Gorillas',
-          'Golden monkey tracking',
+          'The Batwa cultural experience',
           'Hospitable people',
           'Breathtaking scenic beauty',
           'Professional & knowledgeable safari guide',
@@ -177,49 +172,69 @@ const tourPackages = [
         day: 1,
         title: 'Arrival',
         activities: [
-          'Upon arrival at Entebbe International Airport, you will be welcomed by the tour guide and transferred to your hotel, where you will check in and receive a safari briefing.',
+          'Arrive at Entebbe International Airport',
+          "Receive a warm welcome from the company's tour guide",
+          'Exchange greetings with the tour guide',
+          'Transfer to your hotel',
+          'Check in at your hotel',
+          'Receive a detailed briefing about your safari',
         ],
       },
       {
         day: 2,
-        title: 'Transfer to Bwindi Impenetrable National Park ',
+        title: 'Transfer to Bwindi Impenetrable National Park',
         activities: [
-          "After an early breakfast, transfer to Bwindi Impenetrable National Park with a stop at the equator to stand in both hemispheres and observe water's anti-clockwise movement And take photographs. Enjoy a lunch break in Mbarara and breathtaking scenery along the way",
+          'Have an early breakfast at the hotel',
+          'Get picked up from your hotel by the tour guide',
+          'Transfer to Bwindi Impenetrable National Park',
+          'Make a stopover at the equator',
+          'Stand in both the Southern and Northern Hemispheres simultaneously',
+          'Witness water moving anti-clockwise',
+          'Take photographs at the equator',
+          'Continue the journey to Bwindi with a lunch break in Mbarara',
+          'Enjoy the breathtaking scenery en route to Bwindi',
         ],
       },
       {
         day: 3,
         title: 'Gorilla Tracking',
         activities: [
-          'After an early breakfast, head to the park headquarters for a Gorilla trekking briefing, where rangers explain the dos and don’ts. Accompanied by rangers, begin your trek through the rainforest in search of these gentle giants. Though challenging, the experience is rewarding, offering one hour to observe the Gorillas from a safe 6-meter distance as they play. Trekkers are advised to be physically fit, carry raincoats and boots due to unpredictable weather, and can hire porters for luggage at a small fee.',
+          'Have an early morning breakfast',
+          'Proceed to the park headquarters for a briefing on Gorilla trekking',
+          'Accompany rangers into the rainforest to search for the gentle giants',
+          'Prepare for a challenging trek through the forest',
+          'Experience a memorable and rewarding encounter with gorillas',
+          'Bring essential gear such as raincoats and boots for unpredictable weather',
+          'Opt for potters to assist with carrying luggage at a small cost',
+          'Follow rangers’ guidance to maintain a 6-meter distance while observing gorillas',
+          'Spend 1 hour with the gorillas once located',
+          'Ensure physical fitness for the trek',
         ],
       },
       {
         day: 4,
         title: 'Transfer to Volcanoes National Park',
-        activities: [
-          'Volcanoes National Park in northwestern Rwanda, home to the Virunga Mountain range and eight volcanoes, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo, is known for its stunning landscapes and natural beauty. It also serves as a sanctuary for endangered Mountain Gorillas and the rare Golden Monkey, making it a must-visit destination for nature lovers and adventurers.',
-        ],
+        activities: [''],
       },
       {
         day: 5,
-        title: 'Tracking Golden Monkeys',
-        activities: [
-          'After breakfast, head to the park headquarters for a briefing on Golden Monkey tracking, then enjoy the rare opportunity to see these beautiful primates, found only in Uganda and Rwanda.',
-        ],
+        title: 'Tracking the Golden Monkeys',
+        activities: [''],
       },
       {
         day: 6,
-        title: 'City Tour And Departure',
-        activities: [
-          'Depending on your flight time, you may tour Kigali, visiting the Genocide Memorial Museum, local craft shops, and markets before being dropped off at Kigali International Airport for your flight home.',
-        ],
+        title: 'City Tour and Departure',
+        activities: [''],
       },
     ],
     photos: [
       {
-        url: GGMT,
+        url: GM,
         title: 'Golden Monkey',
+      },
+      {
+        url: PG,
+        title: 'Mountain Gorilla',
       },
     ],
   },
@@ -235,6 +250,7 @@ export default function TourDetails() {
         .replace(/(^-|-$)/g, '') === slug
   )
   const [activeTab, setActiveTab] = useState('details')
+  const [openActivities, setOpenActivities] = useState({})
 
   if (!tour) {
     return (
@@ -245,6 +261,19 @@ export default function TourDetails() {
         </Link>
       </div>
     )
+  }
+
+  const toggleActivities = (dayIndex) => {
+    setOpenActivities((prev) => ({
+      ...prev,
+      [dayIndex]: !prev[dayIndex],
+    }))
+  }
+
+  const tabVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
   }
 
   return (
@@ -265,18 +294,10 @@ export default function TourDetails() {
                 <Clock className='w-5 h-5 mr-2' />
                 <span>{tour.duration}</span>
               </div>
-              {/* <div className='flex items-center'>
-                <Users className='w-5 h-5 mr-2' />
-                <span>{tour.groupSize}</span>
-              </div> */}
               <div className='flex items-center'>
                 <MapPin className='w-5 h-5 mr-2' />
                 <span>{tour.location}</span>
               </div>
-              {/* <div className='flex items-center'>
-                <DollarSign className='w-5 h-5 mr-0' />
-                <span>{tour.Price}</span>
-              </div> */}
             </div>
           </div>
         </div>
@@ -309,133 +330,158 @@ export default function TourDetails() {
                 ))}
               </nav>
             </div>
-            {activeTab === 'details' && (
-              <div>
-                <h2 className='text-2xl font-semibold mb-6 text-gray-800'>
-                  Tour Details
-                </h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  {tour.tourDetails.map((detail, index) => (
-                    <div
-                      key={index}
-                      className='bg-gray-50 rounded-lg p-2 flex items-start'
-                    >
-                      <div className='flex-shrink-0 mr-4'>
-                        <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
-                          <detail.icon className='w-6 h-6 text-green-600' />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className='text-lg font-semibold text-gray-800 mb-2'>
-                          {detail.title}
-                        </h3>
-
-                        <ul className='space-y-2'>
-                          {detail.items.map((item, itemIndex) => (
-                            <li key={itemIndex} className='flex items-start'>
-                              <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
-                              <span className='text-gray-700'>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/*
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  {tour.tourDetails.map((detail, index) => (
-                    <div
-                      key={index}
-                      className='bg-gray-50 rounded-lg p-2 flex items-start'
-                    >
-                      <div className='flex-shrink-0 mr-4'>
-                        <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
-                          <detail.icon className='w-6 h-6 text-green-600' />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className='text-lg font-semibold text-gray-800 mb-2'>
-                          {detail.title}
-                        </h3>
-                        <p className='text-gray-600'>{detail.description}</p>
-                        <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
-                        <span className='text-gray-700'>
-                          {detail.description}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div> */}
-              </div>
-            )}
-            {activeTab === 'itinerary' && (
-              <div>
-                <h2 className='text-2xl font-semibold mb-6 text-gray-800'>
-                  Itinerary
-                </h2>
-                {/* <img
-                  src={tour.image}
-                  alt={tour.title}
-                  className='w-full h-64 object-cover rounded'
-                /> */}
-
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  {tour.itinerary.map((day, index) => (
-                    <div key={index} className='bg-gray-50 rounded-lg p-2'>
-                      <div className='flex items-center mb-4'>
-                        <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
-                          <Calendar className='w-6 h-6 text-green-600' />
+            <AnimatePresence mode='wait'>
+              {activeTab === 'details' && (
+                <motion.div
+                  key='details'
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  variants={tabVariants}
+                >
+                  <h2 className='text-2xl font-semibold mb-6 text-gray-800'>
+                    Tour Details
+                  </h2>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    {tour.tourDetails.map((detail, index) => (
+                      <motion.div
+                        key={index}
+                        className='bg-gray-50 rounded-lg p-2 flex items-start'
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <div className='flex-shrink-0 mr-4'>
+                          <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
+                            <detail.icon className='w-6 h-6 text-green-600' />
+                          </div>
                         </div>
                         <div>
-                          <h3 className='text-lg font-medium text-gray-800'>
-                            Day {day.day}
+                          <h3 className='text-lg font-semibold text-gray-800 mb-2'>
+                            {detail.title}
                           </h3>
-                          <p className='text-base text-gray-800 font-bold'>
-                            {day.title}
+                          <ul className='space-y-2'>
+                            {detail.items.map((item, itemIndex) => (
+                              <li key={itemIndex} className='flex items-start'>
+                                <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
+                                <span className='text-gray-700'>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+              {activeTab === 'itinerary' && (
+                <motion.div
+                  key='itinerary'
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  variants={tabVariants}
+                >
+                  <h2 className='text-2xl font-semibold mb-6 text-gray-800'>
+                    Itinerary
+                  </h2>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    {tour.itinerary.map((day, index) => (
+                      <motion.div
+                        key={index}
+                        className='bg-gray-50 rounded-lg p-2'
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <div
+                          className='flex items-center mb-4 cursor-pointer'
+                          onClick={() => toggleActivities(index)}
+                        >
+                          <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4'>
+                            <Calendar className='w-6 h-6 text-green-600' />
+                          </div>
+                          <div className='flex-grow'>
+                            <h3 className='text-lg font-medium text-gray-800'>
+                              Day {day.day}
+                            </h3>
+                            <p className='text-base text-gray-800 font-bold'>
+                              {day.title}
+                            </p>
+                          </div>
+                          {openActivities[index] ? (
+                            <ChevronUp className='w-5 h-5 text-gray-500' />
+                          ) : (
+                            <ChevronDown className='w-5 h-5 text-gray-500' />
+                          )}
+                        </div>
+                        <AnimatePresence>
+                          {openActivities[index] && (
+                            <motion.ul
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className='space-y-2 overflow-hidden'
+                            >
+                              {day.activities.map((activity, actIndex) => (
+                                <motion.li
+                                  key={actIndex}
+                                  className='flex items-start'
+                                  initial={{ opacity: 0, x: -20 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ delay: actIndex * 0.05 }}
+                                >
+                                  <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
+                                  <span className='text-gray-700'>
+                                    {activity}
+                                  </span>
+                                </motion.li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+              {activeTab === 'photos' && (
+                <motion.div
+                  key='photos'
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  variants={tabVariants}
+                >
+                  <h2 className='text-2xl font-semibold mb-4 text-gray-800'>
+                    Photos
+                  </h2>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {tour.photos.map((photo, index) => (
+                      <motion.div
+                        key={index}
+                        className='relative overflow-hidden rounded-lg'
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <img
+                          src={photo.url}
+                          alt={photo.title}
+                          className='w-full h-64 object-cover'
+                        />
+                        <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2'>
+                          <p className='text-sm font-medium text-center'>
+                            {photo.title}
                           </p>
                         </div>
-                      </div>
-                      <ul className='space-y-2'>
-                        {day.activities.map((activity, actIndex) => (
-                          <li key={actIndex} className='flex items-start'>
-                            <Check className='w-5 h-5 mr-3 text-green-500 flex-shrink-0 mt-1' />
-                            <span className='text-gray-700'>{activity}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-            {activeTab === 'photos' && (
-              <div>
-                <h2 className='text-2xl font-semibold mb-4 text-gray-800'>
-                  Photos
-                </h2>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                  {tour.photos.map((photo, index) => (
-                    <div
-                      key={index}
-                      className='relative overflow-hidden rounded-lg'
-                    >
-                      <img
-                        src={photo.url}
-                        alt={photo.title}
-                        className='w-full h-64 object-cover'
-                      />
-                      <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2'>
-                        <p className='text-sm font-medium text-center'>
-                          {photo.title}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 
@@ -464,7 +510,7 @@ export default function TourDetails() {
               <div className='ml-3 inline-flex rounded-md shadow'>
                 <Link
                   to='/contact'
-                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent  text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600'
+                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600'
                 >
                   Contact Us
                 </Link>

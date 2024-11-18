@@ -4,7 +4,8 @@ import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Clock, MapPin } from 'lucide-react'
 
 import GB from '../assets/Gorilla.jpg'
-import Monkey from '../assets/Monkey.jpg'
+//import Monkey from '../assets/Monkey.jpg'
+import GM from '../assets/GoldenMonkey.jpg'
 // import GV from '../assets/Gorilla_Volcano.jpg'
 // import GR from '../assets/Gorilla_rwanda.jpg'
 
@@ -25,7 +26,7 @@ const tourPackages = [
       'This safari offers unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys, starting in Uganda and continuing into Rwanda. Deeply rewarding experience.',
     duration: '6 days',
     location: 'Uganda | Rwanda',
-    image: Monkey,
+    image: GM,
   },
 ]
 
