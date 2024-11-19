@@ -43,7 +43,7 @@ const tourPackages = [
     description:
       'This primate safari in Nyungwe National Park offers chimpanzee and golden monkey sightings, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
     duration: '',
-    location: 'Nyungwe National Park',
+    location: 'Nyungwe National Park & Chamudong',
     image: Chimp,
   },
   {
