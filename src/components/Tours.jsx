@@ -8,7 +8,7 @@ import GB from '../assets/Gorilla.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
 // import GV from '../assets/Gorilla_Volcano.jpg'
 // import GR from '../assets/Gorilla_rwanda.jpg'
-import Chimp from '../assets/Chimpanzee.jpg'
+import Chimp from '../assets/chimpanzee.jpg'
 
 const tourPackages = [
   {
