@@ -504,9 +504,10 @@ export default function TourDetails() {
         />
         <div className='absolute inset-0 bg-black bg-opacity-40 flex items-end'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full'>
-            <h1 className='text-4xl sm:text-5xl font-normal text-white mb-4'>
+            <h1 className='text-2xl sm:text-5xl font-normal text-white mb-4'>
               {tour.title}
             </h1>
+
             <div className='flex flex-wrap gap-4 text-white'>
               <div className='flex items-center'>
                 <Clock className='w-5 h-5 mr-2 text-green-500' />
