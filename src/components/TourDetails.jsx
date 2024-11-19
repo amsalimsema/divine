@@ -19,11 +19,12 @@ import {
 import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
+import Chimp from '../assets/Chimpanzee.jpg'
 
 const tourPackages = [
   {
     id: 1,
-    title: 'Bwindi Gorilla Tracking',
+    title: '3 days Bwindi Gorilla Tracking Safari',
     description: '$1650',
     duration: '3 days',
     location: 'Bwindi Impenetrable National Park - Uganda',
@@ -120,8 +121,8 @@ const tourPackages = [
   },
   {
     id: 2,
-    title: 'Primate Safari',
-    description: '',
+    title: '6 days Uganda And Rwanda Primate Safari',
+    description: 'Request Quote',
     duration: '6 days',
     location: 'Bwindi Impenetrable & Volcanoes National Park',
     image: GM,
@@ -262,6 +263,113 @@ const tourPackages = [
       },
     ],
   },
+  {
+    id: 3,
+    title: '4 Days Rwanda Primate Safari',
+    description: 'Request Quote',
+    duration: '4 days',
+    location: 'Nyungwe National Park',
+    image: Chimp,
+    fullDescription: `This primate safari takes you to Nyungwe National Park, one of Africa's oldest rainforests. The park is renowned for its abundant chimpanzee population and offers a thrilling canopy walk on a suspended bridge 70 meters above the ground, providing breathtaking scenic views. In addition to the natural wonders, the safari also offers an emotional experience with a visit to the Genocide Memorial Museum, offering a profound insight into Rwanda's history.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          '4 days of chimpanzee and golden monkey sightings in the Nyungwe National Park, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
+          'Contact us for a personalized quote.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'A 4X4 Land Cruiser/Minibus with a professional driver guide',
+          'Full board accommodation',
+          'Chimpanzee permits',
+          'Entrance fees',
+          'Golden monkey tracking',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Laundry services',
+          'Any Private Expenses',
+          'Tips to the local guides',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Golden monkey tracking',
+          'Chimpanzee tracking',
+          'Canopy walk',
+          'Breathtaking scenery',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival',
+        activities: [
+          'Upon arrival at Kigali International Airport, you will be welcomed by the tour guide.',
+          'If time permits, enjoy a city tour of Kigali, visiting sites like genocide memorials and markets.',
+          'Option to have lunch in Kigali.',
+          'Afterward, transfer to Kinigi, the closest town to Volcanoes National Park, home to the Mountain Gorillas in Rwanda.',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Tracking Golden Monkeys',
+        activities: [
+          'After breakfast, proceed to the park headquarters for a briefing about Golden monkey tracking.',
+          'Rangers will brief you on how to behave around the primates.',
+          'Golden monkey tracking offers an exciting adventure with epic encounters with the rare and beautiful Golden monkeys.',
+          'Uganda and Rwanda are the only two countries where visitors can trek these beautiful monkeys.',
+          'Afterward, transfer to Nyungwe National Park.',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Chimpanzee Tracking and Canopy Walk',
+        activities: [
+          'Wake up early and have breakfast to prepare for the adventurous chimpanzee trekking, which starts at 5 am.',
+          'Early start increases the chances of finding the primates, as their location is not guaranteed.',
+          'The driver will take you to the Uwinka Visitor Centre for a briefing and to meet the park Rangers/Guides.',
+          'Guides will brief you on the rules and requirements for chimpanzee trekking.',
+          'If there are many travelers, groups will be split between the Uwinka and Cyamudongo areas.',
+          'Nyungwe forest is home to about 500 chimpanzees, and trekking can take up to 4 hours.',
+          'Chimpanzees move freely, making the trek unpredictable, unlike gorillas which stay in one place longer.',
+          'The chimpanzees are very vocal, with loud screams, hoots, and barks helping to locate them.',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Transfer to Kigali',
+        activities: [
+          'Early morning transfer to Kigali.',
+          'Depending on flight time, you may have a city tour of Kigali town.',
+          'Visit the Genocide Memorial, Convention Center, or the craft markets.',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
 ]
 
 export default function TourDetails() {
@@ -310,7 +418,7 @@ export default function TourDetails() {
         />
         <div className='absolute inset-0 bg-black bg-opacity-40 flex items-end'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full'>
-            <h1 className='text-4xl sm:text-5xl font-semibold text-white mb-4'>
+            <h1 className='text-4xl sm:text-5xl font-normal text-white mb-4'>
               {tour.title}
             </h1>
             <div className='flex flex-wrap gap-4 text-white'>
@@ -323,7 +431,7 @@ export default function TourDetails() {
                 <span>{tour.location}</span>
               </div>
               <div className='flex items-center'>
-                {/* <BadgeDollarSign className='w-5 h-5 mr-2 text-green-500' /> */}
+                <BadgeDollarSign className='w-5 h-5 mr-2 text-green-500' />
                 <span className='font-semibold'>{tour.description}</span>
               </div>
             </div>

@@ -8,25 +8,35 @@ import GB from '../assets/Gorilla.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
 // import GV from '../assets/Gorilla_Volcano.jpg'
 // import GR from '../assets/Gorilla_rwanda.jpg'
+import Chimp from '../assets/Chimpanzee.jpg'
 
 const tourPackages = [
   {
     id: 1,
-    title: 'Bwindi Gorilla Tracking',
+    title: '3 Days Bwindi Gorilla Tracking Safari',
     description:
-      'Bwindi Impenetrable National Park, a UNESCO site, is renowned for housing over half of the world’s mountain gorillas, with 20 families available for trekking.',
+      'The safari offers thrilling encounters with endangered Mountain Gorillas at Bwindi Impenetrable National Park-One of the most popular gorilla trekking destinations in the world.',
     duration: '3 days',
     location: 'Bwindi Impenetrable National Park',
     image: GB,
   },
   {
     id: 2,
-    title: 'Primate Safari',
+    title: '6 Days Uganda And Rwanda Primate Safari',
     description:
-      'This safari offers unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys, starting in Uganda and continuing into Rwanda. Deeply rewarding experience.',
+      'The safari offers thrilling encounters with endangered Mountain Gorillas and Golden monkeys, starting in Uganda and ending in Rwanda.',
     duration: '6 days',
     location: 'Bwindi Impenetrable & Volcanoes National Park',
     image: GM,
+  },
+  {
+    id: 3,
+    title: '4 Days Rwanda Primate Safari',
+    description:
+      'This primate safari in Nyungwe National Park offers chimpanzee and golden monkey sightings, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
+    duration: '',
+    location: 'Nyungwe National Park',
+    image: Chimp,
   },
 ]
 
@@ -111,8 +121,8 @@ export default function Component() {
   const visiblePackages = isMobile ? 1 : 3
 
   return (
-    <div className='bg-gradient-to-b from-amber-300 to-amber-100'>
-      <div className='relative max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-gray-900'>
+    <div className='bg-gradient-to-b from-amber-300 to-amber-100 '>
+      <div className='relative w-full max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-gray-900'>
         <h2 className='text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8'>
           Our Tour Packages
         </h2>
@@ -148,17 +158,17 @@ export default function Component() {
                     />
                   </div>
                   <div className='p-4 flex flex-col flex-grow'>
-                    <h3 className='text-lg sm:text-xl font-semibold mb-2'>
+                    <h3 className='text-lg sm:text-xl font-medium mb-2'>
                       {pkg.title}
                     </h3>
-                    <p className='text-sm text-gray-900 mb-4 flex-grow'>
+                    <p className='text-sm text-gray-900 mb-3 flex-grow'>
                       {pkg.description}
                     </p>
                     <div className='mt-auto space-y-2'>
-                      <div className='flex items-center text-sm text-gray-900'>
+                      {/* <div className='flex items-center text-sm text-gray-900'>
                         <Clock className='w-4 h-4 mr-2 flex-shrink-0' />
                         <span>{pkg.duration}</span>
-                      </div>
+                      </div> */}
                       {/* <div className='flex items-center text-sm text-gray-900'>
                         <Users className='w-4 h-4 mr-2 flex-shrink-0' />
                         <span>{pkg.groupSize}</span>
