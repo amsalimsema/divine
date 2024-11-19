@@ -25,7 +25,7 @@ const tourPackages = [
     description:
       'This safari offers unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys, starting in Uganda and continuing into Rwanda. Deeply rewarding experience.',
     duration: '6 days',
-    location: 'Uganda | Rwanda',
+    location: 'Bwindi Impenetrable & Volcanoes National Park',
     image: GM,
   },
 ]

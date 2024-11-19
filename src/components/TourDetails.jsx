@@ -14,7 +14,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from 'lucide-react'
-import GGMT from '../assets/golden_tracking.jpg'
+//import GGMT from '../assets/golden_tracking.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
@@ -122,7 +122,7 @@ const tourPackages = [
     title: 'Primate Safari',
     description: ' ',
     duration: '6 days',
-    location: 'Uganda | Rwanda',
+    location: 'Bwindi Impenetrable & Volcanoes National Park',
     image: GM,
     fullDescription: `Embark on a safari that promises unforgettable encounters with the endangered Mountain Gorillas and the rare, stunning Golden Monkeys. Your journey begins in Uganda, "The Pearl of Africa," and takes you into Rwanda, "The Land of a Thousand Hills." While tracking these remarkable primates can be physically demanding, the reward of witnessing them in their natural habitat is truly unparalleled.`,
     tourDetails: [
@@ -130,7 +130,6 @@ const tourPackages = [
         title: 'Tour Cost',
         icon: DollarSign,
         items: [
-          '$1650',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
         ],
       },
@@ -138,11 +137,11 @@ const tourPackages = [
         title: 'Price Includes',
         icon: Circle,
         items: [
-          'A 4x4 Land Cruiser or Minibus with a professional English-speaking driver-guide',
-          'Full Board accomodation',
-          'Gorilla tracking permit',
-          'The Batwa cultural experience',
-          'Entrance Fee',
+          'Travel in a 4x4 Land Cruiser or Minibus with fuel and an English-speaking driver guide.',
+          'Full-board accommodation as per the itinerary.',
+          'Gorilla tracking permit.',
+          'Golden Monkey tracking permit.',
+          'City tour.',
         ],
       },
       {
@@ -159,10 +158,11 @@ const tourPackages = [
         title: 'What to Expect',
         icon: Eye,
         items: [
-          'Encounter with the Gorillas',
-          'The Batwa cultural experience',
-          'Hospitable people',
-          'Breathtaking scenic beauty',
+          'Mountain Gorilla Tracking.',
+          'Golden Monkey Tracking.',
+          'Visit and experience the Uganda Equator.',
+          'Interact with hospitable local people.',
+          'Enjoy breathtaking scenery.',
           'Professional & knowledgeable safari guide',
         ],
       },
@@ -176,7 +176,7 @@ const tourPackages = [
           "Receive a warm welcome from the company's tour guide",
           'Exchange greetings with the tour guide',
           'Transfer to your hotel',
-          'Check in at your hotel',
+          'Check in at your hotel (Latitude 0 or Imperial Botanical Hotel)',
           'Receive a detailed briefing about your safari',
         ],
       },
@@ -184,7 +184,7 @@ const tourPackages = [
         day: 2,
         title: 'Transfer to Bwindi Impenetrable National Park',
         activities: [
-          'Have an early breakfast at the hotel',
+          'Have an early breakfast at the hotel ',
           'Get picked up from your hotel by the tour guide',
           'Transfer to Bwindi Impenetrable National Park',
           'Make a stopover at the equator',
@@ -193,6 +193,7 @@ const tourPackages = [
           'Take photographs at the equator',
           'Continue the journey to Bwindi with a lunch break in Mbarara',
           'Enjoy the breathtaking scenery en route to Bwindi',
+          'Accomodation at Bush lodge',
         ],
       },
       {
@@ -209,22 +210,43 @@ const tourPackages = [
           'Follow rangers’ guidance to maintain a 6-meter distance while observing gorillas',
           'Spend 1 hour with the gorillas once located',
           'Ensure physical fitness for the trek',
+          'Accomodation at Gorilla Mist lodge or Bush lodge',
         ],
       },
       {
         day: 4,
         title: 'Transfer to Volcanoes National Park',
-        activities: [''],
+        activities: [
+          'Transfer to Volcanoes National Park in the northwestern part of Rwanda.',
+          'Explore the Virunga Mountains, which include eight volcanoes: Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo.',
+          'Take in the breathtaking mountain scenery.',
+          'Learn about the wildlife of Volcanoes National Park, including Mountain Gorillas and the rare Golden Monkeys.',
+          'Stay overnight at Gorilla Mist Lodge.',
+        ],
       },
       {
         day: 5,
         title: 'Tracking the Golden Monkeys',
-        activities: [''],
+        activities: [
+          'Morning briefing at park headquarters.',
+          'Choose between golden monkey tracking or hiking to Karisoke Research Centre established by Dian Fossey,an American primatologist .',
+          'Learn about mountain gorillas at Karisoke Research Centre.',
+          'Return to organize and pack for the Nyungwe Forest National Park trip.',
+          'Enjoy a special lunch of Rwandan local dishes en route to Nyungwe.',
+          'Continue the journey to Nyungwe Forest National Park.',
+          'Check in to Five Volcanoes or Kinigi Cottages for an overnight stay.',
+          'Dinner served at the lodge/hotel.',
+        ],
       },
       {
         day: 6,
         title: 'City Tour and Departure',
-        activities: [''],
+        activities: [
+          'City tour of Kigali town, depending on flight time.',
+          'Visit the Genocide Memorial Museum.',
+          'Explore craft and local markets.',
+          'Transfer to Kigali International Airport for your flight back home.',
+        ],
       },
     ],
     photos: [
@@ -302,7 +324,8 @@ export default function TourDetails() {
           </div>
         </div>
       </div>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+      {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'> */}
+      <div className='w-[98%] max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6'>
         <Link
           to='/'
           className='inline-flex items-center text-blue-500 hover:underline mb-8'
