@@ -19,7 +19,7 @@ import {
 import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
-import Chimp from '../assets/Chimpanzee.jpg'
+import Chimp from '../assets/chimpanzee.jpg'
 
 const tourPackages = [
   {
