@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
 import {
-  BadgeCent,
   ChevronLeft,
   ChevronRight,
-  Clock,
+  // Clock,
   MapPin,
 } from 'lucide-react'
 
@@ -16,6 +15,7 @@ import GM from '../assets/GoldenMonkey.jpg'
 // import GR from '../assets/Gorilla_rwanda.jpg'
 import Chimp from '../assets/chimpanzee.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
+import Elephant from '../assets/divine.jpg'
 
 const tourPackages = [
   {
@@ -53,6 +53,15 @@ const tourPackages = [
     duration: '',
     location: 'Volcanoes National Park',
     image: BGT,
+  },
+  {
+    id: 5,
+    title: '7 Days Rwanda Safari',
+    description:
+      "This 7-day Rwanda gorilla safari explores all of Rwanda's national parks. Highlights include wildlife game drives in Akagera National Park, golden monkey and gorilla trekking in Volcanoes National Park, and chimpanzee trekking in Nyungwe Forest.",
+    duration: '',
+    location: 'Akagera,Volcanoes,Nyungwe',
+    image: Elephant,
   },
 ]
 

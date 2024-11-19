@@ -20,6 +20,8 @@ import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
 import Chimp from '../assets/chimpanzee.jpg'
+import Elephant from '../assets/divine.jpg'
+import Lake from '../assets/Lake-Ihema.jpg'
 
 const tourPackages = [
   {
@@ -446,6 +448,175 @@ const tourPackages = [
       },
     ],
     photos: [
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: '7 Days Rwanda Safari',
+    description: 'Request Quote',
+    duration: '7 days',
+    location: 'All Rwanda National Parks',
+    image: Elephant,
+    fullDescription: `This 7-day Rwanda gorilla safari explores all of Rwanda's national parks. Highlights include wildlife game drives in Akagera National Park, golden monkey and gorilla trekking in Volcanoes National Park, and chimpanzee trekking in Nyungwe Forest, home to 13 primate species.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          "This 7 day Rwanda gorilla safari explores all of Rwanda's national parks (Akagera National Park, Volcanoes National Park & Nyungwe Forest home to 13 primate species.",
+          'Contact us for a personalized quote.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          '4x4 Land Cruiser/Minibus with fuel and an English-speaking guide',
+          'Full-board accommodation',
+          'Gorilla tracking permit',
+          'Chimpanzee tracking permit',
+          'All entrance fees',
+          'Boat cruise on Lake Ihema',
+          'Game drive',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Travel insurance',
+          'Any private expenses',
+          'Tips',
+          'Porter fees',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Gorilla tracking',
+          'Chimpanzee tracking',
+          'Boat cruise',
+          'Game drive',
+          'Breathtaking scenery',
+          'Hospitable people and rich culture',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival ',
+        activities: [
+          'Arrival at Kigali International Airport',
+          'Meet and greet by a representative from the Rwanda travel agency',
+          'Transfer to your hotel in Kigali',
+          'Hotel check-in',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Akagera National Park & Boat Cruise on Lake Ihema',
+        activities: [
+          'Breakfast to start the second day',
+          'Transfer to Akagera National Park',
+          'Check-in at the lodge/hotel',
+          'Lunch with an option to try local dishes',
+          'Boat trip on Lake Ihema',
+          'Opportunity to see water-loving animals like hippopotamuses, crocodiles, and various bird species',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Game Drive & Transfer to Volcanoes National Park',
+        activities: [
+          'Wake up early for an early morning game drive',
+          'Opportunity to see grazing animals and predators hunting in the morning',
+          'Return to the hotel/lodge to freshen up and have lunch',
+          'Pack up for the journey to Volcanoes National Park',
+          'Check-in at Volcanoes National Park accommodation',
+          'Relax and prepare for the next day',
+          'Dinner served at hotel/lodge ',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Gorilla Tracking',
+        activities: [
+          'Early breakfast',
+          'Head to Volcanoes National Park headquarters for a gorilla tracking briefing',
+          'Receive information on the Do’s and Don’ts of the gorilla tour',
+          'Allocation of a random gorilla group to track',
+          'Trek into the Virunga jungles covered in thick rainforest for the gorilla encounter',
+          'Gorilla tracking lasts between 2 to 8 hours',
+          'Return to the lodge for relaxation and lunch',
+          'Optional visit to a local Banywarwanda community for a cultural encounter',
+          'Return to the hotel/lodge for dinner before nightfall',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Golden Monkey Tracking',
+        activities: [
+          'Gather at the park headquarters for briefing in the morning',
+          'Option to go for golden monkey tracking or hike to Karisoke Research Centre',
+          "Learn about Dian Fossey's conservation work and the mountain gorillas at the research center",
+          'Return and pack up for the journey to Nyungwe Forest National Park',
+          'Enjoy lunch with Rwandan local dishes en route to Nyungwe',
+          'Continue the journey to Nyungwe Forest',
+          'Check-in at the hotel/lodge upon arrival at Nyungwe',
+          'Dinner served at the lodge',
+        ],
+      },
+      {
+        day: 6,
+        title: 'Chimpanzee Tracking',
+        activities: [
+          'After breakfast, head to the park headquarters for chimpanzee tracking briefing',
+          'Begin chimp tracking, searching for active and playful chimpanzees in Nyungwe Forest',
+          'Chimpanzees are easily spotted as they jump from tree to tree, chattering and laughing',
+          'Chimp tracking usually lasts about 3 hours',
+          'Return to accommodation for lunch',
+          'After lunch, go on a walking trail to the Canopy Walk',
+          'Experience the 50-meter-long swing bridge with a bird’s eye view of the rainforest',
+          'Spot wildlife from above as you walk through the forest',
+          'Return to the hotel/lodge for dinner before nightfall',
+        ],
+      },
+      {
+        day: 7,
+        title: 'Transfer to Kigali (Departure)',
+        activities: [
+          'Pack up after breakfast and begin the journey back to Kigali',
+          'Arrive in Kigali and go for a city tour',
+          'Optional visit to the genocide memorial site in Kigali',
+          'Drop-off at the hotel or airport in time for your flight back home',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Elephant,
+        title: 'Elephant',
+      },
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+      {
+        url: Lake,
+        title: 'Lake Ihema Hippo',
+      },
       {
         url: BGT,
         title: 'Mountain Gorilla',
