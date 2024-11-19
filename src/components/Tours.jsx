@@ -16,6 +16,7 @@ import GM from '../assets/GoldenMonkey.jpg'
 import Chimp from '../assets/chimpanzee.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
 import Elephant from '../assets/divine.jpg'
+import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
 
 const tourPackages = [
   {
@@ -38,7 +39,7 @@ const tourPackages = [
   },
   {
     id: 3,
-    title: '4 Days Rwanda Primate Safari',
+    title: '5 Days Rwanda Primate Safari',
     description:
       'This primate safari in Nyungwe National Park offers chimpanzee and golden monkey sightings, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
     duration: '',
@@ -62,6 +63,15 @@ const tourPackages = [
     duration: '',
     location: 'Akagera,Volcanoes,Nyungwe',
     image: Elephant,
+  },
+  {
+    id: 6,
+    title: '8 Days Gorilla & Golden Monkey Tracking',
+    description:
+      "This adventure, starting in Entebbe and ending in Kigali, features stunning landscapes and encounters with Mountain Gorillas, Golden monkeys, and a visit to Dian Fossey's grave, celebrating her conservation work.",
+    duration: '',
+    location: 'Bwindi,Queen Elizabeth & Volcanoes',
+    image: GoldenMonkey,
   },
 ]
 
