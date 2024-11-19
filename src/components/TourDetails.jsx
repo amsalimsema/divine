@@ -196,7 +196,7 @@ const tourPackages = [
           'Take photographs at the equator',
           'Continue the journey to Bwindi with a lunch break in Mbarara',
           'Enjoy the breathtaking scenery en route to Bwindi',
-          'Accomodation at Bush lodge',
+          'Accomodation at Bwindi Community Guest House',
         ],
       },
       {
@@ -213,7 +213,7 @@ const tourPackages = [
           'Follow rangers’ guidance to maintain a 6-meter distance while observing gorillas',
           'Spend 1 hour with the gorillas once located',
           'Ensure physical fitness for the trek',
-          'Accomodation at Gorilla Mist lodge or Bush lodge',
+          'Accomodation at Bwindi Community Guest House',
         ],
       },
       {
@@ -224,7 +224,7 @@ const tourPackages = [
           'Explore the Virunga Mountains, which include eight volcanoes: Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo.',
           'Take in the breathtaking mountain scenery.',
           'Learn about the wildlife of Volcanoes National Park, including Mountain Gorillas and the rare Golden Monkeys.',
-          'Stay overnight at Gorilla Mist Lodge.',
+          'Stay overnight at Five Volcanoes or Kinigi Cottages.',
         ],
       },
       {
@@ -363,6 +363,92 @@ const tourPackages = [
       {
         url: Chimp,
         title: 'Chimpanzee',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: '2 Days Gorilla Tracking at Volcanoes National Park',
+    description: 'Request Quote',
+    duration: '2 days',
+    location: 'Volcanoes National Park',
+    image: BGT,
+    fullDescription: `This 2-day Gorilla Safari begins and ends in Kigali, taking visitors to Rwanda's Volcanoes National Park in the northwest. Spanning 160 sq. km of rainforest, the park encompasses eight volcanoes in the Virunga Mountains, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo. It is home to endangered mountain gorillas and rare golden monkeys.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          "This 2-day Gorilla Safari in Rwanda's Volcanoes National Park offers a chance to see endangered mountain gorillas and rare golden monkeys in a stunning volcanic rainforest setting.",
+          'Contact us for a personalized quote.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          '4x4 Land Cruiser/Minibus with a professional English-speaking safari guide',
+          'Full-board accommodation',
+          'Gorilla tracking permit',
+          'Entrance fees',
+          'Water throughout the safari',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Travel insurance',
+          'Any private expenses',
+          'Tips',
+          'Porter fees',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Gorilla tracking',
+          'Breathtaking scenery',
+          'Hospitable people',
+          'Rich culture',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival and Transfer to Volcanoes National Park',
+        activities: [
+          'Welcome at Kigali International Airport by the tour guide',
+          'Optional city tour of Kigali, including visits to genocide memorials and markets',
+          'Optional lunch in Kigali',
+          'Transfer to Kinigi, the closest town to Volcanoes National Park - home to mountain gorillas in Rwanda',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Gorilla Tracking',
+        activities: [
+          'Early morning breakfast and briefing at park headquarters on gorilla trekking guidelines',
+          'Guided trek into the rainforest to search for mountain gorillas with rangers',
+          'Opportunity to encounter and spend 1 hour with mountain gorillas, maintaining a 6-meter distance',
+          'Advisable to bring raincoats, boots, and hire porters for luggage assistance (optional at a small cost)',
+          'Emphasis on physical fitness due to the challenging trek',
+          'Transfer back to Kigali after the trek',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
       },
       {
         url: GM,

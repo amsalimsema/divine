@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSwipeable } from 'react-swipeable'
-import { ChevronLeft, ChevronRight, Clock, MapPin } from 'lucide-react'
+import {
+  BadgeCent,
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  MapPin,
+} from 'lucide-react'
 
 import GB from '../assets/Gorilla.jpg'
 //import Monkey from '../assets/Monkey.jpg'
@@ -9,6 +15,7 @@ import GM from '../assets/GoldenMonkey.jpg'
 // import GV from '../assets/Gorilla_Volcano.jpg'
 // import GR from '../assets/Gorilla_rwanda.jpg'
 import Chimp from '../assets/chimpanzee.jpg'
+import BGT from '../assets/bwindi_gorilla.jpg'
 
 const tourPackages = [
   {
@@ -37,6 +44,15 @@ const tourPackages = [
     duration: '',
     location: 'Nyungwe National Park',
     image: Chimp,
+  },
+  {
+    id: 4,
+    title: '2 Days Gorilla Tracking at Volcanoes National Park',
+    description:
+      "This 2 day Gorilla Safari in Rwanda's Volcanoes National Park offers a chance to see endangered mountain gorillas and rare golden monkeys in a stunning volcanic rainforest setting",
+    duration: '',
+    location: 'Volcanoes National Park',
+    image: BGT,
   },
 ]
 
