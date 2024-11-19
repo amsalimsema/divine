@@ -10,7 +10,7 @@ import {
   Circle,
   CircleOff,
   Eye,
-  DollarSign,
+  Sun,
   ChevronDown,
   ChevronUp,
   BadgeDollarSign,
@@ -32,7 +32,7 @@ const tourPackages = [
     tourDetails: [
       {
         title: 'Tour Cost',
-        icon: DollarSign,
+        icon: Sun,
         items: [
           '$1650',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
@@ -129,7 +129,7 @@ const tourPackages = [
     tourDetails: [
       {
         title: 'Tour Summary',
-        icon: DollarSign,
+        icon: Sun,
         items: [
           'This 6-day safari takes you to both Bwindi Impenetrable and Volcanoes National Park, offering unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys in Uganda and Rwanda. It’s a deeply rewarding experience.',
           'Contact us for a personalized quote.',
@@ -381,7 +381,7 @@ export default function TourDetails() {
                         transition={{ delay: index * 0.1 }}
                       >
                         <div className='flex-shrink-0 mr-4'>
-                          <div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
+                          <div className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center'>
                             <detail.icon className='w-6 h-6 text-green-600' />
                           </div>
                         </div>
