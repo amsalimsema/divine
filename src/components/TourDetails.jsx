@@ -13,6 +13,7 @@ import {
   DollarSign,
   ChevronDown,
   ChevronUp,
+  BadgeDollarSign,
 } from 'lucide-react'
 //import GGMT from '../assets/golden_tracking.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
@@ -23,7 +24,7 @@ const tourPackages = [
   {
     id: 1,
     title: 'Bwindi Gorilla Tracking',
-    description: ' ',
+    description: '$1650',
     duration: '3 days',
     location: 'Bwindi Impenetrable National Park - Uganda',
     image: BGT,
@@ -120,17 +121,18 @@ const tourPackages = [
   {
     id: 2,
     title: 'Primate Safari',
-    description: ' ',
+    description: '',
     duration: '6 days',
     location: 'Bwindi Impenetrable & Volcanoes National Park',
     image: GM,
     fullDescription: `Embark on a safari that promises unforgettable encounters with the endangered Mountain Gorillas and the rare, stunning Golden Monkeys. Your journey begins in Uganda, "The Pearl of Africa," and takes you into Rwanda, "The Land of a Thousand Hills." While tracking these remarkable primates can be physically demanding, the reward of witnessing them in their natural habitat is truly unparalleled.`,
     tourDetails: [
       {
-        title: 'Tour Cost',
+        title: 'Tour Summary',
         icon: DollarSign,
         items: [
-          'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
+          'This 6-day safari takes you to both Bwindi Impenetrable and Volcanoes National Park, offering unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys in Uganda and Rwanda. It’s a deeply rewarding experience.',
+          'Contact us for a personalized quote.',
         ],
       },
       {
@@ -313,12 +315,16 @@ export default function TourDetails() {
             </h1>
             <div className='flex flex-wrap gap-4 text-white'>
               <div className='flex items-center'>
-                <Clock className='w-5 h-5 mr-2' />
+                <Clock className='w-5 h-5 mr-2 text-green-500' />
                 <span>{tour.duration}</span>
               </div>
               <div className='flex items-center'>
-                <MapPin className='w-5 h-5 mr-2' />
+                <MapPin className='w-5 h-5 mr-2 text-green-500' />
                 <span>{tour.location}</span>
+              </div>
+              <div className='flex items-center'>
+                {/* <BadgeDollarSign className='w-5 h-5 mr-2 text-green-500' /> */}
+                <span className='font-semibold'>{tour.description}</span>
               </div>
             </div>
           </div>
