@@ -719,7 +719,7 @@ const tourPackages = [
           'Arrival at Entebbe International Airport',
           'Meet with a representative from Divine African Holidays',
           'Transfer to your hotel',
-          'Check-in at the hotel',
+          'Check-in at the hotel (Accacia Lodge or Acactus hotel)',
           'Briefing about the upcoming safari',
         ],
       },
@@ -734,6 +734,7 @@ const tourPackages = [
           'Continue the journey and enjoy the cool air and lush tea plantations near Bushenyi',
           'Pass through Kalinzu Forest Reserve on the way to Queen Elizabeth National Park',
           'Arrive at the lodge and relax while waiting for the evening game drive',
+          'Accomodation at Bush Lodge / Warjoja Safari Lodge',
         ],
       },
       {
@@ -746,6 +747,7 @@ const tourPackages = [
           'After lunch, enjoy a 2-hour boat cruise on the Kazinga Channel, linking Lake George and Lake Edward',
           'See hippos, Nile crocodiles, and warthogs along the channel banks',
           'Use binoculars for a better view of birds and animals, including African Elephants',
+          'Accomodation at Bush Lodge / Warjoja Safari Lodge',
         ],
       },
       {
@@ -756,6 +758,7 @@ const tourPackages = [
           'Pass through the shining Savannah vegetation',
           'Transfer to Bwindi Impenetrable National Park via the Ishasha sector, famous for tree-climbing lions',
           'Upon arrival, check in at the lodge',
+          'Accomodation at Gorilla Mist Camp / Ride for a woman guest house',
           'Relax and prepare for a strenuous day ahead',
         ],
       },
@@ -773,6 +776,7 @@ const tourPackages = [
           'Physical fitness is recommended for trekkers',
           'After the trek, return to the lodge for lunch',
           'In the afternoon, optional visit to the Batwa community for cultural performances',
+          'Accomodation at Gorilla Mist Camp / Ride for a woman guest house',
         ],
       },
       {
@@ -784,6 +788,7 @@ const tourPackages = [
           'It encompasses eight volcanoes in the Virunga Mountain range, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo',
           'The park is home to the endangered mountain gorillas',
           'The grave of Dian Fossey, a famous primatologist who helped conserve mountain gorillas, is located in the park',
+          'Accomodation at Five Volcanoes / Kinigi Cottages',
         ],
       },
       {
@@ -794,6 +799,7 @@ const tourPackages = [
           'Visit her grave and former research camp',
           'Pay homage to Dian Fossey and learn about her work conserving gorillas',
           'Track the golden monkeys in the park',
+          'Accomodation at Five Volcanoes / Kinigi Cottages',
           'Transfer to Kigali for overnight stay',
         ],
       },
