@@ -24,6 +24,8 @@ import Elephant from '../assets/divine.jpg'
 import Lake from '../assets/Lake-Ihema.jpg'
 import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
+import Bird from '../assets/Birds-of-Lake-Bunyonyi.jpg'
+import ChimpTrek from '../assets/uganda-gorillas-trek-chimp.jpg'
 
 const tourPackages = [
   {
@@ -829,6 +831,156 @@ const tourPackages = [
       {
         url: Lion,
         title: 'Lion At Queen Elizabeth National Park',
+      },
+
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: '6 Days Gorilla & Chimpanzee Tracking',
+    description: '$2550',
+    duration: '6 days',
+    location: 'Bwindi,Queen Elizabeth & Lake Bunyonyi',
+    image: ChimpTrek,
+    fullDescription: `This six day extraordinary journey takes you through Uganda’s pristine wilderness, where awe-inspiring landscapes meet thrilling wildlife encounters. This adventure takes you to the lush Bwindi Impenetrable Forest National Park, home to the majestic Mountain Gorillas, affectionately known as the “gentle giants.” The experience continues to Queen Elizabeth National Park, Uganda’s most visited park, renowned for its abundant wildlife and spectacular views and unwind amidst the serene beauty of Lake Bunyonyi, Africa’s "place of little birds.`,
+    tourDetails: [
+      {
+        title: 'Tour Cost',
+        icon: Sun,
+        items: [
+          '$2550',
+          'Rate for 1 person for a single self-contained room',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'A 4x4 land cruiser/Minibus with a professional English driver guide',
+          'Fuel',
+          'Full board accommodation as per the itinerary',
+          '1 Gorilla permit',
+          'Game drive',
+          'Boat cruise',
+          '1 chimpanzee permit',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Travel insurance',
+          'Any private expenses',
+          'Tips',
+          'Porter fees',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Tracking the Mountain Gorilla',
+          'The Batwa experience',
+          'A game drive',
+          'Boat cruise on the Kazinga channel',
+          'Tracking the chimpanzees in the Kalinzu forest',
+          'Canoeing at Lake Bunyonyi',
+          'Breathtaking scenery',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival ',
+        activities: [
+          'Meet a representative from Divine African Holidays in Kigali for a warm welcome and safari briefing.',
+          'Travel to the home of the Mountain Gorillas.',
+          'Dinner and overnight stay at either Gorilla Mist or Buhoma Community Lodge.',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Gorilla Trekking',
+        activities: [
+          'Transfer to the park headquarters for a briefing and allocation of a gorilla group.',
+          'Enjoy a thrilling gorilla trekking experience.',
+          'Have lunch after the trek.',
+          'Participate in the Batwa experience, including learning about their daily life, enjoying dance and drama, and seeing traditional fire-making using friction.',
+          'Dinner and overnight stay at either Gorilla Mist or Buhoma Community Lodge.',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Transfer to Queen Elizabeth National Park',
+        activities: [
+          'Wake up in the morning and have breakfast.',
+          'Travel to Queen Elizabeth National Park, arriving late in the evening.',
+          'Check in upon arrival.',
+          'Dinner and overnight stay at Bush Lodge.',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Game Drive',
+        activities: [
+          'Wake up early and have breakfast.',
+          'Go for a game drive in the southern part of the park (Ishasha), known for its tree-climbing lions.',
+          'Arrive in time for lunch.',
+          'After lunch, enjoy a boat cruise on the Kazinga Channel, spotting hippos, elephants, and other wildlife.',
+          'Return to your lodge after the cruise.',
+          'Dinner and overnight stay at Bush Lodge.',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Chimp Trekking',
+        activities: [
+          'Wake up in the morning and have breakfast.',
+          'Head to either Kyambura or Kalinzu for chimp trekking.',
+          'Transfer to Lake Bunyonyi, arriving late in the evening.',
+          'Check in upon arrival.',
+          'Dinner and overnight stay at Overland Resort.',
+        ],
+      },
+      {
+        day: 6,
+        title: 'Transfer to Kigali',
+        activities: [
+          'Wake up early in the morning and have breakfast.',
+          'Participate in optional activities such as canoeing on Lake Bunyonyi or horseback riding.',
+          'Have lunch.',
+          'Transfer to Kigali in the afternoon.',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Elephant,
+        title: 'Elephants',
+      },
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+      {
+        url: Bird,
+        title: 'Birds at Lake Bunyonyi',
+      },
+      {
+        url: Lion,
+        title: 'Lions At Queen Elizabeth National Park',
       },
 
       {

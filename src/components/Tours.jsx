@@ -17,10 +17,20 @@ import Chimp from '../assets/chimpanzee.jpg'
 import BGT from '../assets/bwindi_gorilla.jpg'
 import Elephant from '../assets/divine.jpg'
 import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
+import Troop from '../assets/Chimpanzee-troop.jpg'
 
 const tourPackages = [
   {
     id: 1,
+    title: '6 Days Gorilla & Chimpanzee Tracking',
+    description:
+      "Explore Uganda's wilderness, from gorilla and chimpanzee trekking in Bwindi and wildlife in Queen Elizabeth National Park to the tranquil beauty of Lake Bunyonyi.",
+    duration: '6 days',
+    location: 'Bwindi & Queen Elizabeth National Park',
+    image: Troop,
+  },
+  {
+    id: 2,
     title: '3 Days Bwindi Gorilla Tracking Safari',
     description:
       'The safari offers thrilling encounters with endangered Mountain Gorillas at Bwindi Impenetrable National Park-One of the most popular gorilla trekking destinations in the world.',
@@ -29,7 +39,7 @@ const tourPackages = [
     image: GB,
   },
   {
-    id: 2,
+    id: 3,
     title: '6 Days Uganda And Rwanda Primate Safari',
     description:
       'The safari offers thrilling encounters with endangered Mountain Gorillas and Golden monkeys, starting in Uganda and ending in Rwanda.',
@@ -38,7 +48,7 @@ const tourPackages = [
     image: GM,
   },
   {
-    id: 3,
+    id: 4,
     title: '5 Days Rwanda Primate Safari',
     description:
       'This primate safari in Nyungwe National Park offers chimpanzee and golden monkey sightings, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
@@ -47,7 +57,7 @@ const tourPackages = [
     image: Chimp,
   },
   {
-    id: 4,
+    id: 5,
     title: '2 Days Gorilla Tracking at Volcanoes National Park',
     description:
       "This 2 day Gorilla Safari in Rwanda's Volcanoes National Park offers a chance to see endangered mountain gorillas and rare golden monkeys in a stunning volcanic rainforest setting",
@@ -56,7 +66,7 @@ const tourPackages = [
     image: BGT,
   },
   {
-    id: 5,
+    id: 6,
     title: '7 Days Rwanda Safari',
     description:
       "This 7-day Rwanda gorilla safari explores all of Rwanda's national parks. Highlights include wildlife game drives in Akagera National Park, golden monkey and gorilla trekking in Volcanoes National Park, and chimpanzee trekking in Nyungwe Forest.",
@@ -65,7 +75,7 @@ const tourPackages = [
     image: Elephant,
   },
   {
-    id: 6,
+    id: 7,
     title: '8 Days Gorilla & Golden Monkey Tracking',
     description:
       "This adventure, starting in Entebbe and ending in Kigali, features stunning landscapes and encounters with Mountain Gorillas, Golden monkeys, and a visit to Dian Fossey's grave, celebrating her conservation work.",
