@@ -846,7 +846,7 @@ const tourPackages = [
   {
     id: 6,
     title: '6 Days Gorilla & Chimpanzee Tracking',
-    description: '$2550',
+    description: '$2650',
     duration: '6 days',
     location: 'Bwindi,Queen Elizabeth & Lake Bunyonyi',
     image: ChimpTrek,
@@ -856,7 +856,7 @@ const tourPackages = [
         title: 'Tour Cost',
         icon: Sun,
         items: [
-          '$2550',
+          '$2650',
           'Rate for 1 person for a single self-contained room',
           'Contact us for a personalized experience.',
         ],
