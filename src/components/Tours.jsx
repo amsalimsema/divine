@@ -18,6 +18,9 @@ import BGT from '../assets/bwindi_gorilla.jpg'
 import Elephant from '../assets/divine.jpg'
 import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
 import Troop from '../assets/Chimpanzee-troop.jpg'
+import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
+import Giraffe from '../assets/giraffe_murchision.jpg'
+import Impala from '../assets/impala_lake_mburo.jpg'
 
 const tourPackages = [
   {
@@ -82,6 +85,34 @@ const tourPackages = [
     duration: '',
     location: 'Bwindi,Queen Elizabeth & Volcanoes',
     image: GoldenMonkey,
+  },
+  {
+    id: 8,
+    title: '4 days Uganda wildlife safari',
+    description:
+      'A 4-day Uganda safari featuring gorilla tracking, wildlife viewing in Queen Elizabeth National Park, and visits to the equator monument and Igongo Cultural Museum.',
+    duration: '',
+    location: 'Bwindi & Queen Elizabeth National Park',
+    image: Lion,
+  },
+  {
+    id: 9,
+    title: '10 days Uganda wildlife safari',
+    description:
+      "Discover Uganda's wonders on a 10-day safari featuring game drives, boat rides, gorilla trekking, and chimpanzee tracking—a perfect adventure for all.",
+    duration: '',
+    location:
+      'Murchision Falls, Kibale ,Bwindi & Queen Elizabeth National Park',
+    image: Giraffe,
+  },
+  {
+    id: 10,
+    title: '7 Days Uganda Safari',
+    description:
+      'Explore Uganda on a 7-day budget safari with gorilla trekking in Bwindi, wildlife viewing in Queen Elizabeth and Lake Mburo National Parks, and stunning western landscapes.',
+    duration: '',
+    location: 'Lake Mburo ,Bwindi & Queen Elizabeth National Park',
+    image: Impala,
   },
 ]
 

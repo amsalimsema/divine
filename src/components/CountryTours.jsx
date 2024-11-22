@@ -1,11 +1,13 @@
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Clock, Users } from 'lucide-react'
+import { ArrowLeft, Clock, MapPin, Users } from 'lucide-react'
 
 import UGTours from '../assets/Gorilla.jpg'
 import UgandaTours from '../assets/UgandaTours.jpg'
 import TzTours from '../assets/TzTours.jpg'
 import RwTours from '../assets/RwTours.jpg'
 import KTours from '../assets/KTours.jpg'
+
+import Impala from '../assets/impala_lake_mburo.jpg'
 
 // Mock data for tours
 const toursData = {
@@ -15,21 +17,20 @@ const toursData = {
     tours: [
       {
         id: 1,
-        name: 'Bwindi Gorilla Tracking',
+        name: '3 Days Bwindi Gorilla Tracking',
         duration: '3 days',
-        groupSize: '8',
-        price: 1500,
+        groupSize: 'Any',
+        location: 'Bwindi Impenetrable National Park',
         image: UGTours,
-        description:
-          'Get up close with mountain gorillas in their natural habitat.',
-        link: '/tour/bwindi-gorilla-tracking',
+        description: ' ',
+        link: '/tour/3-days-bwindi-gorilla-tracking-safari',
       },
       {
         id: 2,
         name: 'Murchison Falls Safari',
         duration: '4 days',
-        groupSize: '6',
-        price: 1200,
+        groupSize: 'Any',
+        location: 'Bwindi Impenetrable National Park',
         image:
           'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -38,13 +39,12 @@ const toursData = {
       },
       {
         id: 3,
-        name: 'Queen Elizabeth National Park Tour',
-        duration: '5 days',
-        groupSize: '10',
-        price: 1800,
-        image:
-          'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description: 'Explore diverse ecosystems and spot tree-climbing lions.',
+        name: '7 Days Uganda Safari',
+        duration: '7 days',
+        groupSize: 'Any',
+        location: 'Lake Mburo ,Bwindi & Queen Elizabeth National Park',
+        image: Impala,
+        description: '',
         link: '/tours/uganda/queen-elizabeth-park',
       },
     ],
@@ -58,7 +58,7 @@ const toursData = {
         name: 'Masai Mara Wildlife Safari',
         duration: '4 days',
         groupSize: '8',
-        price: 1600,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -70,7 +70,7 @@ const toursData = {
         name: 'Amboseli Elephant Expedition',
         duration: '3 days',
         groupSize: '6',
-        price: 1300,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1575996587496-91d8a7d8bf6d?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -82,7 +82,7 @@ const toursData = {
         name: 'Lake Nakuru Flamingo Tour',
         duration: '2 days',
         groupSize: '10',
-        price: 900,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1468&ixlib=rb-4.0.3',
         description: 'See thousands of flamingos paint Lake Nakuru pink.',
@@ -99,7 +99,7 @@ const toursData = {
         name: 'Serengeti Migration Safari',
         duration: '5 days',
         groupSize: '8',
-        price: 2000,
+        location: '',
         image: TzTours,
         description: 'Follow the great migration through the Serengeti plains.',
         link: '/tours/tanzania/serengeti-migration',
@@ -109,7 +109,7 @@ const toursData = {
         name: 'Ngorongoro Crater Adventure',
         duration: '3 days',
         groupSize: '6',
-        price: 1400,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1589825743636-e3c9d3c6f1f7?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -121,7 +121,7 @@ const toursData = {
         name: 'Mount Kilimanjaro Trekking',
         duration: '7 days',
         groupSize: '12',
-        price: 2500,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1589825743636-e3c9d3c6f1f7?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description: "Climb to the 'Roof of Africa' on this challenging trek.",
@@ -138,7 +138,7 @@ const toursData = {
         name: 'Volcanoes National Park Gorilla Trek',
         duration: '2 days',
         groupSize: '8',
-        price: 1700,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1598880940371-c756e015faf1?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3',
         description:
@@ -150,7 +150,7 @@ const toursData = {
         name: 'Nyungwe Forest Chimpanzee Tour',
         duration: '3 days',
         groupSize: '6',
-        price: 1300,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1628944681206-2ee8d63b0a6b?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -162,7 +162,7 @@ const toursData = {
         name: 'Akagera National Park Safari',
         duration: '4 days',
         groupSize: '10',
-        price: 1500,
+        location: '',
         image:
           'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
         description:
@@ -227,10 +227,14 @@ export default function CountryTours() {
                   {tour.name}
                 </h2>
                 <p className='text-gray-600 mb-4'>{tour.description}</p>
-                <p className='text-gray-800 font-semibold mb-4'>
-                  ${tour.price} per person
-                </p>
+                {/* <p className='text-gray-800 font-semibold mb-4'>
+                  {tour.location}
+                </p> */}
                 <ul className='space-y-2'>
+                  <li className='flex items-center'>
+                    <MapPin className='mr-2 h-4 w-4 text-gray-400' />
+                    <span className='text-gray-800'>{tour.location}</span>
+                  </li>
                   <li className='flex items-center'>
                     <Clock className='mr-2 h-4 w-4 text-gray-400' />
                     <span className='text-gray-800'>{tour.duration}</span>
