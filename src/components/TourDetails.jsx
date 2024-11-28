@@ -28,6 +28,7 @@ import Bird from '../assets/Birds-of-Lake-Bunyonyi.jpg'
 import ChimpTrek from '../assets/uganda-gorillas-trek-chimp.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
+import Sunset from '../assets/Divine-African-Tours-1.jpg'
 
 const tourPackages = [
   {
@@ -1503,6 +1504,487 @@ const tourPackages = [
           'Kigali is home to several key attractions including Kandt House Museum, the oldest building and the foundation of the city’s establishment.',
           'Visit Inema Arts Center, Ivuka Arts Center, Museum of National History, and the Presidential Museum.',
           'Explore the Kigali Genocide Memorial Center, Statehouse Museum, and Miyo Art Gallery.',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Elephant,
+        title: 'Elephants',
+      },
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+
+      {
+        url: Lion,
+        title: 'Lions At Queen Elizabeth National Park',
+      },
+
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: '5 Days Uganda Safari',
+    description: 'Request Quote',
+    duration: '5 days',
+    location: 'Bwindi & Queen Elizabeth National Park',
+    image: Impala,
+    fullDescription: `This safari begins in Kampala and takes you to the Bwindi impenetrable National Park where you will get an opportunity to trek mountain gorillas in their natural habitat. We will also visit the Batwa pygmy community for a culture experience before transferring to Queen Elizabeth National Park the most popular game Park in Uganda for a game viewing adventure where you will see some of Africa’s Big 5 animals. The lunch Cruise on the kazinga channel will be another highlight of the Safari before returning to Kampala`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Captivating 5-day Ugandan adventure featuring mountain gorilla trekking in Bwindi, a cultural encounter with the Batwa community, and unforgettable wildlife experiences, including a game drive and boat cruise in Queen Elizabeth National Park.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Accommodation as highlighted in itinerary',
+          'Meals as highlighted in itinerary',
+          'Transportation in a four-wheel drive vehicle',
+          'Full-time service of an English-speaking driver-guide',
+          'Bottled drinking water',
+          'Park entrance fee',
+          'Gorilla trek',
+          'Lunch cruise on Kazinga Channel',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'Visa',
+          'International flights',
+          'Insurance',
+          'Personal expenditures such as laundry services, tips, and alcoholic drinks',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Tracking the Mountain Gorilla',
+          'A game drive',
+          'Boat cruise on the Kazinga channel',
+          'Breathtaking scenery',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Transfer to Bwindi impenetrable Forest National Park',
+        activities: [
+          'Very early morning, you will be picked up by your safari driver-guide who will brief you about the safari.',
+          'Begin the 7-hour drive to Bwindi Impenetrable Forest National Park.',
+          'Bwindi is known for the best gorilla trekking safari experience in the world, home to the largest population of mountain gorillas.',
+          'Enjoy the rich diversity of flora and other wildlife, including monkey species, forest elephants, and over 345 bird species.',
+          'Have an en-route lunch before arriving at the park late in the evening.',
+          'Accommodation options include Buhoma Camp (budget), Gorilla Mist Camp, Buhoma Haven Lodge (midrange), and Bwindi Lodge, Clouds Mountain Gorilla Lodge (luxury).',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Gorilla Trekking and Batwa Cultural Visit',
+        activities: [
+          'Early breakfast followed by transfer to the park headquarters for a briefing by the park ranger.',
+          'Head into the forest at 8 a.m. to search for the habituated gorilla family, encountering various butterfly, tree, insect, and bird species, along with some types of monkeys.',
+          'Once the gorilla family is found, spend a maximum of one hour observing their behavior, taking photographs, and witnessing their interactions.',
+          'Enjoy a lunch break.',
+          'In the afternoon, visit the nearby Batwa pygmy community, where you will experience vibrant performances of dances, songs, and drama.',
+          'Return to your accommodation for dinner and overnight rest.',
+          'Meal Plan: Breakfast, Lunch, and Dinner.',
+          'Accommodation options: Buhoma Camp (budget), Gorilla Mist Camp, Buhoma Haven Lodge (midrange), Bwindi Lodge, Clouds Mountain Gorilla Lodge (luxury).',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Transfer to Queen Elizabeth National Park',
+        activities: [
+          'Have a final breakfast at your lodge and set out on the drive to Queen Elizabeth National Park, Uganda’s most popular park, named after Queen Elizabeth II.',
+          'Enjoy the beautiful park, which features diverse habitats including wetlands, savanna grasslands, forests, and small lakes, home to a variety of wildlife, including some of the Big Five and numerous bird species.',
+          "Explore the park's famous tree-climbing lions, particularly in the Ishasha area.",
+          "Upon arrival, check-in at your accommodation, enjoy lunch, and later embark on an evening game drive to spot some of the park's animals.",
+          'Meal Plan: Breakfast, Lunch, and Dinner.',
+          'Accommodation options: Bush Lodge (budget), Marafiki Safari Lodge (midrange), Engazi Lodge, Mweya Safari Lodge (luxury).',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Game Drive and Boat Cruise on Kazinga Channel',
+        activities: [
+          "After breakfast, drive along the Kasenyi tracks for a game viewing experience where you'll see animals such as Uganda kobs, lions, spotted hyenas, buffaloes, waterbucks, elephants, warthogs, and more.",
+          "After lunch, transfer for a 2-hour boat cruise on the Kazinga Channel, a natural waterway connecting Lakes George and Edward, where you'll spot hippos, crocodiles, and water birds.",
+          'Return to your accommodation for dinner and overnight rest.',
+          'Meal Plan: Breakfast, Lunch, and Dinner.',
+          'Accommodation options: Bush Lodge (budget), Marafiki Safari Lodge (midrange), Engazi Lodge, Mweya Safari Lodge (luxury).',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Departure Back To Kampala',
+        activities: [
+          'Enjoy a final breakfast at the lodge and check out.',
+          'As you drive out of the park, you may be lucky to spot some animals along the way.',
+          'Have lunch en-route and later arrive in Kampala in the late afternoon.',
+          'This marks the end of your safari.',
+          'Meal Plan: Breakfast and Lunch.',
+          'Travel Time: 6 hours.',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Elephant,
+        title: 'Elephants',
+      },
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+
+      {
+        url: Lion,
+        title: 'Lions At Queen Elizabeth National Park',
+      },
+
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: '3 Days Murchison Falls National Park Safari',
+    description: 'Request Quote',
+    duration: '3 days',
+    location: 'Murchison Falls National Park',
+    image: Giraffe,
+    fullDescription: `The 3-day safari in Murchison Falls National Park, Uganda’s largest and most popular park, offers a diverse experience of wildlife and natural beauty. Covering 3,840 sq km, the park features habitats such as wetlands, woodlands, savannah, and grasslands, home to over 451 bird species and 87 mammals, including the Big Five. The highlight of the safari is a visit to Murchison Falls, where the River Nile forces large volumes of water through a narrow gorge, creating a stunning waterfall. Additionally, a visit to the Ziwa Rhino Sanctuary provides the opportunity to track rhinos.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Captivating 3-day Ugandan adventure in the Murchison Falls National Park with a diverse experience of wildlife and natural beauty.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Full-time English-speaking professional driver-guide.',
+          'Full board accommodation as highlighted in the itinerary.',
+          'Park entrance fees.',
+          'Transportation in a four-wheel drive Land Cruiser.',
+          'Rhino tracking fee at the Ziwa Rhino Sanctuary.',
+          'Bottled drinking water.',
+          'Ranger guide.',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'All international flights and visas.',
+          'Activities highlighted as optional.',
+          'Accommodation while in Kampala.',
+          'Personal expenses such as laundry service, drinks, purchase of souvenirs, cigars, and tips.',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: ['A game drive', 'Breathtaking scenery', 'Knowledgeable guides'],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Transfer to Murchison Falls National Park',
+        activities: [
+          'After an early breakfast, meet your safari driver-guide at 7:00 am for a briefing.',
+          'Begin the long drive to Murchison Falls National Park in northeastern Uganda.',
+          'Have lunch in Masindi en-route.',
+          'Make a stop at Ziwa Rhino Sanctuary to track rhinos on foot.',
+          'Ziwa Rhino Sanctuary, established in 2005, is dedicated to restoring the rhino population in Uganda.',
+          'Continue to Murchison Falls National Park and check into your accommodation for dinner and overnight stay.',
+          'Meal Plan: Lunch and Dinner.',
+          'Journey Time: 6 to 7 hours.',
+          'Accommodation options: Baker’s Lodge / Paraa Safari Lodge (luxury), Fort Murchison or Murchison River Lodge (mid-range), Heritage Safari Lodge (budget).',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Game Drive, Launch Cruise and Option hike to top of falls',
+        activities: [
+          "Start the day early with a morning game drive to explore the park's various habitats and spot wildlife such as elephants, hyenas, lions, Uganda kobs, buffaloes, and giraffes.",
+          'Return to the lodge for lunch and relaxation.',
+          'After lunch, embark on a 2-hour launch cruise along the River Nile to the bottom of Murchison Falls, where you’ll see the falls in their full grandeur.',
+          'Encounter wildlife along the riverbanks, including Nile crocodiles, hippos, elephants, and a variety of birds.',
+          'Option to hike to the top of Murchison Falls for a different view of the falls. The hike takes about 45 minutes and offers beautiful scenery and unique vegetation.',
+          'Return to your accommodation for dinner and overnight rest.',
+          'Meal Plan: Lunch and Dinner.',
+          'Accommodation options: Baker’s Lodge / Paraa Safari Lodge (luxury), Fort Murchison or Murchison River Lodge (mid-range), Heritage Safari Lodge (budget).',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Departure to Kampala',
+        activities: [
+          'On the final day of the safari, enjoy a morning game drive in the park to spot any remaining wildlife.',
+          'Begin the drive back to Kampala, with an estimated arrival in the late afternoon.',
+          'Depending on your travel plans, you will be dropped off either at Entebbe International Airport for your outbound flight or at a hotel of your choice.',
+          'End of Safari.',
+          'Meal Plan: Breakfast and Lunch.',
+          'Journey Time: 6 to 7 hours.',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: Elephant,
+        title: 'Elephants',
+      },
+      {
+        url: Chimp,
+        title: 'Chimpanzee',
+      },
+
+      {
+        url: Lion,
+        title: 'Lions At Queen Elizabeth National Park',
+      },
+
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: GM,
+        title: 'Golden Monkey',
+      },
+    ],
+  },
+  {
+    id: 13,
+    title: '15 Days Eastern and Northern Cultural Tour to Uganda',
+    description: 'Request Quote',
+    duration: '15 days',
+    location:
+      'Murchision Falls, Kidepo ,Lake Kyoga, Mt.Elgon, West, East & North Uganda',
+    image: Sunset,
+    fullDescription: `The culture of Uganda is made up of a diverse range of ethnic groups. Lake Kyoga forms the northern boundary for the Bantu-speaking peoples, who dominate much of east, central ,and southern Africa. In Uganda, they include the Baganda and several other tribes. In the north live the Lango and the Acholi, who speak Nilotic languages. To the east are the Iteso and Karamojong, who speak a Nilotic language, the Gishu are part of the Bantu and they live mainly on the slops of Mt Elgon. They speak lumasaba closely related to the Luhya of Kenya. A few Pygmies live isolated in the rainforests of western Uganda.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'With this cultural safaris we take you to the remote virgin areas full of exciting culture that hasn’t been exploited. These trips are for those who love and more interested in knowing about other cultures, people and their ways of life.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Accommodation as highlighted in itinerary',
+          'Meals as highlighted in itinerary',
+          'Transportation in a four-wheel drive vehicle',
+          'Full-time service of an English-speaking driver-guide',
+          'Bottled drinking water',
+          'Park entrance fee',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'Visa',
+          'International flights',
+          'Insurance',
+          'Personal expenditures such as laundry services, tips, and alcoholic drinks',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Diverse cultural experience,',
+          'Sipi Falls',
+          'A game drive',
+          'Breathtaking scenery',
+          'Knowledgeable guides',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival',
+        activities: [
+          'Arrival at Entebbe Airport.',
+          'Welcome by Divine African Tours representative.',
+          'Transfer to your hotel.',
+          'Overnight at Protea Hotel Entebbe, Cassia Lodge, or Namirembe Guest House.',
+        ],
+      },
+      {
+        day: 2,
+        title: 'City Buganda Cultural Tour',
+        activities: [
+          'After breakfast, go for the City Cultural Buganda tour.',
+          'Visit Kabaka’s Lake, believed to be man-made.',
+          'Continue to Lubiri Palace in Mengo.',
+          'Visit Namugongo Shrines, where the young Uganda Martyrs were burned alive due to religious persecution by King Mwanga.',
+          'Overnight at Protea Hotel Entebbe, Cassia Lodge, or Namirembe Guest House.',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Visit to Buganda Cultural Sites',
+        activities: [
+          'Visit all the Buganda Cultural Sites in the city.',
+          'Explore Naggalabi Coronation Site, the starting point for the Buganda Kingdom.',
+          'Visit Kasubi Tombs and Wamala Tombs, burial places for the Baganda Kings.',
+          'Tour the palaces of some Buganda Kings.',
+          'Overnight at Protea Hotel Entebbe, Cassia Lodge, or Namirembe Guest House.',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Jinja –Sipi Falls',
+        activities: [
+          'Leave Jinja and continue to Sipi Falls, passing through Mbale, a charming town at the foot of Mount Elgon.',
+          'Explore Mbale, known for its strong culture, including bi-annual circumcision ceremonies during leap years.',
+          'Proceed to Sipi Village, located in the mountains and waterfalls.',
+          'Dinner and overnight at Sipi River Lodge or Lacam Lodge.',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Sipi Falls',
+        activities: [
+          'After breakfast, hike to the beautiful Sipi Falls, a series of three waterfalls.',
+          'Enjoy the walk to the bottom of the waterfall on the edge of Mt. Elgon.',
+          'Continue to the caves, plantations, crops, and typical bandas.',
+          'After lunch and relaxation, visit the Coffee Project in Sipi Falls and interact with local farmers.',
+          'Dinner and overnight at Sipi River Lodge or Lacam Lodge.',
+          'Note: The flow of water at Sipi Falls is more during the wet season and less during the dry season.',
+        ],
+      },
+      {
+        day: 6,
+        title: 'Sipi Falls- Kitgmu',
+        activities: [
+          'Travel to the Northern region, passing through unique landscapes.',
+          'Reach Kitgum, a region known for its distinct culture.',
+          'Stopover for the night in Kitgum.',
+          'Dinner and overnight at Boma Guest House or Four Seasons.',
+        ],
+      },
+      {
+        day: 7,
+        title: 'Kitgum Cultural Tour',
+        activities: [
+          'Visit one of the former homes of Idi Amin, the ex-President of Uganda, located in the mountains.',
+          'See the famous chair built by Idi Amin from rock.',
+          'Explore other cultural sites, local communities, markets, and homes.',
+          'Dinner and overnight at Boma Guest House or Four Seasons.',
+        ],
+      },
+      {
+        day: 8,
+        title: 'Kitgum - Kidepo Valley National Park',
+        activities: [
+          'Drive to Kidepo Valley National Park, known for its rich game, uniqueness, and virgin culture.',
+          'After lunch, enjoy an evening game drive.',
+          'Dinner and overnight at Apoka Lodge, Nga’Moru Wilderness Camp, or UWA Bandas.',
+        ],
+      },
+      {
+        day: 9,
+        title: 'Game Drive & Nature Walk',
+        activities: [
+          'Enjoy another exciting game drive, with a chance to spot a variety of animals, including tree-climbing lions.',
+          'After lunch, go on a cultural walk to explore the virgin culture of the Karamoja people.',
+          'Dinner and overnight at Apoka Lodge, Nga’Moru Wilderness Camp, or UWA Bandas.',
+        ],
+      },
+      {
+        day: 10,
+        title: 'Gulu Tour',
+        activities: [
+          'Continue to Gulu after lunch.',
+          'Take a walk through the street and visit the market place.',
+          'Visit Lacor Hospital and the IDP camp sites.',
+          'Dinner and overnight at the Boma Hotel or Hotel Pearl Afrique.',
+        ],
+      },
+      {
+        day: 11,
+        title: "Baker's Fort Patiko",
+        activities: [
+          'Visit Baker’s Fort, also known as Fort Patiko, founded by Sir Samuel Baker.',
+          'Located 32 km north of Gulu town, the fort is a memorable site for the slave trade.',
+          'The fort was taken over by the Arab slave traders in 1872 from Sir Samuel Baker.',
+          'Dinner and overnight at the Boma Hotel or Hotel Pearl Afrique.',
+        ],
+      },
+      {
+        day: 12,
+        title: 'Murchison Falls',
+        activities: [
+          'Continue to Murchison Falls National Park with an evening game drive.',
+          'Dinner and overnight at Paraa Lodge, Nile Safari Lodge, Sambiya Lodge, or Red Chili.',
+        ],
+      },
+      {
+        day: 13,
+        title: 'Game drive & Boat Trip',
+        activities: [
+          'Go for an early morning game drive on the northern bank with the help of the guide.',
+          'Spot elephant, lion, Rothchild’s giraffe, cape buffalo, waterbuck, hartebeest, bushbuck, and possibly leopard.',
+          'After lunch, go for a boat safari upstream the calm Victoria Nile to the base of the falls.',
+          'Stop near the ‘Devil’s Cauldron’ and spot hippos, crocodiles, waterbuck, elephant, and Uganda Kob along the 17km stretch.',
+          'View bird species such as goliath heron, Egyptian goose, pelican, bee-eater, kingfisher, hornbill, cormorant, and the rare shoebill stork.',
+          'Dinner and overnight at Paraa Lodge, Nile Safari Lodge, Sambiya Lodge, or Red Chili.',
+        ],
+      },
+      {
+        day: 14,
+        title: 'Drive back to Kampala',
+        activities: [
+          'Transfer to Kampala.',
+          'Overnight at Le Petit Hotel, Cassia Lodge, or Namirembe Guest House.',
+        ],
+      },
+      {
+        day: 15,
+        title: 'Departure',
+        activities: [
+          'You will be transfered to the airport to catch your flight back home',
         ],
       },
     ],

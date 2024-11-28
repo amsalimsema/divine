@@ -21,6 +21,7 @@ import Troop from '../assets/Chimpanzee-troop.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
+import Sunset from '../assets/Divine-African-Tours-1.jpg'
 
 const tourPackages = [
   {
@@ -113,6 +114,34 @@ const tourPackages = [
     duration: '',
     location: 'Lake Mburo ,Bwindi & Queen Elizabeth National Park',
     image: Impala,
+  },
+  {
+    id: 11,
+    title: '5 Days Uganda Safari',
+    description:
+      'Explore gorillas in Bwindi, culture with the Batwa, and wildlife in Queen Elizabeth, including a Kazinga Channel cruise, before returning to Kampala.',
+    duration: '',
+    location: 'Bwindi & Queen Elizabeth National Park',
+    image: BGT,
+  },
+  {
+    id: 12,
+    title: '3 Days Murchison Falls National Park Safari',
+    description:
+      'This 3-day Murchison Falls safari features diverse wildlife, breathtaking waterfalls, and rhino tracking at Ziwa Sanctuary.',
+    duration: '',
+    location: 'Murchison Falls National Park',
+    image: Giraffe,
+  },
+  {
+    id: 13,
+    title: '15 Days Eastern and Northern Cultural Tour to Uganda',
+    description:
+      "This 15-day tour explores Uganda's diverse cultures, from Bantu and Nilotic communities to the Gishu of Mt. Elgon and the Pygmies in western rainforests.",
+    duration: '',
+    location:
+      'Kidepo, Murchison, Lake Kyoga, Mt.Elgon, West, East & North Uganda',
+    image: Sunset,
   },
 ]
 
