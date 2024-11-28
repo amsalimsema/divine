@@ -28,7 +28,7 @@ import Bird from '../assets/Birds-of-Lake-Bunyonyi.jpg'
 import ChimpTrek from '../assets/uganda-gorillas-trek-chimp.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
-import Sunset from '../assets/Divine-African-Tours-1.jpg'
+import Imbalu from '../assets/imbalu-celebrations.jpg'
 
 const tourPackages = [
   {
@@ -1794,7 +1794,7 @@ const tourPackages = [
     duration: '15 days',
     location:
       'Murchision Falls, Kidepo ,Lake Kyoga, Mt.Elgon, West, East & North Uganda',
-    image: Sunset,
+    image: Imbalu,
     fullDescription: `The culture of Uganda is made up of a diverse range of ethnic groups. Lake Kyoga forms the northern boundary for the Bantu-speaking peoples, who dominate much of east, central ,and southern Africa. In Uganda, they include the Baganda and several other tribes. In the north live the Lango and the Acholi, who speak Nilotic languages. To the east are the Iteso and Karamojong, who speak a Nilotic language, the Gishu are part of the Bantu and they live mainly on the slops of Mt Elgon. They speak lumasaba closely related to the Luhya of Kenya. A few Pygmies live isolated in the rainforests of western Uganda.`,
     tourDetails: [
       {
@@ -1989,6 +1989,7 @@ const tourPackages = [
       },
     ],
     photos: [
+      { url: Imbalu, title: 'Imbalu Celebrations' },
       {
         url: Elephant,
         title: 'Elephants',

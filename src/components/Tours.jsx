@@ -21,7 +21,7 @@ import Troop from '../assets/Chimpanzee-troop.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
-import Sunset from '../assets/Divine-African-Tours-1.jpg'
+import Imbalu from '../assets/imbalu-celebrations.jpg'
 
 const tourPackages = [
   {
@@ -141,7 +141,7 @@ const tourPackages = [
     duration: '',
     location:
       'Kidepo, Murchison, Lake Kyoga, Mt.Elgon, West, East & North Uganda',
-    image: Sunset,
+    image: Imbalu,
   },
 ]
 
