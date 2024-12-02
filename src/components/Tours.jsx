@@ -22,6 +22,7 @@ import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Imbalu from '../assets/imbalu-celebrations.jpg'
+import Sunset from '../assets/Divine-African-Tours-1.jpg'
 
 const tourPackages = [
   {
@@ -142,6 +143,15 @@ const tourPackages = [
     location:
       'Kidepo, Murchison, Lake Kyoga, Mt.Elgon, West, East & North Uganda',
     image: Imbalu,
+  },
+  {
+    id: 14,
+    title: 'Sunset Cruise To Equator Island',
+    description:
+      'Experience a magical sunset cruise on Lake Victoria, crossing the Equator at 0° latitude, with opportunities to float or swim at this iconic landmark.',
+    duration: '',
+    location: 'Equator Island - Lake Victoria',
+    image: Sunset,
   },
 ]
 

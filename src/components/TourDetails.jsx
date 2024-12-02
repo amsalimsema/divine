@@ -29,12 +29,13 @@ import ChimpTrek from '../assets/uganda-gorillas-trek-chimp.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Imbalu from '../assets/imbalu-celebrations.jpg'
+import Sunset from '../assets/Divine-African-Tours-1.jpg'
 
 const tourPackages = [
   {
     id: 1,
     title: '3 days Bwindi Gorilla Tracking Safari',
-    description: '$1650',
+    description: '$1485/Person',
     duration: '3 days',
     location: 'Bwindi Impenetrable National Park - Uganda',
     image: BGT,
@@ -44,7 +45,7 @@ const tourPackages = [
         title: 'Tour Cost',
         icon: Sun,
         items: [
-          '$1650',
+          '$1485 per person',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
         ],
       },
@@ -89,7 +90,7 @@ const tourPackages = [
           'An experienced tour driver/guide will pick you up from the airport for transfer to Bwindi Impenetrable National Park.',
           'Enjoy a stop at the equator to stand in both the Northern and Southern hemispheres and take photos.',
           'Continue the journey with a lunch stop in Mbarara.',
-          'Dinner and an overnight stay at a prebooked lodge of your choice.',
+          'Dinner and an overnight stay at  Gorilla Mist Lodge or Buhoma Community',
           'Meal plan includes breakfast, lunch, and dinner.',
         ],
       },
@@ -108,6 +109,7 @@ const tourPackages = [
           'Optionally, visit the Batwa community in the afternoon to enjoy cultural performances.',
           'Dinner and an overnight stay at a prebooked lodge of your choice.',
           'Meal plan includes breakfast, lunch, and dinner.',
+          'Accomodation at  Gorilla Mist Lodge or Buhoma Community',
         ],
       },
       {
@@ -205,7 +207,7 @@ const tourPackages = [
           'Take photographs at the equator',
           'Continue the journey to Bwindi with a lunch break in Mbarara',
           'Enjoy the breathtaking scenery en route to Bwindi',
-          'Accomodation at Bwindi Community Guest House',
+          'Accomodation at Gorilla Mist Lodge',
         ],
       },
       {
@@ -222,7 +224,7 @@ const tourPackages = [
           'Follow rangers’ guidance to maintain a 6-meter distance while observing gorillas',
           'Spend 1 hour with the gorillas once located',
           'Ensure physical fitness for the trek',
-          'Accomodation at Bwindi Community Guest House',
+          'Accomodation at Gorilla Mist Lodge',
         ],
       },
       {
@@ -463,7 +465,7 @@ const tourPackages = [
           'Welcome at Kigali International Airport by the tour guide',
           'Optional city tour of Kigali, including visits to genocide memorials and markets',
           'Optional lunch in Kigali',
-          'Transfer to Kinigi, the closest town to Volcanoes National Park - home to mountain gorillas in Rwanda',
+          'Accomodation at Five Volcanoes or Kinigi Cottages',
         ],
       },
       {
@@ -553,7 +555,7 @@ const tourPackages = [
           'Arrival at Kigali International Airport',
           'Meet and greet by a representative from the Rwanda travel agency',
           'Transfer to your hotel in Kigali',
-          'Hotel check-in',
+          'Accomodation at Chez Lando Hotel includes meal plan, bed and breakfast',
         ],
       },
       {
@@ -562,7 +564,7 @@ const tourPackages = [
         activities: [
           'Breakfast to start the second day',
           'Transfer to Akagera National Park',
-          'Check-in at the lodge/hotel',
+          'Check-in at the Akagezi Lodge',
           'Lunch with an option to try local dishes',
           'Boat trip on Lake Ihema',
           'Opportunity to see water-loving animals like hippopotamuses, crocodiles, and various bird species',
@@ -576,7 +578,7 @@ const tourPackages = [
           'Opportunity to see grazing animals and predators hunting in the morning',
           'Return to the hotel/lodge to freshen up and have lunch',
           'Pack up for the journey to Volcanoes National Park',
-          'Check-in at Volcanoes National Park accommodation',
+          'Check-in at Akagezi lodge',
           'Relax and prepare for the next day',
           'Dinner served at hotel/lodge ',
         ],
@@ -593,7 +595,7 @@ const tourPackages = [
           'Gorilla tracking lasts between 2 to 8 hours',
           'Return to the lodge for relaxation and lunch',
           'Optional visit to a local Banywarwanda community for a cultural encounter',
-          'Return to the hotel/lodge for dinner before nightfall',
+          'Accomodation at Five Volcanoes or Kinigi Cottages',
         ],
       },
       {
@@ -606,7 +608,7 @@ const tourPackages = [
           'Return and pack up for the journey to Nyungwe Forest National Park',
           'Enjoy lunch with Rwandan local dishes en route to Nyungwe',
           'Continue the journey to Nyungwe Forest',
-          'Check-in at the hotel/lodge upon arrival at Nyungwe',
+          'Accomodation at Five Volcanoes or Kinigi Cottages',
           'Dinner served at the lodge',
         ],
       },
@@ -622,7 +624,7 @@ const tourPackages = [
           'After lunch, go on a walking trail to the Canopy Walk',
           'Experience the 50-meter-long swing bridge with a bird’s eye view of the rainforest',
           'Spot wildlife from above as you walk through the forest',
-          'Return to the hotel/lodge for dinner before nightfall',
+          'Accomodation at Kivu Resort',
         ],
       },
       {
@@ -849,7 +851,7 @@ const tourPackages = [
   {
     id: 7,
     title: '6 Days Gorilla & Chimpanzee Tracking',
-    description: '$2650',
+    description: '$2500/Person',
     duration: '6 days',
     location: 'Bwindi,Queen Elizabeth & Lake Bunyonyi',
     image: ChimpTrek,
@@ -859,7 +861,7 @@ const tourPackages = [
         title: 'Tour Cost',
         icon: Sun,
         items: [
-          '$2650',
+          '$2500 per person',
           'Rate for 1 person for a single self-contained room',
           'Contact us for a personalized experience.',
         ],
@@ -2013,6 +2015,58 @@ const tourPackages = [
         title: 'Golden Monkey',
       },
     ],
+  },
+  {
+    id: 14,
+    title: 'Sunset Cruise To Equator Island',
+    description: 'Request Quote',
+    duration: '1 day',
+    location: 'Equator Island - Lake Victoria',
+    image: Sunset,
+    fullDescription: `Embark on an enchanting sunset cruise across Lake Victoria, Uganda's largest lake, and experience the thrill of crossing the Equator at 0° latitude. This unique journey offers the chance to float serenely on the boat or take a refreshing swim right at the Equator line, making it an unforgettable evening on the water.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Experience a magical sunset cruise on Lake Victoria, crossing the Equator at 0° latitude, with opportunities to float or swim at this iconic landmark.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Sunset Cruise',
+          'Tour Guide',
+          'Entrance Fees',
+          'All transportation in destination location',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: ['Tips', 'Any Private Expenses'],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: ['The beautiful sunset on the fresh waters of Lake Victoria'],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Entebbe to Equator Island',
+        activities: [
+          'Evening Cruise starts at 5:00 PM from Entebbe za Mugula',
+          'Visit Equator Island',
+          'Duration: Birdwatching at Bird Point and Sightseeing experience to 7:00 PM or 7:30 PM depending on the season of the year)',
+          'Refreshments: Fish fingers, fish fillets, drinks, and snacks',
+        ],
+      },
+    ],
+    photos: [{ url: Sunset, title: 'Sunset' }],
   },
 ]
 

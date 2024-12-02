@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className='flex space-x-4'>
               <a
-                href='https://www.facebook.com'
+                href='https://www.facebook.com/divineafrican.ug'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='hover:text-gray-700'
@@ -41,7 +41,7 @@ export default function Footer() {
                 <span className='sr-only'>Facebook</span>
               </a>
               <a
-                href='https://www.instagram.com'
+                href='https://www.instagram.com/divineafricanholidays/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='hover:text-gray-700'
@@ -50,7 +50,7 @@ export default function Footer() {
                 <span className='sr-only'>Instagram</span>
               </a>
               <a
-                href='https://www.twitter.com'
+                href='https://x.com/holidays_divine'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='hover:text-gray-700'
