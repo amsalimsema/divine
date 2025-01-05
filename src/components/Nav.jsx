@@ -48,12 +48,12 @@ export default function NavMenu() {
     },
     {
       name: 'DESTINATIONS',
-      href: '/destinations',
+      href: '/',
       dropdown: [
-        { name: 'Kenya', href: '/destinations/kenya' },
-        { name: 'Tanzania', href: '/destinations/tanzania' },
+        { name: 'Kenya', href: '/tours/kenya-wildlife' },
+        { name: 'Tanzania', href: '/tours/tanzania-adventure' },
         { name: 'Uganda', href: '/tours/uganda-safari' },
-        { name: 'Rwanda', href: '/destinations/rwanda' },
+        { name: 'Rwanda', href: '/tours/rwanda-expedition' },
       ],
     },
     {

@@ -153,6 +153,33 @@ const tourPackages = [
     location: 'Equator Island - Lake Victoria',
     image: Sunset,
   },
+  {
+    id: 15,
+    title: '3 Days Masai Mara Safari',
+    description:
+      '3-day Maasai Mara safari with thrilling game drives and rich wildlife exploration.Explore stunning landscapes, abundant wildlife, and the iconic Big Five in Africa’s wilderness.',
+    duration: '',
+    location: 'Masai Mara National Park',
+    image: Sunset,
+  },
+  {
+    id: 16,
+    title: '4 Days Explore Lake Nakuru & Masai Mara National Parks',
+    description:
+      'This 4-day safari takes you to the stunning Lake Nakuru, known for its pink pelicans, and the breathtaking Maasai Mara, offering an unforgettable wildlife experience.',
+    duration: '',
+    location: 'Lake Nakuru & Masai Mara National Parks',
+    image: Sunset,
+  },
+  {
+    id: 17,
+    title: '15 Days Climb Kilimanjaro & Tanzania Safari',
+    description:
+      'The 15-day Kilimanjaro climb and Tanzania safari combines summiting Africa’s highest peak with a 4-day wildlife adventure through Lake Manyara, Ngorongoro, and Serengeti National Parks.',
+    duration: '',
+    location: 'Serengeti National Park, Mount Kilimanjaro',
+    image: Sunset,
+  },
 ]
 
 export default function Component() {

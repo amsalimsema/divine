@@ -24,58 +24,48 @@ export default function AboutUs() {
 
   return (
     <>
-      <Hero title=' WHO WE ARE' />
+      <Hero title='About us' />
       <div className='min-h-screen bg-gradient-to-b from-green-100 to-amber-100 text-gray-800'>
         <main className='container mx-auto px-4 py-12 sm:px-6 lg:px-8'>
-          <motion.h2
-            className='text-3xl font-bold text-center mb-2 text-green-800'
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Divine African Tours
-          </motion.h2>
-
-          <motion.div
-            className='prose lg:prose-xl mx-auto mb-12 text-center'
-            {...fadeIn}
-          >
-            <p className='lead'>
-              Connecting with the soul of Africa and its people, one journey at
-              a time
-            </p>
+          <motion.div {...fadeIn}>
+            <div className='h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-md p-6'>
+              <h2 className='text-2xl font-semibold mb-4 flex items-center'>
+                <Globe className='mr-2 text-green-600' /> Our story is simple,
+                We are Divine
+              </h2>
+              <p>
+                Divine African Holidays tours and travel is a ground handling
+                tours and Travel Company that organizes both inbound and
+                outbound safaris throughout the East African region. Ingeniously
+                owned and managed Divine African Holidays is a thoroughly
+                professional and established company.
+              </p>
+              <br />
+              <p>
+                We specialize in tailor-made and set departure safaris in the
+                East African region ensuring that they are Eco- friendly and
+                respecting the cultures of the local community.
+              </p>
+              <br />
+              <p>
+                As part of giving back to the community, a percentage of our
+                revenue is given to selected orphanages.
+              </p>
+              <br />
+              <p>
+                In a way to conserve the environment, we do plant trees and also
+                encourage people to do the same. If more trees are planted, then
+                the world’s environment will become a safer place to live in.
+                This is because trees provide oxygen to the environment, provide
+                medicine, provide shelter for birds that attract tourists, and
+                reduce on pollution.
+              </p>
+              <br />
+              At Divine African holidays tours and travel we are enthusiastic in
+              making the tourism industry offering professional advice on
+              corporate ventures.
+            </div>
           </motion.div>
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-16'>
-            <motion.div {...fadeIn}>
-              <div className='h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-md p-6'>
-                <h2 className='text-2xl font-semibold mb-4 flex items-center'>
-                  <Globe className='mr-2 text-green-600' /> Our Story
-                </h2>
-                <p>
-                  Divine African Holidays is a ground handling Tours and Travel
-                  Company that organizes both inbound and outbound safaris
-                  throughout the East African region. Ingeniously owned and
-                  managed, we are a thoroughly professional and established
-                  company specializing in tailor-made and set departure safaris.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
-              <div className='h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-md p-6'>
-                <h2 className='text-2xl font-semibold mb-4 flex items-center'>
-                  <Leaf className='mr-2 text-green-600' /> Our Commitment
-                </h2>
-                <p>
-                  We ensure our safaris are Eco-friendly and respect the
-                  cultures of the local communities. Our passion lies in making
-                  the tourism industry thrive while offering professional advice
-                  on corporate ventures.
-                </p>
-              </div>
-            </motion.div>
-          </div>
 
           <motion.section
             className='mb-16'
@@ -83,7 +73,7 @@ export default function AboutUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className='text-3xl font-bold text-center mb-8 text-green-800'>
+            <h2 className='text-3xl font-bold text-center my-8 text-green-800'>
               Our Impact
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>

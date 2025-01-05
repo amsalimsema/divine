@@ -17,35 +17,116 @@ const toursData = {
     tours: [
       {
         id: 1,
-        name: '3 Days Bwindi Gorilla Tracking',
-        duration: '3 days',
-        groupSize: 'Any',
-        location: 'Bwindi Impenetrable National Park',
+        name: '6 Days Gorilla & Chimpanzee Tracking',
+        duration: '6 days',
+        groupSize: '',
+        location: 'Bwindi,Queen Elizabeth & Lake Bunyonyi',
         image: UGTours,
         description: ' ',
-        link: '/tour/3-days-bwindi-gorilla-tracking-safari',
+        link: '/tour/6-days-gorilla-chimpanzee-tracking',
       },
       {
         id: 2,
-        name: 'Murchison Falls Safari',
-        duration: '4 days',
-        groupSize: 'Any',
+        name: '3 days Bwindi Gorilla Tracking Safari',
+        duration: '3 days',
+        groupSize: '',
         location: 'Bwindi Impenetrable National Park',
         image:
           'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          'Witness the power of the Nile at Murchison Falls National Park.',
-        link: '/tours/uganda/murchison-falls',
+        description: '',
+        link: '/tour/3-days-bwindi-gorilla-tracking-safari',
       },
       {
         id: 3,
+        name: '6 days Uganda And Rwanda Primate Safari',
+        duration: '6 days',
+        groupSize: '',
+        location: 'Bwindi Impenetrable & Volcanoes National Park',
+        image: Impala,
+        description: '',
+        link: '/tour/6-days-uganda-and-rwanda-primate-safari',
+      },
+      {
+        id: 4,
+        name: '8 Days Gorilla & Golden Monkey Tracking',
+        duration: '8 days',
+        groupSize: '',
+        location: 'Bwindi,Queen Elizabeth & Volcanoes',
+        image: Impala,
+        description: '',
+        link: '/tour/8-days-gorilla-golden-monkey-tracking',
+      },
+      {
+        id: 5,
+        name: '4 days Uganda wildlife safari',
+        duration: '4 days',
+        groupSize: '',
+        location: 'Bwindi & Queen Elizabeth National Park',
+        image: Impala,
+        description: '',
+        link: '/tour/4-days-uganda-wildlife-safari',
+      },
+      {
+        id: 6,
+        name: '10 days Uganda wildlife safari',
+        duration: '10 days',
+        groupSize: '',
+        location:
+          'Murchision Falls, Kibale ,Bwindi & Queen Elizabeth National Park',
+        image: Impala,
+        description: '',
+        link: '/tour/10-days-uganda-wildlife-safari',
+      },
+      {
+        id: 7,
         name: '7 Days Uganda Safari',
         duration: '7 days',
-        groupSize: 'Any',
+        groupSize: '',
         location: 'Lake Mburo ,Bwindi & Queen Elizabeth National Park',
         image: Impala,
         description: '',
-        link: '/tours/uganda/queen-elizabeth-park',
+        link: '/tour/7-days-uganda-safari',
+      },
+      {
+        id: 8,
+        name: '5 Days Uganda Safari',
+        duration: '5 days',
+        groupSize: '',
+        location: 'Bwindi & Queen Elizabeth National Park',
+        image: Impala,
+        description: '',
+        link: '/tour/5-days-uganda-safari',
+      },
+      {
+        id: 9,
+        name: '3 Days Murchison Falls National Park Safari',
+        duration: '3 days',
+        groupSize: '',
+        location: 'Murchison Falls National Park',
+        image: Impala,
+        description: '',
+        link: '/tour/3-days-murchison-falls-national-park-safari',
+      },
+      {
+        id: 10,
+        name: '15 Days Eastern and Northern Cultural Tour to Uganda',
+        duration: '15 days',
+        groupSize: '',
+        location:
+          'Murchision Falls, Kidepo ,Lake Kyoga, Mt.Elgon, West, East & North Uganda',
+        image: Impala,
+        description: '',
+        link: '/tour/15-days-eastern-and-northern-cultural-tour-to-uganda',
+      },
+      {
+        id: 11,
+        name: 'Sunset Cruise To Equator Island',
+        duration: '1 day',
+        groupSize: '',
+        location: 'Equator Island - Lake Victoria',
+        image: Impala,
+        description: '',
+        link: '/tour/sunset-cruise-to-equator-island',
       },
     ],
   },
@@ -55,38 +136,26 @@ const toursData = {
     tours: [
       {
         id: 1,
-        name: 'Masai Mara Wildlife Safari',
+        name: '4 Days Explore Lake Nakuru & Masai Mara National Parks',
         duration: '4 days',
-        groupSize: '8',
-        location: '',
+        groupSize: '',
+        location: 'Lake Nakuru & Masai Mara National Parks',
         image:
           'https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          'Witness the great wildebeest migration in the Masai Mara.',
-        link: '/tours/kenya/masai-mara-safari',
+        description: '',
+        link: '/tour/4-days-explore-lake-nakuru-masai-mara-national-parks',
       },
+
       {
         id: 2,
-        name: 'Amboseli Elephant Expedition',
+        name: '3 Days Masai Mara Safari',
         duration: '3 days',
-        groupSize: '6',
-        location: '',
-        image:
-          'https://images.unsplash.com/photo-1575996587496-91d8a7d8bf6d?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          'Get close to elephants with Mt. Kilimanjaro as your backdrop.',
-        link: '/tours/kenya/amboseli-expedition',
-      },
-      {
-        id: 3,
-        name: 'Lake Nakuru Flamingo Tour',
-        duration: '2 days',
-        groupSize: '10',
-        location: '',
+        groupSize: '',
+        location: 'Masai Mara National Park',
         image:
           'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1468&ixlib=rb-4.0.3',
-        description: 'See thousands of flamingos paint Lake Nakuru pink.',
-        link: '/tours/kenya/lake-nakuru-tour',
+        description: '',
+        link: '/tour/3-days-masai-mara-safari',
       },
     ],
   },
@@ -96,36 +165,13 @@ const toursData = {
     tours: [
       {
         id: 1,
-        name: 'Serengeti Migration Safari',
-        duration: '5 days',
-        groupSize: '8',
-        location: '',
+        name: '15 Days Climb Kilimanjaro & Tanzania Safari',
+        duration: '15 days',
+        groupSize: '',
+        location: 'Serengeti National Park, Mount Kilimanjaro',
         image: TzTours,
         description: 'Follow the great migration through the Serengeti plains.',
-        link: '/tours/tanzania/serengeti-migration',
-      },
-      {
-        id: 2,
-        name: 'Ngorongoro Crater Adventure',
-        duration: '3 days',
-        groupSize: '6',
-        location: '',
-        image:
-          'https://images.unsplash.com/photo-1589825743636-e3c9d3c6f1f7?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          'Descend into the Ngorongoro Crater, a natural wildlife haven.',
-        link: '/tours/tanzania/ngorongoro-crater',
-      },
-      {
-        id: 3,
-        name: 'Mount Kilimanjaro Trekking',
-        duration: '7 days',
-        groupSize: '12',
-        location: '',
-        image:
-          'https://images.unsplash.com/photo-1589825743636-e3c9d3c6f1f7?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description: "Climb to the 'Roof of Africa' on this challenging trek.",
-        link: '/tours/tanzania/kilimanjaro-trek',
+        link: '/tour/15-days-climb-kilimanjaro-tanzania-safari',
       },
     ],
   },
@@ -135,39 +181,58 @@ const toursData = {
     tours: [
       {
         id: 1,
-        name: 'Volcanoes National Park Gorilla Trek',
-        duration: '2 days',
-        groupSize: '8',
-        location: '',
+        name: '6 Days Uganda And Rwanda Primate Safari',
+        duration: '6 days',
+        groupSize: '',
+        location: 'Bwindi Impenetrable & Volcanoes National Park',
         image:
           'https://images.unsplash.com/photo-1598880940371-c756e015faf1?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3',
-        description:
-          'Trek through misty forests to encounter mountain gorillas.',
-        link: '/tours/rwanda/volcanoes-gorilla-trek',
+        description: '',
+        link: '/tour/6-days-gorilla-chimpanzee-tracking',
       },
       {
         id: 2,
-        name: 'Nyungwe Forest Chimpanzee Tour',
-        duration: '3 days',
-        groupSize: '6',
-        location: '',
+        name: '5 Days Rwanda Primate Safari',
+        duration: '5 days',
+        groupSize: '',
+        location: 'Nyungwe National Park & Chamudong',
         image:
           'https://images.unsplash.com/photo-1628944681206-2ee8d63b0a6b?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          "Walk among chimpanzees in one of Africa's oldest rainforests.",
-        link: '/tours/rwanda/nyungwe-chimpanzee-tour',
+        description: '',
+        link: '/tour/5-days-rwanda-primate-safari',
       },
       {
         id: 3,
-        name: 'Akagera National Park Safari',
-        duration: '4 days',
-        groupSize: '10',
-        location: '',
+        name: '2 Days Gorilla Tracking at Volcanoes National Park',
+        duration: '2 days',
+        groupSize: '',
+        location: 'Volcanoes National Park',
         image:
           'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
-        description:
-          "Explore Rwanda's only savannah park, home to the Big Five.",
-        link: '/tours/rwanda/akagera-safari',
+        description: '',
+        link: '/tour/2-days-gorilla-tracking-at-volcanoes-national-park',
+      },
+      {
+        id: 4,
+        name: '7 Days Rwanda Safari',
+        duration: '7 days',
+        groupSize: '',
+        location: 'All Rwanda National Parks',
+        image:
+          'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
+        description: '',
+        link: '/tour/7-days-rwanda-safari',
+      },
+      {
+        id: 5,
+        name: '8 Days Gorilla & Golden Monkey Tracking',
+        duration: '8 days',
+        groupSize: '',
+        location: 'Bwindi,Queen Elizabeth & Volcanoes',
+        image:
+          'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3',
+        description: '',
+        link: '/tour/8-days-gorilla-golden-monkey-tracking',
       },
     ],
   },
@@ -239,12 +304,12 @@ export default function CountryTours() {
                     <Clock className='mr-2 h-4 w-4 text-gray-400' />
                     <span className='text-gray-800'>{tour.duration}</span>
                   </li>
-                  <li className='flex items-center'>
+                  {/* <li className='flex items-center'>
                     <Users className='mr-2 h-4 w-4 text-gray-400' />
                     <span className='text-gray-800'>
                       Group size: {tour.groupSize}
                     </span>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className='p-6'>

@@ -28,7 +28,7 @@ export default function Component() {
 
   return (
     <>
-      <Hero title='CONTACT US' />
+      <Hero title='Contact Us' />
       <div className='bg-gray-100'>
         <div className='max-w-4xl mx-auto p-4 py-12'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
@@ -37,13 +37,17 @@ export default function Component() {
                 className='w-8 h-8 mb-4 text-gray-600'
                 aria-hidden='true'
               />
-              <h2 className='text-xl font-semibold mb-2'>PHONE</h2>
+              <h2 className='text-xl font-semibold mb-2 text-gray-800'>
+                PHONE
+              </h2>
               <p className='text-gray-600'>Office: +256 759 650705</p>
               <p className='text-gray-600'>Mobile: +256 775 650705</p>
             </div>
             <div className='flex flex-col items-center text-center'>
               <Mail className='w-8 h-8 mb-4 text-gray-600' aria-hidden='true' />
-              <h2 className='text-xl font-semibold mb-2'>EMAIL</h2>
+              <h2 className='text-xl font-semibold mb-2 text-gray-800'>
+                EMAIL
+              </h2>
               <p className='text-gray-600 mb-2'>
                 Our Email is one of the most reliable modes of communication.
               </p>
@@ -60,7 +64,9 @@ export default function Component() {
                 className='w-8 h-8 mb-4 text-gray-600'
                 aria-hidden='true'
               />
-              <h2 className='text-xl font-semibold mb-2'>LOCATION</h2>
+              <h2 className='text-xl font-semibold mb-2 text-gray-800'>
+                LOCATION
+              </h2>
               <p className='text-gray-600 mb-2'>Plot 30, Lumumba Avenue.</p>
               <p className='text-gray-600 mb-2'>P.O.BOX: 129920.</p>
               <p className='text-gray-600'>Kampala - Uganda</p>
@@ -68,7 +74,7 @@ export default function Component() {
           </div>
 
           <div className='w-full p-0 rounded-lg min-h-full mb-12'>
-            <h2 className='text-4xl font-extrabold text-center mb-3'>
+            <h2 className='text-4xl font-extrabold text-center mb-3 text-gray-800'>
               Get in Touch
             </h2>
             <p className='text-xl text-center text-gray-600 mb-8 font-medium'>

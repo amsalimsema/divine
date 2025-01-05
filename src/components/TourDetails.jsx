@@ -2051,7 +2051,9 @@ const tourPackages = [
       {
         title: 'What to Expect',
         icon: Eye,
-        items: ['The beautiful sunset on the fresh waters of Lake Victoria'],
+        items: [
+          'Breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives',
+        ],
       },
     ],
     itinerary: [
@@ -2063,6 +2065,349 @@ const tourPackages = [
           'Visit Equator Island',
           'Duration: Birdwatching at Bird Point and Sightseeing experience to 7:00 PM or 7:30 PM depending on the season of the year)',
           'Refreshments: Fish fingers, fish fillets, drinks, and snacks',
+        ],
+      },
+    ],
+    photos: [{ url: Sunset, title: 'Sunset' }],
+  },
+  {
+    id: 15,
+    title: '3 Days Masai Mara Safari',
+    description: 'Request Quote',
+    duration: '3 days',
+    location: 'Masai Mara National Park',
+    image: Sunset,
+    fullDescription: `Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve. Discover breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives, while immersing yourself in the heart of Africa’s wilderness.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Tour Guide',
+          'Entrance Fees',
+          'All transportation in destination location',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: ['Tips', 'Any Private Expenses'],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Departure from Nairobi',
+        activities: [
+          'Depart Nairobi at 7:00 AM for a scenic drive through the Great Rift Valley',
+          'Brief stopover en route for stretching and sightseeing',
+          'Arrive at Maasai Mara in time for lunch',
+          'Afternoon game drive in the African wild',
+          'Accommodation options: Budget camping, Ol Moran Tented Camp (midrange), Sentirm Mara Camp (luxury)',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Game Drives',
+        activities: [
+          'Morning departure for a full day of game drives in Maasai Mara',
+          'Wildlife viewing: lions, leopards, cheetahs, buffalo, zebras, giraffes, and various bird species',
+          'Experience the annual wildebeest migration (July to September) and Mara River crossing spectacle',
+          'Evening return to the camp',
+          'Accommodation options: Budget camping, Ol Moran Tented Camp (midrange), Sentirm Mara Camp (luxury)',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Maasai Mara – Nairobi',
+        activities: [
+          'Early morning game drive at 6:00 AM to spot nocturnal and semi-nocturnal wildlife',
+          'Return to camp for breakfast and prepare for departure',
+          'Transfer back to Nairobi, arriving by late afternoon',
+        ],
+      },
+    ],
+    photos: [{ url: Sunset, title: 'Sunset' }],
+  },
+  {
+    id: 16,
+    title: '4 Days Explore Lake Nakuru & Masai Mara National Parks',
+    description: 'Request Quote',
+    duration: '4 days',
+    location: 'Lake Nakuru & Masai Mara National Parks',
+    image: Sunset,
+    fullDescription: `This 4-day safari takes you to Lake Nakuru, a birdwatcher’s paradise, and the iconic Maasai Mara, known for its incredible wildlife. Explore the diverse habitats of Lake Nakuru, perfect for bird watching and game drives. Then, venture to Maasai Mara, one of Africa’s greatest wildlife reserves, home to over 95 species of mammals and 570 bird species. Witness the spectacular wildebeest migration (July–October) or enjoy the dry season (December–February) for prime big cat sightings. This tour offers unparalleled wildlife experiences in two of Kenya's top national parks.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve.',
+          'Contact us for a personalized experience.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Tour Guide',
+          'Entrance Fees',
+          'All transportation in destination location',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: ['Tips', 'Any Private Expenses'],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Nairobi to Lake Nakuru National Park',
+        activities: [
+          'Depart Nairobi in the early hours for Lake Nakuru National Park',
+          'Spend the day game watching, with sightings of flamingos, rhinos, lions, leopards, hyenas, and antelopes',
+          'Observe Rothschild’s giraffes and other wildlife',
+          'Major highlight: Flamingo population at Lake Nakuru',
+          'Accommodation options: Wildlife Clubs Guesthouse (budget), Hill Court Resort (midrange), Lake Nakuru Lodge (luxury)',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Lake Nakuru – Masai Mara National Park',
+        activities: [
+          'Depart after breakfast for a 6-hour drive through the Great Rift Valley',
+          'Arrive at Maasai Mara National Reserve in time for lunch',
+          'Leisure afternoon followed by a game-viewing drive through the park’s rolling hills and open plains',
+          'Opportunity to capture wildlife in their natural habitats',
+          'Accommodation options: Budget camping, Ol Moran Tented Camp (midrange), Sentirm Mara Camp (luxury)',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Maasai Mara – Game drives',
+        activities: [
+          'Full day of game drives in Maasai Mara to view the Big Five and other wildlife',
+          'Spot giraffes, zebras, hippos, baboons, wildebeests, warthogs, gazelles, crocodiles, and birds',
+          'Witness the wildebeest and zebra migration (July–October) and Mara River crossing',
+          'Optional Maasai Village visit for cultural engagement, dances, and learning',
+          'Accommodation options: Budget camping, Ol Moran Tented Camp (midrange), Sentirm Mara Camp (luxury)',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Maasai Mara – Nairobi',
+        activities: [
+          'Early 6:00 AM game drive to spot nocturnal and semi-nocturnal animals',
+          'Return to camp for breakfast and preparation for departure',
+          'Travel back to Nairobi, arriving by late afternoon',
+        ],
+      },
+    ],
+    photos: [{ url: Sunset, title: 'Sunset' }],
+  },
+  {
+    id: 17,
+    title: '15 Days Climb Kilimanjaro & Tanzania Safari',
+    description: 'Request Quote',
+    duration: '15 days',
+    location: 'Serengeti National Park, Mount Kilimanjaro',
+    image: Sunset,
+    fullDescription: `Mount Kilimanjaro, Africa's highest mountain and the largest free-standing mountain in the world, offers an unforgettable adventure. The 15-day Kilimanjaro climb and Tanzania safari combines the challenge of summiting the iconic peak with a relaxing 4-day wildlife game drive through Lake Manyara, Ngorongoro, and Serengeti National Parks. This once-in-a-lifetime experience begins at Kilimanjaro International Airport, where the towering mountain beckons, and ends with the thrill of Tanzania's incredible wildlife.`,
+    tourDetails: [
+      {
+        title: 'Tour Summary',
+        icon: Sun,
+        items: [
+          'Best times to climb Kilimanjaro: January-March and June-October',
+          'June-October is the busiest season due to summer holidays',
+          'April, May, and November are the wettest months, not ideal for trekking',
+          'December is becoming popular, though very cold on the summit',
+          'Snow cover is highest between November and May',
+          'Departure and return location: Arusha',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          'Tour Guide',
+          'Entrance Fees',
+          'All transportation in destination location',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: ['Tips', 'Any Private Expenses'],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival in Arusha',
+        activities: [
+          'Upon arrival at the airport, transfer to your overnight stay',
+          'Dinner and overnight at Planet Lodge',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Machame Gate/Machame Camp',
+        activities: [],
+      },
+      {
+        day: 3,
+        title: 'Machame Camp/Shira Camp',
+        activities: [
+          'After breakfast, leave the rainforest and follow an ascending path',
+          'Cross a valley and walk along a steep rocky ridge covered with heather',
+          'Route turns west to a river gorge at 3658m (5-7 hours)',
+          'Dinner and overnight at the Shira Hut campsite at 3800m',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Hira Camp/Barranco Camp',
+        activities: [
+          'Trek east from the Shira plateau towards the Lava Tower (the Shark’s Tooth)',
+          'Reach a junction leading to the Arrow Glacier after the tower',
+          'Continue to Barranco Hut campsite at 3950m for dinner and overnight (5-7 hours walking)',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Barranco Camp/Karanga Valley Camp',
+        activities: [
+          'After breakfast, start with a descent into the Gorge',
+          'Climb the eastern wall with views of Kilimanjaro’s ice fields',
+          'Continue hiking to Kilimanjaro Karanga Valley campsite at 13,900 feet (4-5 hours walking)',
+        ],
+      },
+      {
+        day: 6,
+        title: 'Karanga Valley Camp/Barafu Camp',
+        activities: [
+          'After breakfast, hike through Karanga Valley and steadily uphill towards Barafu Camp',
+          'Landscape becomes colder and more sparse as you approach Barafu Camp',
+          'Barafu Camp, at 15,200 feet, is set on a flat ridge and serves as a base for the summit attempt',
+          'Total walking time: 6-7 hours',
+        ],
+      },
+      {
+        day: 7,
+        title: 'Barafu Camp/Uhuru Peak (Roof Of Africa)',
+        activities: [
+          'Trek to Stella Point (5745m) just after midnight on the way to the summit',
+          'Reach the highest point in Africa, Uhuru Peak (5895m) after about 8 hours',
+          'Descend to Mweka Hut campsite at 3100m for dinner and overnight (5 hours walking)',
+        ],
+      },
+      {
+        day: 8,
+        title: 'Mweka Camp/Mweka Gate',
+        activities: [
+          'Spend the day descending to the Mweka park gate (3-4 hours)',
+          'At the gate, receive your climbing certificate',
+          'Transfer to Planet Lodge for late lunch, dinner, and overnight',
+        ],
+      },
+      {
+        day: 9,
+        title: 'Arusha National Park',
+        activities: [
+          'After breakfast, drive to Arusha National Park for a game drive with a picnic lunch',
+          'Spot giraffes, antelopes, flamingos in the Momela Lakes, and search for the rare black and white Colobus Monkey',
+          'After lunch, enjoy 2 hours of canoe riding in the Momela Lakes',
+          'Dinner and overnight at Planet Lodge',
+        ],
+      },
+      {
+        day: 10,
+        title: 'Mtowambu Village',
+        activities: [
+          'After breakfast, drive to Mtowambu village for a guided village walk and interact with local people from all 120 tribes in Tanzania',
+          'Visit a local banana beer bar, a nursery school, and banana/rice farms, with an opportunity to try farm work',
+          'Continue to Twiga Lodge for lunch',
+          'In the afternoon, bike ride across the villages to Lake Manyara to spot animals from a distance, guided by a local',
+          'Return to Twiga Lodge for dinner',
+          'Depart for a night game drive to look for nocturnal animals with special night drive vehicles',
+          'Dinner and overnight at Twiga Lodge',
+        ],
+      },
+      {
+        day: 11,
+        title: 'Lake Manyara National Park',
+        activities: [
+          'After breakfast, a game drive in Lake Manyara National Park',
+          'See the largest concentration of baboons in North Tanzania, tree-climbing lions, flamingos, and other birds',
+          'Return to Manyara Twiga Lodge for late lunch and rest',
+          'In the afternoon, visit a traditional Maasai village to explore their culture',
+          'Dinner and overnight at Twiga Lodge',
+        ],
+      },
+      {
+        day: 12,
+        title: 'Serengeti National Park',
+        activities: [
+          'After breakfast, drive to Serengeti National Park for a game drive with picnic lunch',
+          'Spot the largest concentration of big mammals in the world, including lions, leopards, cheetahs, elephants, impalas, and giraffes',
+          'Dinner and overnight at Serengeti Bush Camp',
+        ],
+      },
+      {
+        day: 13,
+        title: 'Serengeti National Park',
+        activities: [
+          'Morning and afternoon game drives in Serengeti National Park, with early departures to spot active cats and hunting predators',
+          'All meals and overnight at Serengeti Bush Camp',
+        ],
+      },
+      {
+        day: 14,
+        title: 'Ngorongoro National Park',
+        activities: [
+          'After breakfast, drive to Ngorongoro National Park for a game drive in the crater with picnic lunch',
+          'Spot the endangered black rhino, along with zebras, wildebeests, hippos, gazelles, and hyenas',
+          'Dinner and overnight at Eileen Trees Inn',
+        ],
+      },
+      {
+        day: 15,
+        title: 'Departure',
+        activities: [
+          'After breakfast, drive back to Arusha for lunch',
+          'Continue to the airport for your departure after this amazing experience',
         ],
       },
     ],

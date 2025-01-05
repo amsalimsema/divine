@@ -102,13 +102,11 @@ export function WhyChooseUs() {
                   <span className='font-semibold text-amber-600'>
                     Divine African Tours
                   </span>
-                  , we craft exceptional safari experiences that capture the
-                  beauty and diversity of East Africa. With deep local
-                  expertise, we offer tailor-made adventures that respect the
-                  environment and the cultural heritage of the communities we
-                  visit. Whether you're exploring majestic landscapes or
-                  encountering wildlife up close, our team ensures every journey
-                  is immersive and eco-conscious.
+                  , We offer tailor made safaris to Uganda, Rwanda, Kenya and
+                  Tanzania. Our tailor-made safaris are built around each
+                  client’s individual needs, time and budget offering them the
+                  complete choice, freedom and a rare opportunity to appreciate
+                  the beauty and diversity of our destinations
                 </motion.p>
                 <motion.p
                   className='text-gray-600'
@@ -163,30 +161,30 @@ export function SafariAnimals() {
   const destinations = [
     {
       src: UGTours,
-      alt: 'Lion in the savanna',
+      alt: 'Uganda Safaris',
       country: 'Uganda',
-      tours: 15,
+      tours: 11,
       slug: 'uganda-safari',
     },
     {
       src: KTours,
-      alt: 'Elephant in the wild',
+      alt: 'Kenya Safaris',
       country: 'Kenya',
-      tours: 12,
+      tours: 2,
       slug: 'kenya-wildlife',
     },
     {
       src: TzTours,
-      alt: 'Zebras grazing',
+      alt: 'Tanzania Safaris',
       country: 'Tanzania',
-      tours: 18,
+      tours: 1,
       slug: 'tanzania-adventure',
     },
     {
       src: RwTours,
-      alt: 'Gorilla close-up',
+      alt: 'Rwanda Safaris',
       country: 'Rwanda',
-      tours: 10,
+      tours: 5,
       slug: 'rwanda-expedition',
     },
   ]

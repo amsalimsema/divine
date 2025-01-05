@@ -32,14 +32,14 @@ export default function Hero({ title }) {
       ))}
       <div className='absolute inset-0 bg-black bg-opacity-50' />
       <div className='relative z-10 flex h-full flex-col items-center justify-center pt-24 md:pt-32 lg:pt-40'>
-        <motion.p
-          className='mt-4 text-center lead text-white pb-6'
+        <motion.h1
+          className='mt-4 text-center text-white pb-6 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
         >
           {title}
-        </motion.p>
+        </motion.h1>
       </div>
     </section>
   )
