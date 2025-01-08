@@ -575,7 +575,7 @@ export default function CarHireSection() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className='flex justify-center mb-8'
+              className='flex flex-wrap justify-center mb-8 gap-2'
             >
               {[
                 'all',
@@ -587,7 +587,7 @@ export default function CarHireSection() {
                 <motion.button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-4 py-2 mx-2 rounded-md ${
+                  className={`px-3 py-2 text-sm sm:text-base rounded-full sm:rounded-md ${
                     activeTab === tab
                       ? 'bg-orange-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-orange-100'
