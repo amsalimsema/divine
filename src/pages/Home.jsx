@@ -1,16 +1,14 @@
 import React from 'react'
-import { WhyChooseUs, SafariAnimals } from '../components/Why'
-
-import Tours from '../components/Tours'
 import MainHero from '../components/MainHero'
+import Four from '../components/Four'
+import Five from '../components/Five'
 
 function Home() {
   return (
     <>
       <MainHero />
-      <WhyChooseUs />
-      <Tours />
-      <SafariAnimals />
+      <Five />
+      <Four />
     </>
   )
 }

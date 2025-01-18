@@ -1,46 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react'
 
-export default function Hero({ title }) {
-  const [circles, setCircles] = useState([])
-
-  useEffect(() => {
-    const colors = ['bg-amber-800', 'bg-green-800', 'bg-yellow-400']
-    const newCircles = Array.from({ length: 20 }, (_, i) => ({
-      id: i,
-      size: Math.random() * 200 + 50,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      color: colors[Math.floor(Math.random() * colors.length)],
-    }))
-    setCircles(newCircles)
-  }, [])
-
+const Hero = ({ title, sub }) => {
   return (
-    <section className='relative h-40% w-full overflow-hidden'>
-      {circles.map((circle) => (
-        <div
-          key={circle.id}
-          className={`absolute rounded-full opacity-20 ${circle.color}`}
-          style={{
-            width: `${circle.size}px`,
-            height: `${circle.size}px`,
-            left: `${circle.x}%`,
-            top: `${circle.y}%`,
-          }}
-        />
-      ))}
-      <div className='absolute inset-0 bg-black bg-opacity-50' />
-      <div className='relative z-10 flex h-full flex-col items-center justify-center pt-24 md:pt-32 lg:pt-40'>
-        <motion.h1
-          className='mt-4 text-center text-white pb-6 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl'
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-        >
-          {title}
-        </motion.h1>
+    <section
+      className='h-[320px] overflow-hidden bg-cover bg-center flex items-center'
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+      }}
+    >
+      <div className='container mx-auto px-4 relative'>
+        <div className='flex flex-col md:flex-row items-center'>
+          {/* Text content */}
+          <div className='w-full text-center'>
+            <div className='space-y-2'>
+              <p className='text-3xl font-medium text-white'>{title}</p>
+              <p className='text-3xl text-white'>{sub}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
+
+export default Hero

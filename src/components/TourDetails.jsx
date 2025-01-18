@@ -20,7 +20,7 @@ import BGT from '../assets/bwindi_gorilla.jpg'
 import PG from '../assets/primate_hero.jpg'
 import GM from '../assets/GoldenMonkey.jpg'
 import Chimp from '../assets/chimpanzee.jpg'
-import Elephant from '../assets/divine.jpg'
+import Elephant from '../assets/ElephantsRW.jpg'
 import Lake from '../assets/Lake-Ihema.jpg'
 import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
@@ -2431,8 +2431,8 @@ export default function TourDetails() {
     return (
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center'>
         <h2 className='text-2xl font-bold mb-4'>Tour not found</h2>
-        <Link to='/' className='text-gray-500 hover:underline'>
-          Return to home
+        <Link to='/destinations' className='text-gray-500 hover:underline'>
+          Return to all tours
         </Link>
       </div>
     )
@@ -2663,40 +2663,6 @@ export default function TourDetails() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-        </div>
-
-        {/* Call to Action Section */}
-        <div className='mt-12 bg-green-800 rounded-lg shadow-xl overflow-hidden'>
-          <div className='px-6 py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:justify-between'>
-            <div>
-              <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-                Ready to embark on your adventure?
-              </h2>
-              <p className='mt-3 max-w-3xl text-lg text-green-100'>
-                Book your Safari Adventure today and create memories that will
-                last a lifetime. Our team is ready to assist you with any
-                questions and help you plan your perfect safari experience.
-              </p>
-            </div>
-            <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
-              <div className='inline-flex rounded-md shadow'>
-                <Link
-                  to='/book'
-                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-800 bg-white hover:bg-green-50'
-                >
-                  Book Now
-                </Link>
-              </div>
-              <div className='ml-3 inline-flex rounded-md shadow'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600'
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>

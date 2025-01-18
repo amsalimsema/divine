@@ -7,8 +7,11 @@ import {
 
 import Nav from './components/Nav'
 import Home from './pages/Home'
-import Footer from './components/Footer'
+//import Footer from './components/Footer'
 import Contact from './components/Contact'
+
+import Three from './components/Three'
+import CTA from './components/CTA'
 
 import './App.css'
 import TourDetails from './components/TourDetails'
@@ -16,6 +19,7 @@ import { useEffect } from 'react'
 import About from './components/About'
 import CarHire from './components/CarHire'
 import CountryTours from './components/CountryTours'
+import Destinations from './components/Destinations'
 
 function App() {
   //ScrollToTop component to handle scrolling on route change
@@ -33,15 +37,21 @@ function App() {
       <Router>
         <ScrollToTop />
         <Nav />
+
         <Routes>
           <Route path='/' element={<Home />} />
+
+          <Route path='/destinations' element={<Destinations />} />
+
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/car-hire' element={<CarHire />} />
           <Route path='/tour/:slug' element={<TourDetails />} />
           <Route path='/tours/:slug' element={<CountryTours />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
+        <CTA />
+        <Three />
       </Router>
     </>
   )
