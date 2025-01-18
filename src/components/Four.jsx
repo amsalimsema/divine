@@ -15,7 +15,7 @@ import Imbalu from '../assets/imbalu-celebrations.jpg'
 import MountainGorilla from '../assets/bwindi_gorilla.jpg'
 import ElephantRW from '../assets/ElephantsRw.jpg'
 
-import Chimpanzee from '../assets/Chimpanzee.jpg'
+import Chimpanzee from '../assets/chimpanzee.jpg'
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
