@@ -16,9 +16,9 @@ import Hero from './Hero'
 
 //cars
 import hiace from '../assets/dat_hiace.jpg'
-import open from '../assets/dat_open.Jpg'
-import pickup from '../assets/dat_pickup.Jpg'
-import suv from '../assets/dat_suv.Jpg'
+import open from '../assets/dat_open.jpg'
+import pickup from '../assets/dat_pickup.jpg'
+import suv from '../assets/dat_suv.jpg'
 
 export default function CarHireSection() {
   const [openAccordion, setOpenAccordion] = useState(null)
