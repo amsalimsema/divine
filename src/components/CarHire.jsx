@@ -1,7 +1,24 @@
 import React, { useState } from 'react'
-import { Car, Users, Fuel, Cog, Check, Info, ChevronDown } from 'lucide-react'
+import {
+  Car,
+  Users,
+  Fuel,
+  Cog,
+  Check,
+  Info,
+  ChevronDown,
+  Phone,
+  Mail,
+} from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Hero from './Hero'
+
+//cars
+import hiace from '../assets/dat_hiace.jpg'
+import open from '../assets/dat_open.Jpg'
+import pickup from '../assets/dat_pickup.Jpg'
+import suv from '../assets/dat_suv.Jpg'
 
 export default function CarHireSection() {
   const [openAccordion, setOpenAccordion] = useState(null)
@@ -12,40 +29,57 @@ export default function CarHireSection() {
 
   const images = [
     {
-      src: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5',
-      alt: 'Elephant walking in savanna',
+      src: hiace,
+      alt: 'hiace',
     },
     {
-      src: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e',
-      alt: 'Pride of lions resting in grass',
+      src: open,
+      alt: 'open top',
     },
     {
-      src: 'https://images.unsplash.com/photo-1549366021-9f761d450615',
-      alt: 'Giraffe close-up with trees in background',
+      src: pickup,
+      alt: 'pickup truck',
     },
     {
-      src: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098',
-      alt: 'Zebras grazing in the savanna',
+      src: suv,
+      alt: 'suv',
     },
   ]
   return (
     <>
-      <Hero title='CAR HIRE' />
+      <Hero title='Discover the Wild Heart of East Africa' sub='Car Hire' />
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className='py-2 bg-white overflow-hidden'
       >
-        <div className='container mx-auto px-4 text-black'>
+        <div className='container mx-auto px-2 text-black'>
           {/* new */}
-          <section className='py-16 bg-white'>
-            <div className='container mx-auto px-4'>
+          <section className='py-2 bg-white'>
+            <div className='container mx-auto px-2'>
               <div className='flex flex-col lg:flex-row gap-8'>
+                {/* Right Column - Image Grid */}
+                <div className='lg:w-1/2 overflow-hidden'>
+                  <div className='grid grid-cols-2 gap-4 justify-center rotate-12'>
+                    {images.map((image, index) => (
+                      <div
+                        key={index}
+                        className='aspect-square overflow-hidden rounded-lg transform rotate-5 hover:scale-105 transition duration-300 ease-in-out'
+                      >
+                        <img
+                          src={image.src || '/placeholder.svg'}
+                          alt={image.alt}
+                          className='w-full h-full object-cover transform -rotate-5 scale-125'
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 {/* Left Column - Copy */}
                 <div className='lg:w-1/2 space-y-6'>
                   <h2 className='text-3xl font-bold text-gray-900'>
-                    Divine African Tours
+                    Divine African Tours Car Hire
                   </h2>
                   <p className='text-lg text-gray-700'>
                     Traveling in Uganda can be stressing if you don't have a car
@@ -63,27 +97,23 @@ export default function CarHireSection() {
                     All our Cars are comprehensively insured and our prices very
                     competitive.
                   </p>
-                  <button className='bg-[#2ba924] hover:bg-[#2ba924] text-white font-bold py-2 px-4 rounded transition duration-300'>
-                    Hire Now
-                  </button>
-                </div>
 
-                {/* Right Column - Image Grid */}
-                <div className='lg:w-1/2 overflow-hidden'>
-                  <div className='grid grid-cols-2 gap-4 justify-center'>
-                    {images.map((image, index) => (
-                      <div
-                        key={index}
-                        className='aspect-square overflow-hidden rounded-lg transform rotate-5 hover:scale-105 transition duration-300 ease-in-out'
-                      >
-                        <img
-                          src={image.src || '/placeholder.svg'}
-                          alt={image.alt}
-                          className='w-full h-full object-cover transform -rotate-5 scale-125'
-                        />
-                      </div>
-                    ))}
+                  {/* call buttons */}
+                  <div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-10 py-16'>
+                    <a href='tel:+256759650705' className='inline-block'>
+                      <button className='w-full sm:w-auto flex items-center justify-center space-x-2 bg-transparent border border-[#2ba924] text-[#2ba924] hover:bg-[#2ba924] hover:text-white py-2 px-4 rounded-md transition duration-300'>
+                        <Phone size={18} />
+                        <span>Call Now</span>
+                      </button>
+                    </a>
+                    <Link to='/contact' className='inline-block'>
+                      <button className='w-full sm:w-auto flex items-center justify-center space-x-2 bg-transparent border border-[#2ba924] text-[#2ba924] hover:bg-[#2ba924] hover:text-white py-2 px-4 rounded-md transition duration-300'>
+                        <Mail size={18} />
+                        <span>Send Message</span>
+                      </button>
+                    </Link>
                   </div>
+                  {/* end */}
                 </div>
               </div>
             </div>
@@ -95,7 +125,7 @@ export default function CarHireSection() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className='bg-gray-50 rounded-lg shadow-lg p-8 mb-12'
+            className='bg-gray-50 rounded-lg shadow-lg p-8 mb-12 py-12'
           >
             <h3 className='text-2xl font-semibold mb-6'>
               Why Choose Divine African Tours for Your Car Hire?

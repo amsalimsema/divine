@@ -7,10 +7,9 @@ import {
 
 import Nav from './components/Nav'
 import Home from './pages/Home'
-//import Footer from './components/Footer'
+import Footer from './components/Footer'
 import Contact from './components/Contact'
 
-import Three from './components/Three'
 import CTA from './components/CTA'
 
 import './App.css'
@@ -49,9 +48,8 @@ function App() {
           <Route path='/tour/:slug' element={<TourDetails />} />
           <Route path='/tours/:slug' element={<CountryTours />} />
         </Routes>
-        {/* <Footer /> */}
         <CTA />
-        <Three />
+        <Footer />
       </Router>
     </>
   )

@@ -213,11 +213,9 @@ export default function Component() {
 
   return (
     <>
-      <Hero title='Contact' />
+      <Hero title='Contact' sub='Get in Touch' />
       <div className='bg-white'>
         <div className='max-w-5xl mx-auto p-4 py-8 flex flex-col gap-12 w-full lg:w-[70%]'>
-          <h1 className='text-center text-4xl mb-1 text-black'>Get in Touch</h1>
-
           <div className='text-black flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-0'>
             <div className='text-center lg:text-left'>
               <Phone
@@ -263,7 +261,7 @@ export default function Component() {
               <p className='text-black'>Kampala, Uganda</p>
             </div>
           </div>
-          <div className='w-full p-0 rounded-lg min-h-full text-black mt-8 lg:mt-0'>
+          <div className='w-full p-0 rounded-lg min-h-full text-black mt-8 lg:mt-10'>
             <form onSubmit={handleSubmit} className='space-y-4'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>

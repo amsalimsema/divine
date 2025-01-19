@@ -4,15 +4,11 @@ import { motion } from 'framer-motion'
 
 // Import desktop images
 
-import Sunset from '../assets/Divine-African-Tours-1.jpg'
-
+import Chimp from '../assets/chimpanzee.jpg'
 import GoldenMonkeyRw from '../assets/uganda-golden-monkey.jpg'
-
 import Nakuru from '../assets/Nakuru.jpg'
 import Mara from '../assets/Mara.jpg'
-
 import MountainGorilla from '../assets/bwindi_gorilla.jpg'
-
 import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
@@ -124,8 +120,8 @@ export default function Hero() {
       aspect: '4/3',
     },
     {
-      src: Sunset,
-      alt: 'Equator Island Sunset',
+      src: Chimp,
+      alt: 'Equator Island Chimp',
       aspect: 'square',
     },
     {

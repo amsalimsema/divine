@@ -1,14 +1,14 @@
 import React from 'react'
 import MainHero from '../components/MainHero'
-import Four from '../components/Four'
-import Five from '../components/Five'
+import Tours from '../components/Tours'
+import Why from '../components/Why'
 
 function Home() {
   return (
     <>
       <MainHero />
-      <Five />
-      <Four />
+      <Why />
+      <Tours />
     </>
   )
 }

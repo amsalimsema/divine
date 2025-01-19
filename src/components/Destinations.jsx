@@ -1,5 +1,5 @@
 import React from 'react'
-import Four from '../components/Four'
+import Tours from '../components/Tours'
 import Hero from './Hero'
 export default function Six() {
   return (
@@ -8,7 +8,7 @@ export default function Six() {
         title='Tailor-Made Safaris,'
         sub='built around each client’s individual needs'
       />
-      <Four />
+      <Tours />
     </div>
   )
 }
