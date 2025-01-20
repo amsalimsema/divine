@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
   MapPin,
-  ArrowLeft,
+  ArrowUpLeft,
   Calendar,
   Check,
   Circle,
@@ -2485,11 +2485,11 @@ export default function TourDetails() {
       {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'> */}
       <div className='w-[98%] max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6'>
         <Link
-          to='/'
-          className='inline-flex items-center text-blue-500 hover:underline mb-8'
+          to='/destinations'
+          className='inline-flex items-center text-black hover:underline mb-8'
         >
-          <ArrowLeft className='w-4 h-4 mr-2' />
-          Back to home page
+          <ArrowUpLeft className='w-4 h-4 mr-2' />
+          All Tours
         </Link>
         <div className='bg-white rounded-lg overflow-hidden'>
           <div className='p-2'>

@@ -8,7 +8,7 @@ import Logo from '../assets/divine-footer-logo.png'
 
 export default function Footer() {
   return (
-    <footer className='bg-black/80 py-16 text-white'>
+    <footer className='bg-black py-16 text-white'>
       <div className='max-w-7xl mx-auto px-4 md:px-8 lg:px-16'>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-left'>
           {/* Company Logo and Memberships */}
@@ -17,17 +17,20 @@ export default function Footer() {
               <img
                 src={Logo}
                 alt='Divine African Tours Logo'
-                className='h-6 w-24 mb-4'
+                className='h-auto w-30 mb-4'
               />
               <h3 className='text-sm font-semibold mb-2 text-white'>
                 Memberships
               </h3>
               <div className='flex items-center space-x-4'>
-                <img
-                  src={TripAdvisor}
-                  alt='TripAdvisor'
-                  className='h-10 w-auto rounded-md'
-                />
+                <a href='' target='_blank' rel='noopener noreferrer'>
+                  <img
+                    src={TripAdvisor}
+                    alt='TripAdvisor'
+                    className='h-10 w-auto rounded-md'
+                  />
+                </a>
+
                 <img src={UWA} alt='UWA' className='h-20 w-auto rounded-md' />
                 <img
                   src={UTB}
