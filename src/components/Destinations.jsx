@@ -5,8 +5,8 @@ export default function Six() {
   return (
     <div>
       <Hero
-        title='Tailor-Made Safaris,'
-        sub='built around each client’s individual needs'
+        heading='Tailor-Made Safaris'
+        sub='Discover unique adventures across East Africa'
       />
       <Tours />
     </div>

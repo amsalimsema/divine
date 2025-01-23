@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import Hero from './Hero'
+//import Hero from './Hero'
 
 //cars
 import hiace from '../assets/dat_hiace.jpg'
@@ -47,7 +47,7 @@ export default function CarHireSection() {
   ]
   return (
     <>
-      <Hero title='Discover the Wild Heart of East Africa' sub='Car Hire' />
+      {/* <Hero title='Discover the Wild Heart of East Africa' sub='Car Hire' /> */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

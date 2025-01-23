@@ -1,49 +1,81 @@
 import React from 'react'
+import Chimp from '../assets/chimpanzee.jpg'
+import GoldenMonkeyRw from '../assets/uganda-golden-monkey.jpg'
+import Nakuru from '../assets/Nakuru.jpg'
+import Mara from '../assets/Mara.jpg'
+import MountainGorilla from '../assets/bwindi_gorilla.jpg'
+import Giraffe from '../assets/giraffe_murchision.jpg'
+import Impala from '../assets/impala_lake_mburo.jpg'
+import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 
-const Hero = ({ title, sub }) => {
+const Hero = ({ heading, sub }) => {
   return (
-    <div className='relative h-[300px] overflow-hidden bg-gradient-to-b from-[#2ba924] via-[#228c1d] to-[#1a6f16]'>
-      {/* Safari pattern overlay */}
-      <div className='absolute inset-0 opacity-20'>
-        <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
-          <pattern
-            id='pattern'
-            width='40'
-            height='40'
-            patternUnits='userSpaceOnUse'
-          >
-            <path
-              d='M0 0L40 0L40 40L0 40Z'
-              fill='none'
-              stroke='white'
-              strokeWidth='1'
-            />
-            <circle cx='20' cy='20' r='8' fill='white' opacity='0.5' />
-          </pattern>
-          <rect width='100%' height='100%' fill='url(#pattern)' />
-        </svg>
+    <div className='relative w-full h-[350px] overflow-hidden'>
+      {/* Masonry Background */}
+      <div className='absolute inset-0 grid grid-cols-4 gap-1'>
+        <div className='grid gap-1'>
+          <img
+            src={Chimp || '/placeholder.svg'}
+            alt='Chimpanzee'
+            className='w-full h-[170px] object-cover'
+          />
+          <img
+            src={GoldenMonkeyRw || '/placeholder.svg'}
+            alt='Golden Monkey in Rwanda'
+            className='w-full h-[180px] object-cover'
+          />
+        </div>
+        <div className='grid gap-1'>
+          <img
+            src={Nakuru || '/placeholder.svg'}
+            alt='Lake Nakuru'
+            className='w-full h-[220px] object-cover'
+          />
+          <img
+            src={Mara || '/placeholder.svg'}
+            alt='Maasai Mara'
+            className='w-full h-[130px] object-cover'
+          />
+        </div>
+        <div className='grid gap-1'>
+          <img
+            src={MountainGorilla || '/placeholder.svg'}
+            alt='Mountain Gorilla in Bwindi'
+            className='w-full h-[150px] object-cover'
+          />
+          <img
+            src={Giraffe || '/placeholder.svg'}
+            alt='Giraffe in Murchison Falls'
+            className='w-full h-[200px] object-cover'
+          />
+        </div>
+        <div className='grid gap-1'>
+          <img
+            src={Impala || '/placeholder.svg'}
+            alt='Impala in Lake Mburo'
+            className='w-full h-[180px] object-cover'
+          />
+          <img
+            src={Lion || '/placeholder.svg'}
+            alt='Lion in Queen Elizabeth National Park'
+            className='w-full h-[170px] object-cover'
+          />
+        </div>
       </div>
 
-      {/* Animal silhouettes */}
-      <div className='absolute bottom-0 left-0 right-0'>
-        <svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'>
-          <path
-            fill='rgba(0,0,0,0.1)'
-            fillOpacity='1'
-            d='M0,224L60,229.3C120,235,240,245,360,234.7C480,224,600,192,720,181.3C840,171,960,181,1080,181.3C1200,181,1320,171,1380,165.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'
-          ></path>
-        </svg>
-      </div>
+      {/* Overlay */}
+      <div className='absolute inset-0 bg-black bg-opacity-60'></div>
 
       {/* Content */}
-      <div className='relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 sm:px-6 lg:px-8'>
-        <h1 className='text-4xl sm:text-5xl md:text-6xl mb-4 text-shadow'>
-          {title}
-        </h1>
-
-        <h3 className='text-2xl'>{sub}</h3>
-
-        {/* Decorative elements */}
+      <div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
+        <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg'>
+          {heading}
+          {/* Discover African Adventures */}
+        </h2>
+        <p className='text-lg md:text-xl lg:text-2xl text-gray-100 max-w-3xl mx-auto drop-shadow-md'>
+          {sub}
+          {/* Embark on unforgettable journeys through the heart of East Africa */}
+        </p>
       </div>
     </div>
   )

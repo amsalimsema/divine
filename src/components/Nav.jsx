@@ -57,11 +57,9 @@ export default function Navbar() {
         to='/'
         className={`${
           mobile ? 'block w-full' : 'px-3 inline-block'
-        } py-2 text-sm font-medium text-white hover:text-[#2ba924] focus:outline-none ${
-          location.pathname === '/'
-            ? 'underline decoration-[#2ba924] decoration-2'
-            : ''
-        }`}
+        } py-2 text-sm font-medium ${
+          location.pathname === '/' ? 'text-[#2ba924]' : 'text-white'
+        } hover:text-[#2ba924] focus:outline-none`}
         onClick={mobile ? onItemClick : undefined}
       >
         HOME
@@ -70,11 +68,9 @@ export default function Navbar() {
         to='/about'
         className={`${
           mobile ? 'block w-full' : 'px-3 inline-block'
-        } py-2 text-sm font-medium text-white hover:text-[#2ba924] focus:outline-none ${
-          location.pathname === '/about'
-            ? 'underline decoration-[#2ba924] decoration-2'
-            : ''
-        }`}
+        } py-2 text-sm font-medium ${
+          location.pathname === '/about' ? 'text-[#2ba924]' : 'text-white'
+        } hover:text-[#2ba924] focus:outline-none`}
         onClick={mobile ? onItemClick : undefined}
       >
         ABOUT
@@ -83,11 +79,11 @@ export default function Navbar() {
         to='/destinations'
         className={`${
           mobile ? 'block w-full' : 'px-3 inline-block'
-        } py-2 text-sm font-medium text-white hover:text-[#2ba924] focus:outline-none ${
-          location.pathname === '/six'
-            ? 'underline decoration-[#2ba924] decoration-2'
-            : ''
-        }`}
+        } py-2 text-sm font-medium ${
+          location.pathname === '/destinations'
+            ? 'text-[#2ba924]'
+            : 'text-white'
+        } hover:text-[#2ba924] focus:outline-none`}
         onClick={mobile ? onItemClick : undefined}
       >
         DESTINATIONS
@@ -96,11 +92,9 @@ export default function Navbar() {
         to='/car-hire'
         className={`${
           mobile ? 'block w-full' : 'px-3 inline-block'
-        } py-2 text-sm font-medium text-white hover:text-[#2ba924] focus:outline-none ${
-          location.pathname === '/car-hire'
-            ? 'underline decoration-[#2ba924] decoration-2'
-            : ''
-        }`}
+        } py-2 text-sm font-medium ${
+          location.pathname === '/car-hire' ? 'text-[#2ba924]' : 'text-white'
+        } hover:text-[#2ba924] focus:outline-none`}
         onClick={mobile ? onItemClick : undefined}
       >
         CAR HIRE
@@ -109,11 +103,9 @@ export default function Navbar() {
         to='/contact'
         className={`${
           mobile ? 'block w-full' : 'px-3 inline-block'
-        } py-2 text-sm font-medium text-white hover:text-[#2ba924] focus:outline-none ${
-          location.pathname === '/contact'
-            ? 'underline decoration-[#2ba924] decoration-2'
-            : ''
-        }`}
+        } py-2 text-sm font-medium ${
+          location.pathname === '/contact' ? 'text-[#2ba924]' : 'text-white'
+        } hover:text-[#2ba924] focus:outline-none`}
         onClick={mobile ? onItemClick : undefined}
       >
         CONTACT
@@ -136,7 +128,7 @@ export default function Navbar() {
         >
           <Link to='/' className='text-xl font-bold text-gray-900'>
             <img
-              src={Logo}
+              src={Logo || '/placeholder.svg'}
               alt='Divine African Tours Logo'
               className='h-auto w-30'
             />
@@ -176,7 +168,7 @@ export default function Navbar() {
             <div className='flex justify-between items-center'>
               <Link to='/' className='text-xl font-bold text-white'>
                 <img
-                  src={Logo}
+                  src={Logo || '/placeholder.svg'}
                   alt='Divine African Tours Logo'
                   className='h-auto w-30'
                 />
