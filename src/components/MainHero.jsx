@@ -177,7 +177,7 @@ export default function Hero() {
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
             {/* Right Column - Scrolling Image Grid */}
-            <div className='relative grid grid-cols-2 gap-4 h-[300px] lg:h-[600px] w-full lg:w-auto pt-8 lg:pt-0 mobile-top-spacing'>
+            <div className='relative grid grid-cols-2 gap-4 h-[300px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 mobile-top-spacing'>
               <ImageColumn images={columnOneImages} isScrolling={isScrolling} />
               <ImageColumn images={columnTwoImages} isScrolling={isScrolling} />
               <button

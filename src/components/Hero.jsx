@@ -17,48 +17,48 @@ const Hero = ({ heading, sub }) => {
           <img
             src={Chimp || '/placeholder.svg'}
             alt='Chimpanzee'
-            className='w-full h-[170px] object-cover'
+            className='w-full h-[170px] object-cover rounded-sm'
           />
           <img
             src={GoldenMonkeyRw || '/placeholder.svg'}
             alt='Golden Monkey in Rwanda'
-            className='w-full h-[180px] object-cover'
+            className='w-full h-[180px] object-cover rounded-sm'
           />
         </div>
         <div className='grid gap-1'>
           <img
             src={Nakuru || '/placeholder.svg'}
             alt='Lake Nakuru'
-            className='w-full h-[220px] object-cover'
+            className='w-full h-[220px] object-cover rounded-sm'
           />
           <img
             src={Mara || '/placeholder.svg'}
             alt='Maasai Mara'
-            className='w-full h-[130px] object-cover'
+            className='w-full h-[130px] object-cover rounded-sm'
           />
         </div>
         <div className='grid gap-1'>
           <img
             src={MountainGorilla || '/placeholder.svg'}
             alt='Mountain Gorilla in Bwindi'
-            className='w-full h-[150px] object-cover'
+            className='w-full h-[150px] object-cover rounded-sm'
           />
           <img
             src={Giraffe || '/placeholder.svg'}
             alt='Giraffe in Murchison Falls'
-            className='w-full h-[200px] object-cover'
+            className='w-full h-[200px] object-cover rounded-sm'
           />
         </div>
         <div className='grid gap-1'>
           <img
             src={Impala || '/placeholder.svg'}
             alt='Impala in Lake Mburo'
-            className='w-full h-[180px] object-cover'
+            className='w-full h-[180px] object-cover rounded-sm'
           />
           <img
             src={Lion || '/placeholder.svg'}
             alt='Lion in Queen Elizabeth National Park'
-            className='w-full h-[170px] object-cover'
+            className='w-full h-[170px] object-cover rounded-sm'
           />
         </div>
       </div>
