@@ -35,7 +35,7 @@ const ImageColumn = ({ images, isScrolling }) => {
         }}
       >
         {[...images, ...images].map((img, index) => (
-          <div key={index} className='w-full mb-4 md:mb-4 last:mb-0'>
+          <div key={index} className='w-full mb-0 md:mb-1 last:mb-0'>
             <div
               className={
                 img.aspect === 'square' ? 'aspect-square' : 'aspect-[4/3]'
@@ -50,8 +50,8 @@ const ImageColumn = ({ images, isScrolling }) => {
           </div>
         ))}
       </div>
-      <div className='absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent pointer-events-none'></div>
-      <div className='absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none'></div>
+      <div className='absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/65 to-transparent pointer-events-none'></div>
+      <div className='absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/65 to-transparent pointer-events-none'></div>
     </div>
   )
 }
@@ -176,8 +176,8 @@ export default function Hero() {
       <div className='bg-white text-black'>
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
-            {/* Right Column - Scrolling Image Grid */}
-            <div className='relative grid grid-cols-2 gap-4 h-[300px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 mobile-top-spacing'>
+            {/* Right Column - Scrolling Image Grid mobile-top-spacing*/}
+            <div className='relative grid grid-cols-2 gap-1 h-[300px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 '>
               <ImageColumn images={columnOneImages} isScrolling={isScrolling} />
               <ImageColumn images={columnTwoImages} isScrolling={isScrolling} />
               <button
