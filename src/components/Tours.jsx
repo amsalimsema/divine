@@ -283,15 +283,21 @@ export default function TourismPlatform() {
                       />
                     </div>
                     <div className='h-[25%] p-4'>
-                      <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-900 line-clamp-1'>
-                        {tour.title}
+                      <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-800 line-clamp-1'>
+                        {tour.title}:
                       </h3>
-                      <p className='text-sm text-gray-900 font-medium line-clamp-1'>
+                      <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-900 line-clamp-1'>
                         {tour.name}
-                      </p>
+                      </h3>
+                      {/* <p className='text-sm text-gray-900 font-medium line-clamp-1'>
+                        {tour.name}
+                      </p> */}
 
-                      <p className='text-xs text-gray-900 font-medium mt-1'>
+                      {/* <p className='text-xs text-gray-900 font-medium mt-1'>
                         {tour.categories.join(', ')}
+                      </p> */}
+                      <p className='text-xs text-gray-900 font-medium mt-1'>
+                        {tour.location}
                       </p>
                     </div>
                   </div>

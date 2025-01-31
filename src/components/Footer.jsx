@@ -22,24 +22,23 @@ export default function Footer() {
               <h3 className='text-sm font-semibold mb-2 text-white'>
                 Memberships
               </h3>
+              <a
+                href='https://www.tripadvisor.com/Attraction_Review-g293841-d20411656-Reviews-Divine_African_Tours-Kampala_Central_Region.html'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  src={TripAdvisor}
+                  alt='TripAdvisor'
+                  className='h-10 w-auto rounded-md mb-2'
+                />
+              </a>
               <div className='flex items-center space-x-4'>
-                <a
-                  href='https://www.tripadvisor.com/Attraction_Review-g293841-d20411656-Reviews-Divine_African_Tours-Kampala_Central_Region.html'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <img
-                    src={TripAdvisor}
-                    alt='TripAdvisor'
-                    className='h-10 w-auto rounded-md'
-                  />
-                </a>
-
-                <img src={UWA} alt='UWA' className='h-20 w-auto rounded-md' />
+                <img src={UWA} alt='UWA' className='h-auto w-16 rounded-md' />
                 <img
                   src={UTB}
                   alt='Uganda Tourism Board'
-                  className='h-16 w-auto rounded-md'
+                  className='h-16 w-16 rounded-md'
                 />
               </div>
             </div>
@@ -187,7 +186,18 @@ export default function Footer() {
                 <img
                   src='https://cdn-icons-png.flaticon.com/128/349/349221.png'
                   alt='Visa'
-                  className='h-8 w-auto'
+                  className='h-10 w-auto'
+                />
+              </a>
+              <a
+                href='https://payments.pesapal.com/divineafricantours'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  src='https://cdn-icons-png.flaticon.com/128/349/349230.png'
+                  alt='Visa'
+                  className='h-10 w-auto'
                 />
               </a>
               <a

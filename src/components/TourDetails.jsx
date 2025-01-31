@@ -30,6 +30,7 @@ import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Imbalu from '../assets/imbalu-celebrations.jpg'
 import Sunset from '../assets/Divine-African-Tours-1.jpg'
+import Wilde from '../assets/wildebeest.jpg'
 
 const tourPackages = [
   {
@@ -1678,7 +1679,7 @@ const tourPackages = [
   {
     id: 12,
     title: '3 Days Murchison Falls National Park Safari',
-    description: 'Request Quote',
+    description: '$750 Per Person',
     duration: '3 days',
     location: 'Murchison Falls National Park',
     image: Giraffe,
@@ -2150,7 +2151,7 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '4 days',
     location: 'Lake Nakuru & Masai Mara National Parks',
-    image: Sunset,
+    image: Wilde,
     fullDescription: `This 4-day safari takes you to Lake Nakuru, a birdwatcher’s paradise, and the iconic Maasai Mara, known for its incredible wildlife. Explore the diverse habitats of Lake Nakuru, perfect for bird watching and game drives. Then, venture to Maasai Mara, one of Africa’s greatest wildlife reserves, home to over 95 species of mammals and 570 bird species. Witness the spectacular wildebeest migration (July–October) or enjoy the dry season (December–February) for prime big cat sightings. This tour offers unparalleled wildlife experiences in two of Kenya's top national parks.`,
     tourDetails: [
       {
