@@ -4,7 +4,8 @@ import PesaPal from '../assets/pesapal.png'
 import TripAdvisor from '../assets/TripAdvisor.png'
 import UWA from '../assets/uwa.jpg'
 import UTB from '../assets/utb.png'
-import Logo from '../assets/divine-footer-logo.png'
+import Logo from '../assets/divine_one.png'
+//import Logo from '../assets/divine-footer-logo.png'
 
 export default function Footer() {
   return (

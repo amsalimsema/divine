@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Logo from '../assets/divine-footer-logo.png'
+//import Logo from '../assets/divine-footer-logo.png'
+import Logo from '../assets/divine_one.png'
 
 const HamburgerMenu = ({ isOpen, toggleMenu }) => (
   <button
@@ -119,7 +120,7 @@ export default function Navbar() {
 
   return (
     <nav className='w-full border-b border-transparent bg-black'>
-      <div className='max-w-[1600px] mx-auto px-4 h-16 flex items-center justify-between'>
+      <div className='max-w-[1600px] mx-auto px-2 h-20 flex items-center justify-between'>
         {/* Logo */}
         <div
           className={`flex items-center ${
@@ -130,7 +131,7 @@ export default function Navbar() {
             <img
               src={Logo || '/placeholder.svg'}
               alt='Divine African Tours Logo'
-              className='h-auto w-30'
+              // className='h-auto w-30'
             />
           </Link>
         </div>
@@ -170,7 +171,7 @@ export default function Navbar() {
                 <img
                   src={Logo || '/placeholder.svg'}
                   alt='Divine African Tours Logo'
-                  className='h-auto w-30'
+                  // className='h-auto w-30'
                 />
               </Link>
               <CloseButton
