@@ -20,6 +20,8 @@ import Giraffe from '../assets/giraffe_murchision.jpg'
 import Impala from '../assets/impala_lake_mburo.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 
+import buffalo from '../assets/buffalo.jpg'
+
 const countries = [
   { icon: <Globe className='w-4 h-4' />, name: 'All Tours' },
   { icon: '🇺🇬', name: 'Uganda' },
@@ -35,6 +37,13 @@ const tours = [
     image: Chimp,
     categories: ['Uganda'],
     location: 'Bwindi, Queen Elizabeth & Lake Bunyonyi',
+  },
+  {
+    name: '7 days of Adventure, Wildlife & Primates',
+    title: 'Wildlife & Primate Adventure',
+    image: buffalo,
+    categories: ['Uganda'],
+    location: 'Kibale, Queen Elizabeth & Bwindi',
   },
   {
     name: '3 days Bwindi Gorilla Tracking Safari',

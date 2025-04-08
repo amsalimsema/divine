@@ -31,6 +31,7 @@ import Impala from '../assets/impala_lake_mburo.jpg'
 import Imbalu from '../assets/imbalu-celebrations.jpg'
 import Sunset from '../assets/Divine-African-Tours-1.jpg'
 import Wilde from '../assets/wildebeest.jpg'
+import buffalo from '../assets/buffalo.jpg'
 
 const tourPackages = [
   {
@@ -2413,6 +2414,157 @@ const tourPackages = [
       },
     ],
     photos: [{ url: Sunset, title: 'Sunset' }],
+  },
+  {
+    id: 18,
+    title: '7 days of Adventure, Wildlife & Primates',
+    description: '$3,377/Person',
+    duration: '7 days',
+    location: 'Kibale, Queen Elizabeth & Bwindi',
+    image: buffalo,
+    fullDescription: `Embark on an unforgettable adventure through Uganda's wild landscapes, starting in the legendary Bwindi Impenetrable Forest to encounter the majestic Mountain Gorillas. This tour also takes you to Kibale National Park & Queen Elizabeth National Park, the country's most visited wildlife haven. Highlights include gorilla and chimpanzee tracking, a thrilling game drive, the cultural Batwa experience, and stunning crater lake views.`,
+    tourDetails: [
+      {
+        title: 'Tour Cost',
+        icon: Sun,
+        items: [
+          '$3,377 pp sharing',
+          'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
+        ],
+      },
+      {
+        title: 'Price Includes',
+        icon: Circle,
+        items: [
+          '4x4 Land Cruiser/Minibus with fuel and English-speaking guide',
+          'Full board accommodation',
+          '1 Chimpanzee tracking permit',
+          'All entrance fees',
+          'Batwa cultural experience',
+          'Game drive',
+          '1 Gorilla permit',
+          'Park entrance fees',
+        ],
+      },
+      {
+        title: 'Price Excludes',
+        icon: CircleOff,
+        items: [
+          'International flights',
+          'Laundry services',
+          'Any Private Expenses',
+          'Tips to the local guides',
+          'Travel insurance',
+        ],
+      },
+      {
+        title: 'What to Expect',
+        icon: Eye,
+        items: [
+          'Tracking the Mountain Gorilla',
+          'The Batwa experience',
+          'A game drive',
+          'Tracking the chimpanzees',
+          'Crater lake viewing',
+        ],
+      },
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Arrival',
+        activities: [
+          'Meet and greet by Divine African Holidays representative',
+          'Transfer to your hotel',
+          'Dinner and overnight at Acactus Hotel (Half Board)',
+        ],
+      },
+      {
+        day: 2,
+        title: 'Kampala - Kibale National Park',
+        activities: [
+          'Early breakfast and hotel check-out',
+          'Transfer to Kibale National Park',
+          'Lunch stopover in Fort Portal town',
+          'Check-in upon arrival at Kibale',
+          'Crater lake walk and exploration',
+          'Dinner and overnight at Chimpanzee Forest Guest House (Full Board)',
+        ],
+      },
+      {
+        day: 3,
+        title: 'Chimpanzee Trekking & Queen Elizabeth National Park',
+        activities: [
+          'Early breakfast and briefing at the park headquarters on chimpanzee trekking',
+          'Start chimpanzee search by 8:00am, encountering not only chimpanzees but also other primates (black and white colobus monkeys, grey checked Mangabey, red tailed monkeys, bush babies) and various bird species',
+          'Explore a rainforest home to diverse wildlife including baboons, mongoose, otters, bush pigs, and bush bucks',
+          'Check out of the hotel after trekking and transfer to Queen Elizabeth Park',
+          'Check into the hotel upon arrival, followed by dinner and overnight stay at Bush Lodge (Full Board)',
+        ],
+      },
+      {
+        day: 4,
+        title: 'Morning Drive - Bwindi Impenetrable National Park',
+        activities: [
+          'Early morning wake-up and transfer to the park for a game drive on Kasenyi track',
+          'Spot early risers such as lions, elephants, buffaloes, kobs, and antelopes',
+          'Return to the lodge, check out, and begin drive toward Bwindi Impenetrable National Park',
+          'Scenic drive through the savannah and Ishasha sector, known for tree-climbing lions',
+          'Arrival at Bwindi and lodge check-in',
+          "Relax and prepare for the next day's gorilla trekking",
+          'Dinner and overnight at Gorilla Mist Camp or Ride for a Woman Guest House (Full Board)',
+        ],
+      },
+      {
+        day: 5,
+        title: 'Gorilla Trekking',
+        activities: [
+          'Early morning breakfast at the lodge',
+          'Transfer to the park headquarters for a gorilla trekking briefing',
+          'Start guided trek into Bwindi Impenetrable Forest to search for Mountain Gorillas',
+          'Experience the rewarding encounter with the gorillas, maintaining a 6-meter distance',
+          'Trek duration varies between 2 to 8 hours depending on gorilla family location',
+          'Advised to carry raincoats, boots, and consider hiring porters for luggage',
+          'Return to the lodge for lunch after the trek',
+          'Optional afternoon visit to the Batwa community for cultural performances',
+          'Dinner and overnight at Gorilla Mist Camp or Ride for a Woman Guest House (Full Board)',
+        ],
+      },
+      {
+        day: 6,
+        title: 'Bwindi Impenetrable National Park - Kampala',
+        activities: [
+          'Transfer back to Kampala',
+          'Stopover at the Equator for lunch and photo opportunities',
+          'Stand in both the Southern and Northern Hemispheres',
+          'Buy souvenirs at the Equator',
+          'Arrival in Kampala and hotel check-in',
+          'Dinner and overnight at Acactus Lodge (Half Board)',
+        ],
+      },
+      {
+        day: 7,
+        title: 'City Tour & Departure',
+        activities: [
+          'Wake up and have breakfast',
+          'Check out and head for a city tour with optional shopping',
+          'Lunch in town',
+          'Transfer to Entebbe Airport',
+          'Optional visit to Uganda Wildlife Education Center (time permitting)',
+          'Drop-off at Entebbe International Airport for your flight home',
+        ],
+      },
+    ],
+    photos: [
+      {
+        url: BGT,
+        title: 'Mountain Gorilla',
+      },
+      {
+        url: buffalo,
+        title: 'buffalo',
+      },
+    ],
   },
 ]
 
