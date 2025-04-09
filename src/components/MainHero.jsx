@@ -76,11 +76,16 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
   }, [isScrolling, allImages.length])
 
   return (
-    <div className='md:hidden relative h-[300px] w-full overflow-hidden'>
-      {/* Full-width container that breaks out of parent padding */}
+    <div className='md:hidden relative h-[300px] overflow-hidden'>
+      {/* Full-width container that breaks out of all parent containers */}
       <div
-        className='absolute left-0 right-0 h-full'
-        style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
+        className='absolute'
+        style={{
+          left: '-50vw',
+          marginLeft: '50%',
+          width: '100vw',
+          height: '100%',
+        }}
       >
         {/* Image slider container */}
         <div className='relative h-full w-full overflow-hidden'>
@@ -99,6 +104,7 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
                   src={img.src || '/placeholder.svg'}
                   alt={img.alt}
                   className='h-full w-full object-cover'
+                  style={{ display: 'block' }} // Ensure no extra space
                 />
               </div>
             ))}
