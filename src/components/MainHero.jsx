@@ -76,22 +76,20 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
   }, [isScrolling, allImages.length])
 
   return (
-    <div className='md:hidden relative h-[300px] overflow-hidden'>
+    <div className='md:hidden relative h-[300px] w-full overflow-hidden p-0 m-0'>
       {/* Full-width container that breaks out of all parent containers */}
       <div
-        className='absolute'
+        className='absolute left-0 right-0 top-0 bottom-0 p-0 m-0'
         style={{
-          left: '-50vw',
-          marginLeft: '50%',
           width: '100vw',
-          height: '100%',
+          marginLeft: 'calc(-50vw + 50%)',
         }}
       >
-        {/* Image slider container */}
-        <div className='relative h-full w-full overflow-hidden'>
-          {/* Image track */}
+        {/* Image slider container with no padding/margin */}
+        <div className='relative h-full w-full overflow-hidden p-0 m-0'>
+          {/* Image track with no padding/margin */}
           <div
-            className='absolute flex h-full'
+            className='absolute flex h-full p-0 m-0'
             style={{
               width: `${allImages.length * 100}vw`,
               transform: `translateX(-${currentIndex * 100}vw)`,
@@ -99,11 +97,14 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
             }}
           >
             {allImages.map((img, index) => (
-              <div key={index} className='w-screen h-full flex-shrink-0'>
+              <div
+                key={index}
+                className='w-screen h-full flex-shrink-0 p-0 m-0'
+              >
                 <img
                   src={img.src || '/placeholder.svg'}
                   alt={img.alt}
-                  className='h-full w-full object-cover'
+                  className='h-full w-full object-cover p-0 m-0'
                   style={{ display: 'block' }} // Ensure no extra space
                 />
               </div>
@@ -246,13 +247,19 @@ export default function Hero() {
               margin-top:5px;
             }
           }
+          @media (max-width: 768px) {
+            .max-w-7xl.mx-auto.px-4 {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+          }
         `}
       </style>
       <div className='bg-white text-black'>
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
             {/* Mobile Single Image Display */}
-            <div className='md:hidden relative'>
+            <div className='md:hidden relative p-0 m-0'>
               <MobileSingleImage
                 images={{ column1: columnOneImages, column2: columnTwoImages }}
                 isScrolling={isScrolling}
@@ -280,7 +287,7 @@ export default function Hero() {
             </div>
 
             {/* Left Column */}
-            <div className='h-full flex items-center w-full lg:w-auto mt-0 md:mt-0'>
+            <div className='h-full flex items-center w-full lg:w-auto mt-0 px-2 md:mt-0'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
