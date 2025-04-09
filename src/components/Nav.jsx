@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-//import Logo from '../assets/divine-footer-logo.png'
 import Logo from '../assets/divine_one.png'
 
 const HamburgerMenu = ({ isOpen, toggleMenu }) => (
@@ -43,14 +42,6 @@ const CloseButton = ({ onClick, className }) => (
 export default function Navbar() {
   const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false)
   const location = useLocation()
-
-  const scrollToTours = (e) => {
-    e.preventDefault()
-    const toursSection = document.getElementById('tours-section')
-    if (toursSection) {
-      toursSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   const NavItems = ({ mobile = false, onItemClick }) => (
     <>
@@ -122,16 +113,12 @@ export default function Navbar() {
     <nav className='w-full border-b border-transparent bg-black'>
       <div className='max-w-[1600px] mx-auto px-2 h-20 flex items-center justify-between'>
         {/* Logo */}
-        <div
-          className={`flex items-center ${
-            isSideDrawerOpen ? 'lg:flex hidden' : ''
-          }`}
-        >
-          <Link to='/' className='text-xl font-bold text-gray-900'>
+        <div className='flex items-center'>
+          <Link to='/'>
             <img
               src={Logo || '/placeholder.svg'}
               alt='Divine African Tours Logo'
-              // className='h-auto w-30'
+              className='h-full w-full'
             />
           </Link>
         </div>
@@ -154,10 +141,12 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu - Mobile */}
-        <HamburgerMenu
-          isOpen={isSideDrawerOpen}
-          toggleMenu={toggleSideDrawer}
-        />
+        <div className='lg:hidden'>
+          <HamburgerMenu
+            isOpen={isSideDrawerOpen}
+            toggleMenu={toggleSideDrawer}
+          />
+        </div>
 
         {/* Side Drawer - Mobile */}
         <div
@@ -171,7 +160,6 @@ export default function Navbar() {
                 <img
                   src={Logo || '/placeholder.svg'}
                   alt='Divine African Tours Logo'
-                  // className='h-auto w-30'
                 />
               </Link>
               <CloseButton

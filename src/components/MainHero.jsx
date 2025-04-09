@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react'
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Play, Pause, ArrowDownRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 // Import desktop images
-
 import Chimp from '../assets/chimpanzee.jpg'
 import GoldenMonkeyRw from '../assets/uganda-golden-monkey.jpg'
 import Nakuru from '../assets/Nakuru.jpg'
@@ -14,7 +15,7 @@ import Impala from '../assets/impala_lake_mburo.jpg'
 import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
 
 const scrollKeyframes = `
-  @keyframes scroll {
+  @keyframes scrollVertical {
     0% {
       transform: translateY(0);
     }
@@ -30,7 +31,9 @@ const ImageColumn = ({ images, isScrolling }) => {
       <div
         className='flex flex-col'
         style={{
-          animation: isScrolling ? 'scroll 30s linear infinite' : 'none',
+          animation: isScrolling
+            ? 'scrollVertical 30s linear infinite'
+            : 'none',
           animationPlayState: isScrolling ? 'running' : 'paused',
         }}
       >
@@ -52,6 +55,73 @@ const ImageColumn = ({ images, isScrolling }) => {
       </div>
       <div className='absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/65 to-transparent pointer-events-none'></div>
       <div className='absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/65 to-transparent pointer-events-none'></div>
+    </div>
+  )
+}
+
+// Fixed Mobile single image display with auto-advance
+const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const allImages = [...images.column1, ...images.column2]
+
+  // Auto-advance images when isScrolling is true
+  useEffect(() => {
+    if (isScrolling) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length)
+      }, 6000)
+
+      return () => clearInterval(interval)
+    }
+  }, [isScrolling, allImages.length])
+
+  return (
+    <div className='md:hidden relative h-[300px] w-full overflow-hidden'>
+      {/* Absolute positioned container to take full width */}
+      <div
+        className='absolute inset-x-0 h-full'
+        style={{
+          left: '-1rem', // Offset to counteract parent padding
+          right: '-1rem', // Offset to counteract parent padding
+          width: 'calc(100% + 2rem)', // Ensure full width including offsets
+        }}
+      >
+        {/* Image slider container */}
+        <div className='relative h-full w-full overflow-hidden'>
+          {/* Image track with fixed positioning */}
+          <div
+            className='absolute flex h-full'
+            style={{
+              width: `${allImages.length * 100}vw`,
+              transform: `translateX(-${currentIndex * 100}vw)`,
+              transition: 'transform 500ms ease',
+            }}
+          >
+            {allImages.map((img, index) => (
+              <div key={index} className='w-screen h-full flex-shrink-0'>
+                <img
+                  src={img.src || '/placeholder.svg'}
+                  alt={img.alt}
+                  className='h-full w-full object-cover'
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Play/Pause button */}
+      <button
+        onClick={() => setIsScrolling(!isScrolling)}
+        className='absolute bottom-4 right-4 p-2 bg-white/50 rounded-full hover:bg-white/75 transition-colors z-10'
+        aria-label={isScrolling ? 'Pause image advance' : 'Play image advance'}
+      >
+        {isScrolling ? (
+          <Pause className='w-5 h-5' />
+        ) : (
+          <Play className='w-5 h-5' />
+        )}
+      </button>
     </div>
   )
 }
@@ -177,8 +247,15 @@ export default function Hero() {
       <div className='bg-white text-black'>
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
-            {/* Right Column - Scrolling Image Grid */}
-            <div className='relative grid grid-cols-2 gap-1 h-[310px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 mobile-top-spacing'>
+            {/* Mobile Single Image Display */}
+            <MobileSingleImage
+              images={{ column1: columnOneImages, column2: columnTwoImages }}
+              isScrolling={isScrolling}
+              setIsScrolling={setIsScrolling}
+            />
+
+            {/* Desktop Two-Column Vertical Scroll - Hidden on Mobile */}
+            <div className='relative hidden md:grid grid-cols-2 gap-1 h-[310px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 mobile-top-spacing'>
               <ImageColumn images={columnOneImages} isScrolling={isScrolling} />
               <ImageColumn images={columnTwoImages} isScrolling={isScrolling} />
               <button
@@ -197,12 +274,12 @@ export default function Hero() {
             </div>
 
             {/* Left Column */}
-            <div className='h-full flex items-center w-full lg:w-auto mt-6 md:mt-0'>
+            <div className='h-full flex items-center w-full lg:w-auto mt-4 md:mt-0'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className='space-y-6'
+                className='space-y-6 px-0 md:px-0'
               >
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
