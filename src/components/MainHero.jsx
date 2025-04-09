@@ -69,44 +69,37 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
     if (isScrolling) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length)
-      }, 6000)
+      }, 2000)
 
       return () => clearInterval(interval)
     }
   }, [isScrolling, allImages.length])
 
   return (
-    <div className='md:hidden relative h-[300px] w-full overflow-hidden'>
-      {/* Absolute positioned container to take full width */}
-      <div
-        className='absolute inset-x-0 h-full'
-        style={{
-          left: '-1rem', // Offset to counteract parent padding
-          right: '-1rem', // Offset to counteract parent padding
-          width: 'calc(100% + 2rem)', // Ensure full width including offsets
-        }}
-      >
-        {/* Image slider container */}
-        <div className='relative h-full w-full overflow-hidden'>
-          {/* Image track with fixed positioning */}
-          <div
-            className='absolute flex h-full'
-            style={{
-              width: `${allImages.length * 100}vw`,
-              transform: `translateX(-${currentIndex * 100}vw)`,
-              transition: 'transform 500ms ease',
-            }}
-          >
-            {allImages.map((img, index) => (
-              <div key={index} className='w-screen h-full flex-shrink-0'>
-                <img
-                  src={img.src || '/placeholder.svg'}
-                  alt={img.alt}
-                  className='h-full w-full object-cover'
-                />
-              </div>
-            ))}
-          </div>
+    <div
+      className='md:hidden fixed left-0 right-0 h-[300px] w-screen overflow-hidden'
+      style={{ marginBottom: '-0.5rem' }}
+    >
+      {/* Image slider container */}
+      <div className='relative h-full w-full overflow-hidden'>
+        {/* Image track with fixed positioning */}
+        <div
+          className='absolute flex h-full'
+          style={{
+            width: `${allImages.length * 100}vw`,
+            transform: `translateX(-${currentIndex * 100}vw)`,
+            transition: 'transform 500ms ease',
+          }}
+        >
+          {allImages.map((img, index) => (
+            <div key={index} className='w-screen h-full flex-shrink-0'>
+              <img
+                src={img.src || '/placeholder.svg'}
+                alt={img.alt}
+                className='h-full w-full object-cover'
+              />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -248,11 +241,13 @@ export default function Hero() {
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
             {/* Mobile Single Image Display */}
-            <MobileSingleImage
-              images={{ column1: columnOneImages, column2: columnTwoImages }}
-              isScrolling={isScrolling}
-              setIsScrolling={setIsScrolling}
-            />
+            <div className='md:hidden relative h-[300px]'>
+              <MobileSingleImage
+                images={{ column1: columnOneImages, column2: columnTwoImages }}
+                isScrolling={isScrolling}
+                setIsScrolling={setIsScrolling}
+              />
+            </div>
 
             {/* Desktop Two-Column Vertical Scroll - Hidden on Mobile */}
             <div className='relative hidden md:grid grid-cols-2 gap-1 h-[310px] lg:h-[600px] w-full lg:w-auto pt-0 lg:pt-0 mobile-top-spacing'>
@@ -274,7 +269,7 @@ export default function Hero() {
             </div>
 
             {/* Left Column */}
-            <div className='h-full flex items-center w-full lg:w-auto mt-4 md:mt-0'>
+            <div className='h-full flex items-center w-full lg:w-auto mt-0 md:mt-0'>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
