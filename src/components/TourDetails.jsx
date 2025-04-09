@@ -48,6 +48,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           '$1485 per person',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
         ],
       },
@@ -147,6 +148,7 @@ const tourPackages = [
         items: [
           'This 6-day safari takes you to both Bwindi Impenetrable and Volcanoes National Park, offering unforgettable encounters with endangered Mountain Gorillas and rare Golden Monkeys in Uganda and Rwanda. It’s a deeply rewarding experience.',
           'Contact us for a personalized quote.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
         ],
       },
       {
@@ -289,6 +291,7 @@ const tourPackages = [
         title: 'Tour Summary',
         icon: Sun,
         items: [
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           '5 days of chimpanzee and golden monkey sightings in the Nyungwe National Park, a canopy walk with scenic views, and a visit to the Genocide Memorial Museum for a poignant historical experience.',
           'Contact us for a personalized quote.',
         ],
@@ -421,6 +424,7 @@ const tourPackages = [
         title: 'Tour Summary',
         icon: Sun,
         items: [
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           "This 2-day Gorilla Safari in Rwanda's Volcanoes National Park offers a chance to see endangered mountain gorillas and rare golden monkeys in a stunning volcanic rainforest setting.",
           'Contact us for a personalized quote.',
         ],
@@ -508,6 +512,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           "This 7 day Rwanda gorilla safari explores all of Rwanda's national parks (Akagera National Park, Volcanoes National Park & Nyungwe Forest home to 13 primate species.",
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized quote.',
         ],
       },
@@ -677,6 +682,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           "This adventure, starting in Entebbe and ending in Kigali, features stunning landscapes and encounters with Mountain Gorillas, Golden monkeys, and a visit to Dian Fossey's grave, celebrating her conservation work for eight days.",
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized quote.',
         ],
       },
@@ -864,7 +870,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           '$2500 per person',
-          'Rate for 1 person for a single self-contained room',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1014,6 +1020,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience the best of Uganda on a 4-day wildlife safari featuring unforgettable gorilla tracking, a game drive, and a boat cruise for wildlife viewing in Queen Elizabeth National Park.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1139,6 +1146,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience the best of Uganda on a 10-day wildlife safari featuring unforgettable gorilla tracking in Bwindi, a game drive, and a boat cruise for wildlife viewing in Queen Elizabeth, Kibale & Murchision Falls National Park.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1345,6 +1353,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience the best of Uganda on a 7-day wildlife safari featuring unforgettable gorilla tracking in Bwindi, a game drive, and a boat cruise for wildlife viewing in Lake Mburo & Queen Elizabeth.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1550,6 +1559,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Captivating 5-day Ugandan adventure featuring mountain gorilla trekking in Bwindi, a cultural encounter with the Batwa community, and unforgettable wildlife experiences, including a game drive and boat cruise in Queen Elizabeth National Park.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1691,6 +1701,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Captivating 3-day Ugandan adventure in the Murchison Falls National Park with a diverse experience of wildlife and natural beauty.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -1806,6 +1817,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'With this cultural safaris we take you to the remote virgin areas full of exciting culture that hasn’t been exploited. These trips are for those who love and more interested in knowing about other cultures, people and their ways of life.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -2032,6 +2044,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience a magical sunset cruise on Lake Victoria, crossing the Equator at 0° latitude, with opportunities to float or swim at this iconic landmark.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -2086,6 +2099,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -2160,6 +2174,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           'Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve.',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Contact us for a personalized experience.',
         ],
       },
@@ -2429,6 +2444,7 @@ const tourPackages = [
         icon: Sun,
         items: [
           '$3,377 pp sharing',
+          'Traveling with a group? Get exclusive discounts – book together & save more!',
           'Tour rates are flexible and can be tailored to your preferences. Contact us for a personalized quote.',
         ],
       },
