@@ -76,45 +76,50 @@ const MobileSingleImage = ({ images, isScrolling, setIsScrolling }) => {
   }, [isScrolling, allImages.length])
 
   return (
-    <div
-      className='md:hidden fixed left-0 right-0 h-[300px] w-screen overflow-hidden'
-      style={{ marginBottom: '-0.5rem' }}
-    >
-      {/* Image slider container */}
-      <div className='relative h-full w-full overflow-hidden'>
-        {/* Image track with fixed positioning */}
-        <div
-          className='absolute flex h-full'
-          style={{
-            width: `${allImages.length * 100}vw`,
-            transform: `translateX(-${currentIndex * 100}vw)`,
-            transition: 'transform 500ms ease',
-          }}
-        >
-          {allImages.map((img, index) => (
-            <div key={index} className='w-screen h-full flex-shrink-0'>
-              <img
-                src={img.src || '/placeholder.svg'}
-                alt={img.alt}
-                className='h-full w-full object-cover'
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Play/Pause button */}
-      <button
-        onClick={() => setIsScrolling(!isScrolling)}
-        className='absolute bottom-4 right-4 p-2 bg-white/50 rounded-full hover:bg-white/75 transition-colors z-10'
-        aria-label={isScrolling ? 'Pause image advance' : 'Play image advance'}
+    <div className='md:hidden relative h-[300px] w-full overflow-hidden'>
+      {/* Full-width container that breaks out of parent padding */}
+      <div
+        className='absolute left-0 right-0 h-full'
+        style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
       >
-        {isScrolling ? (
-          <Pause className='w-5 h-5' />
-        ) : (
-          <Play className='w-5 h-5' />
-        )}
-      </button>
+        {/* Image slider container */}
+        <div className='relative h-full w-full overflow-hidden'>
+          {/* Image track */}
+          <div
+            className='absolute flex h-full'
+            style={{
+              width: `${allImages.length * 100}vw`,
+              transform: `translateX(-${currentIndex * 100}vw)`,
+              transition: 'transform 500ms ease',
+            }}
+          >
+            {allImages.map((img, index) => (
+              <div key={index} className='w-screen h-full flex-shrink-0'>
+                <img
+                  src={img.src || '/placeholder.svg'}
+                  alt={img.alt}
+                  className='h-full w-full object-cover'
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Play/Pause button */}
+        <button
+          onClick={() => setIsScrolling(!isScrolling)}
+          className='absolute bottom-4 right-4 p-2 bg-white/50 rounded-full hover:bg-white/75 transition-colors z-10'
+          aria-label={
+            isScrolling ? 'Pause image advance' : 'Play image advance'
+          }
+        >
+          {isScrolling ? (
+            <Pause className='w-5 h-5' />
+          ) : (
+            <Play className='w-5 h-5' />
+          )}
+        </button>
+      </div>
     </div>
   )
 }
@@ -241,7 +246,7 @@ export default function Hero() {
         <div className='max-w-7xl mx-auto px-4 min-h-screen'>
           <div className='grid lg:grid-cols-2 gap-8 lg:gap-12 flex-col lg:flex-row'>
             {/* Mobile Single Image Display */}
-            <div className='md:hidden relative h-[300px]'>
+            <div className='md:hidden relative'>
               <MobileSingleImage
                 images={{ column1: columnOneImages, column2: columnTwoImages }}
                 isScrolling={isScrolling}
