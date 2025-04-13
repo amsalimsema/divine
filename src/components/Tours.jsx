@@ -1,4 +1,6 @@
-import React, { useState, useMemo } from 'react'
+'use client'
+
+import { useState, useMemo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Globe } from 'lucide-react'
 
@@ -178,6 +180,27 @@ const tours = [
 export default function TourismPlatform() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedCountry, setSelectedCountry] = useState('All Tours')
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // Initial call to make sure we have the correct width
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  // Reset currentIndex when country changes
+  useEffect(() => {
+    setCurrentIndex(0)
+  }, [selectedCountry])
 
   const filteredTours = useMemo(() => {
     if (selectedCountry === 'All Tours') {
@@ -189,14 +212,14 @@ export default function TourismPlatform() {
   }, [selectedCountry])
 
   const nextSlide = () => {
-    const increment = window.innerWidth >= 768 ? 3 : 1
+    const increment = windowWidth >= 768 ? 3 : 1
     setCurrentIndex((prevIndex) =>
       prevIndex + increment >= filteredTours.length ? 0 : prevIndex + increment
     )
   }
 
   const prevSlide = () => {
-    const increment = window.innerWidth >= 768 ? 3 : 1
+    const increment = windowWidth >= 768 ? 3 : 1
     setCurrentIndex((prevIndex) =>
       prevIndex - increment < 0
         ? Math.max(filteredTours.length - increment, 0)
@@ -271,62 +294,65 @@ export default function TourismPlatform() {
         {/* Carousel */}
         <div className='relative overflow-hidden'>
           <div className='flex gap-4'>
-            {filteredTours
-              .slice(
-                currentIndex,
-                currentIndex + (window.innerWidth >= 768 ? 3 : 1)
-              )
-              .map((tour, index) => (
-                <Link
-                  key={index}
-                  to={`/tour/${getSeoFriendlyUrl(tour.name)}`}
-                  className='relative flex-none w-full sm:w-[240px] md:w-[calc(33.333%-1rem)] cursor-pointer'
-                >
-                  <div className='flex flex-col h-[400px] overflow-hidden rounded-lg bg-gray-200'>
-                    <div className='relative h-[75%] overflow-hidden group'>
-                      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50' />
-                      <img
-                        src={tour.image || '/placeholder.svg'}
-                        alt={tour.name}
-                        className='object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110'
-                      />
+            {filteredTours.length > 0 ? (
+              filteredTours
+                .slice(
+                  currentIndex,
+                  currentIndex + (windowWidth >= 768 ? 3 : 1)
+                )
+                .map((tour, index) => (
+                  <Link
+                    key={index}
+                    to={`/tour/${getSeoFriendlyUrl(tour.name)}`}
+                    className='relative flex-none w-full sm:w-[240px] md:w-[calc(33.333%-1rem)] cursor-pointer'
+                  >
+                    <div className='flex flex-col h-[400px] overflow-hidden rounded-lg bg-gray-200'>
+                      <div className='relative h-[75%] overflow-hidden group'>
+                        <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50' />
+                        <img
+                          src={tour.image || '/placeholder.svg'}
+                          alt={tour.name}
+                          className='object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110'
+                        />
+                      </div>
+                      <div className='h-[25%] p-4'>
+                        <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-800 line-clamp-1'>
+                          {tour.title}:
+                        </h3>
+                        <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-900 line-clamp-1'>
+                          {tour.name}
+                        </h3>
+                        <p className='text-xs text-gray-900 font-medium mt-1'>
+                          {tour.location}
+                        </p>
+                      </div>
                     </div>
-                    <div className='h-[25%] p-4'>
-                      <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-800 line-clamp-1'>
-                        {tour.title}:
-                      </h3>
-                      <h3 className='font-semibold text-lg leading-tight mb-1 text-gray-900 line-clamp-1'>
-                        {tour.name}
-                      </h3>
-                      {/* <p className='text-sm text-gray-900 font-medium line-clamp-1'>
-                        {tour.name}
-                      </p> */}
-
-                      {/* <p className='text-xs text-gray-900 font-medium mt-1'>
-                        {tour.categories.join(', ')}
-                      </p> */}
-                      <p className='text-xs text-gray-900 font-medium mt-1'>
-                        {tour.location}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))
+            ) : (
+              <div className='w-full text-center py-8'>
+                <p>No tours available for this selection.</p>
+              </div>
+            )}
           </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className='absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-md p-2'
-          >
-            <ChevronLeft className='w-6 h-6 text-white' />
-          </button>
-          <button
-            onClick={nextSlide}
-            className='absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-md p-2'
-          >
-            <ChevronRight className='w-6 h-6 text-white' />
-          </button>
+          {/* Navigation Arrows - Only show if there are tours */}
+          {filteredTours.length > 0 && (
+            <>
+              <button
+                onClick={prevSlide}
+                className='absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-md p-2'
+              >
+                <ChevronLeft className='w-6 h-6 text-white' />
+              </button>
+              <button
+                onClick={nextSlide}
+                className='absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-md p-2'
+              >
+                <ChevronRight className='w-6 h-6 text-white' />
+              </button>
+            </>
+          )}
 
           {/* Dots (hidden on all devices) */}
           <div className='hidden justify-center gap-1 mt-4'>
