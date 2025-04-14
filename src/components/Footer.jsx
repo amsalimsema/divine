@@ -153,6 +153,12 @@ export default function Footer() {
                       +256 759 650705
                     </a>
                     <a
+                      href='tel:+256776927456'
+                      className='hover:underline block'
+                    >
+                      +256 776 927456
+                    </a>
+                    <a
                       href='tel:+256775650705'
                       className='hover:underline block'
                     >
