@@ -15,23 +15,6 @@ import {
   ChevronUp,
   BadgeDollarSign,
 } from 'lucide-react'
-//import GGMT from '../assets/golden_tracking.jpg'
-import BGT from '../assets/bwindi_gorilla.jpg'
-import PG from '../assets/primate_hero.jpg'
-import GM from '../assets/GoldenMonkey.jpg'
-import Chimp from '../assets/chimpanzee.jpg'
-import Elephant from '../assets/ElephantHerd.jpg'
-import Lake from '../assets/Lake-Ihema.jpg'
-import GoldenMonkey from '../assets/uganda-golden-monkey.jpg'
-import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
-import Bird from '../assets/Birds-of-Lake-Bunyonyi.jpg'
-import ChimpTrek from '../assets/uganda-gorillas-trek-chimp.jpg'
-import Giraffe from '../assets/giraffe_murchision.jpg'
-import Impala from '../assets/impala_lake_mburo.jpg'
-import Imbalu from '../assets/imbalu-celebrations.jpg'
-import Sunset from '../assets/Divine-African-Tours-1.jpg'
-import Wilde from '../assets/wildebeest.jpg'
-import buffalo from '../assets/buffalo.jpg'
 
 const tourPackages = [
   {
@@ -40,7 +23,8 @@ const tourPackages = [
     description: '$1485/Person',
     duration: '3 days',
     location: 'Bwindi Impenetrable National Park - Uganda',
-    image: BGT,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
     fullDescription: `Bwindi Impenetrable National park is one of the most popular gorilla trekking destinations sheltering more than half the World's surviving population  of mountain gorillas in more than 40 families, 20 of which are habituated for trekking. Bwindi forest was gazetted into a National park in 1991 and was later declared a UNESCO world heritage site in 1994.`,
     tourDetails: [
       {
@@ -128,7 +112,7 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
     ],
@@ -139,7 +123,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '6 days',
     location: 'Bwindi Impenetrable & Volcanoes National Park',
-    image: GM,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
     fullDescription: `Embark on a safari that promises unforgettable encounters with the endangered Mountain Gorillas and the rare, stunning Golden Monkeys. Your journey begins in Uganda, "The Pearl of Africa," and takes you into Rwanda, "The Land of a Thousand Hills." While tracking these remarkable primates can be physically demanding, the reward of witnessing them in their natural habitat is truly unparalleled.`,
     tourDetails: [
       {
@@ -269,11 +254,11 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
       {
-        url: PG,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/4lCYlOGBc6ozNaQGcR8RPx/72194c19241bc648b4df1412788906b9/primate_hero.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
     ],
@@ -284,7 +269,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '5 days',
     location: 'Nyungwe National Park & Chamudong',
-    image: Chimp,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
     fullDescription: `This primate safari takes you to Nyungwe National Park, one of Africa's oldest rainforests. The park is renowned for its abundant chimpanzee population and offers a thrilling canopy walk on a suspended bridge 70 meters above the ground, providing breathtaking scenic views. In addition to the natural wonders, the safari also offers an emotional experience with a visit to the Genocide Memorial Museum, offering a profound insight into Rwanda's history.`,
     tourDetails: [
       {
@@ -402,11 +388,11 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/7MuHpS3ZODAgG9kOR9A90z/09f58ea10ce1043e1d99187693a2244b/uganda-golden-monkey.jpg?w=750&h=450&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -417,7 +403,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '2 days',
     location: 'Volcanoes National Park',
-    image: BGT,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
     fullDescription: `This 2-day Gorilla Safari begins and ends in Kigali, taking visitors to Rwanda's Volcanoes National Park in the northwest. Spanning 160 sq. km of rainforest, the park encompasses eight volcanoes in the Virunga Mountains, including Karisimbi, Bisoke, Mgahinga, Muhabura, and Sabinyo. It is home to endangered mountain gorillas and rare golden monkeys.`,
     tourDetails: [
       {
@@ -489,11 +476,11 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -504,7 +491,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '7 days',
     location: 'All Rwanda National Parks',
-    image: Elephant,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
     fullDescription: `This 7-day Rwanda gorilla safari explores all of Rwanda's national parks. Highlights include wildlife game drives in Akagera National Park, golden monkey and gorilla trekking in Volcanoes National Park, and chimpanzee trekking in Nyungwe Forest, home to 13 primate species.`,
     tourDetails: [
       {
@@ -647,23 +635,23 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephant',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
       {
-        url: Lake,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1t87rqqx9fSFzOurQ5spnr/447262b7050c2422036d5eebddc1bcc2/Lake-Ihema.jpg?w=600&h=443&fm=jpg&fl=progressive',
         title: 'Lake Ihema Hippo',
       },
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -674,7 +662,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '8 days',
     location: 'Bwindi,Queen Elizabeth & Volcanoes',
-    image: GoldenMonkey,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/7MuHpS3ZODAgG9kOR9A90z/09f58ea10ce1043e1d99187693a2244b/uganda-golden-monkey.jpg?w=750&h=450&fm=jpg&fl=progressive',
     fullDescription: `This adventure starts in Entebbe and ends in Kigali, exploring two stunning countries. It offers breathtaking scenic views with lush green hills. Highlights include encountering the endangered Mountain Gorilla and Golden monkey, as well as visiting Dian Fossey's grave to appreciate her conservation efforts for Mountain Gorillas.`,
     tourDetails: [
       {
@@ -830,28 +819,28 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephant',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
       {
-        url: GoldenMonkey,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lion At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -862,7 +851,8 @@ const tourPackages = [
     description: '$2500/Person',
     duration: '6 days',
     location: 'Bwindi,Queen Elizabeth & Lake Bunyonyi',
-    image: ChimpTrek,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/42YVJ8Na4E6PEkWiutxjPL/114fd0beb5e742cf1869b7ec949f49db/uganda-gorillas-trek-chimp.jpg?w=1020&h=400&fm=jpg&fl=progressive',
     fullDescription: `This six day extraordinary journey takes you through Uganda’s pristine wilderness, where awe-inspiring landscapes meet thrilling wildlife encounters. This adventure takes you to the lush Bwindi Impenetrable Forest National Park, home to the majestic Mountain Gorillas, affectionately known as the “gentle giants.” The experience continues to Queen Elizabeth National Park, Uganda’s most visited park, renowned for its abundant wildlife and spectacular views and unwind amidst the serene beauty of Lake Bunyonyi, Africa’s "place of little birds.`,
     tourDetails: [
       {
@@ -980,28 +970,28 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
       {
-        url: Bird,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/5LufMGIho4ZDPDa8EjI7at/5adb4f9caee46223176c3bceaa393eda/Birds-of-Lake-Bunyonyi.jpg?w=636&h=426&fm=jpg&fl=progressive',
         title: 'Birds at Lake Bunyonyi',
       },
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1012,7 +1002,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '4 days',
     location: 'Bwindi & Queen Elizabeth National Park',
-    image: Lion,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
     fullDescription: `Experience the best of Uganda on a 4-day wildlife safari featuring unforgettable gorilla tracking, a game drive, and a boat cruise for wildlife viewing in Queen Elizabeth National Park. This short but memorable tour also includes visits to iconic sites like the equator monument and the Igongo Cultural Museum in Mbarara town.`,
     tourDetails: [
       {
@@ -1108,25 +1099,25 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1138,7 +1129,8 @@ const tourPackages = [
     duration: '10 days',
     location:
       'Murchision Falls, Kibale ,Bwindi & Queen Elizabeth National Park',
-    image: Giraffe,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/59fQJ4qa1dCEsZmr62CpqX/57e4ad9cd9f27e7c3b702f9638c043c9/giraffe_murchision.jpg?w=1080&h=721&fm=jpg&fl=progressive',
     fullDescription: `The 10-day Uganda safari offers an unforgettable adventure, blending wildlife, culture, and nature across four major national parks: Murchison Falls, Queen Elizabeth, Kibale, and Bwindi Impenetrable. Highlights include gorilla trekking, chimpanzee tracking, game drives, boat cruises, and visits to cultural communities like the Batwa. The tour also features a hike to the spectacular Murchison Falls, boat launches, and a visit to Ziwa Rhino Sanctuary. Starting in Kampala and ending in Kigali, this safari provides an unparalleled experience of Uganda's wildlife and landscapes, making it the perfect blend of adventure and exploration.`,
     tourDetails: [
       {
@@ -1316,25 +1308,25 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1345,7 +1337,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '7 days',
     location: 'Lake Mburo ,Bwindi & Queen Elizabeth National Park',
-    image: Impala,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2fydVAZeIT9I1JRJM0GyKQ/740e24744bffecede023f1ae5d2e3141/impala_lake_mburo.jpg?w=1920&h=1280&fm=jpg&fl=progressive',
     fullDescription: `Embark on an affordable 7-day Uganda safari with Divine African Tours, offering an unforgettable experience to explore mountain gorillas in Bwindi and diverse wildlife in Queen Elizabeth and Lake Mburo National Parks. This budget-friendly safari includes expert guides and exciting activities like gorilla trekking, game drives, and boat cruises, providing a chance to witness Uganda’s rich wildlife and stunning landscapes, including tree-climbing lions, elephants, zebras, and over 600 bird species. A perfect adventure for nature lovers seeking an unforgettable African experience.`,
     tourDetails: [
       {
@@ -1522,25 +1515,25 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1551,7 +1544,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '5 days',
     location: 'Bwindi & Queen Elizabeth National Park',
-    image: Impala,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2fydVAZeIT9I1JRJM0GyKQ/740e24744bffecede023f1ae5d2e3141/impala_lake_mburo.jpg?w=1920&h=1280&fm=jpg&fl=progressive',
     fullDescription: `This safari begins in Kampala and takes you to the Bwindi impenetrable National Park where you will get an opportunity to trek mountain gorillas in their natural habitat. We will also visit the Batwa pygmy community for a culture experience before transferring to Queen Elizabeth National Park the most popular game Park in Uganda for a game viewing adventure where you will see some of Africa’s Big 5 animals. The lunch Cruise on the kazinga channel will be another highlight of the Safari before returning to Kampala`,
     tourDetails: [
       {
@@ -1664,25 +1658,25 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1693,7 +1687,8 @@ const tourPackages = [
     description: '$750 Per Person',
     duration: '3 days',
     location: 'Murchison Falls National Park',
-    image: Giraffe,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/59fQJ4qa1dCEsZmr62CpqX/57e4ad9cd9f27e7c3b702f9638c043c9/giraffe_murchision.jpg?w=1080&h=721&fm=jpg&fl=progressive',
     fullDescription: `The 3-day safari in Murchison Falls National Park, Uganda’s largest and most popular park, offers a diverse experience of wildlife and natural beauty. Covering 3,840 sq km, the park features habitats such as wetlands, woodlands, savannah, and grasslands, home to over 451 bird species and 87 mammals, including the Big Five. The highlight of the safari is a visit to Murchison Falls, where the River Nile forces large volumes of water through a narrow gorge, creating a stunning waterfall. Additionally, a visit to the Ziwa Rhino Sanctuary provides the opportunity to track rhinos.`,
     tourDetails: [
       {
@@ -1779,25 +1774,25 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -1809,7 +1804,8 @@ const tourPackages = [
     duration: '15 days',
     location:
       'Murchision Falls, Kidepo ,Lake Kyoga, Mt.Elgon, West, East & North Uganda',
-    image: Imbalu,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/cnloa5euUBWbXBYYtJcLJ/62c2ad334c6e3b8bf4f103d13d121775/imbalu-celebrations.jpg?w=1240&h=600&fm=jpg&fl=progressive',
     fullDescription: `The culture of Uganda is made up of a diverse range of ethnic groups. Lake Kyoga forms the northern boundary for the Bantu-speaking peoples, who dominate much of east, central ,and southern Africa. In Uganda, they include the Baganda and several other tribes. In the north live the Lango and the Acholi, who speak Nilotic languages. To the east are the Iteso and Karamojong, who speak a Nilotic language, the Gishu are part of the Bantu and they live mainly on the slops of Mt Elgon. They speak lumasaba closely related to the Luhya of Kenya. A few Pygmies live isolated in the rainforests of western Uganda.`,
     tourDetails: [
       {
@@ -2005,27 +2001,30 @@ const tourPackages = [
       },
     ],
     photos: [
-      { url: Imbalu, title: 'Imbalu Celebrations' },
       {
-        url: Elephant,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/cnloa5euUBWbXBYYtJcLJ/62c2ad334c6e3b8bf4f103d13d121775/imbalu-celebrations.jpg?w=1240&h=600&fm=jpg&fl=progressive',
+        title: 'Imbalu Celebrations',
+      },
+      {
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
         title: 'Elephants',
       },
       {
-        url: Chimp,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
         title: 'Chimpanzee',
       },
 
       {
-        url: Lion,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
         title: 'Lions At Queen Elizabeth National Park',
       },
 
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: GM,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
         title: 'Golden Monkey',
       },
     ],
@@ -2036,7 +2035,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '1 day',
     location: 'Equator Island - Lake Victoria',
-    image: Sunset,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
     fullDescription: `Embark on an enchanting sunset cruise across Lake Victoria, Uganda's largest lake, and experience the thrill of crossing the Equator at 0° latitude. This unique journey offers the chance to float serenely on the boat or take a refreshing swim right at the Equator line, making it an unforgettable evening on the water.`,
     tourDetails: [
       {
@@ -2083,7 +2083,12 @@ const tourPackages = [
         ],
       },
     ],
-    photos: [{ url: Sunset, title: 'Sunset' }],
+    photos: [
+      {
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
+        title: 'Sunset',
+      },
+    ],
   },
   {
     id: 15,
@@ -2091,7 +2096,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '3 days',
     location: 'Masai Mara National Park',
-    image: Sunset,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
     fullDescription: `Experience an unforgettable 3-day Maasai Mara safari, exploring the renowned Maasai Mara National Reserve. Discover breathtaking landscapes, rich wildlife, and the iconic Big Five on thrilling game drives, while immersing yourself in the heart of Africa’s wilderness.`,
     tourDetails: [
       {
@@ -2158,7 +2164,12 @@ const tourPackages = [
         ],
       },
     ],
-    photos: [{ url: Sunset, title: 'Sunset' }],
+    photos: [
+      {
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
+        title: 'Sunset',
+      },
+    ],
   },
   {
     id: 16,
@@ -2166,7 +2177,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '4 days',
     location: 'Lake Nakuru & Masai Mara National Parks',
-    image: Wilde,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/5ycrLPtQCiYwSG08dMNgq2/e5dcdf55c09c20035cb0be9b055758b6/wildebeest.jpg?w=1920&h=1280&fm=jpg&fl=progressive',
     fullDescription: `This 4-day safari takes you to Lake Nakuru, a birdwatcher’s paradise, and the iconic Maasai Mara, known for its incredible wildlife. Explore the diverse habitats of Lake Nakuru, perfect for bird watching and game drives. Then, venture to Maasai Mara, one of Africa’s greatest wildlife reserves, home to over 95 species of mammals and 570 bird species. Witness the spectacular wildebeest migration (July–October) or enjoy the dry season (December–February) for prime big cat sightings. This tour offers unparalleled wildlife experiences in two of Kenya's top national parks.`,
     tourDetails: [
       {
@@ -2244,7 +2256,12 @@ const tourPackages = [
         ],
       },
     ],
-    photos: [{ url: Sunset, title: 'Sunset' }],
+    photos: [
+      {
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
+        title: 'Sunset',
+      },
+    ],
   },
   {
     id: 17,
@@ -2252,7 +2269,8 @@ const tourPackages = [
     description: 'Request Quote',
     duration: '15 days',
     location: 'Serengeti National Park, Mount Kilimanjaro',
-    image: Sunset,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
     fullDescription: `Mount Kilimanjaro, Africa's highest mountain and the largest free-standing mountain in the world, offers an unforgettable adventure. The 15-day Kilimanjaro climb and Tanzania safari combines the challenge of summiting the iconic peak with a relaxing 4-day wildlife game drive through Lake Manyara, Ngorongoro, and Serengeti National Parks. This once-in-a-lifetime experience begins at Kilimanjaro International Airport, where the towering mountain beckons, and ends with the thrill of Tanzania's incredible wildlife.`,
     tourDetails: [
       {
@@ -2428,7 +2446,12 @@ const tourPackages = [
         ],
       },
     ],
-    photos: [{ url: Sunset, title: 'Sunset' }],
+    photos: [
+      {
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
+        title: 'Sunset',
+      },
+    ],
   },
   {
     id: 18,
@@ -2436,7 +2459,8 @@ const tourPackages = [
     description: '$3,377/Person',
     duration: '7 days',
     location: 'Kibale, Queen Elizabeth & Bwindi',
-    image: buffalo,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/dVt2lGWjCPAhbpOMyXZO9/8b00f1791e02d7ba8a0d5f32cf000aa3/buffalo.jpg?w=1920&h=1285&fm=jpg&fl=progressive',
     fullDescription: `Embark on an unforgettable adventure through Uganda's wild landscapes, starting in the legendary Bwindi Impenetrable Forest to encounter the majestic Mountain Gorillas. This tour also takes you to Kibale National Park & Queen Elizabeth National Park, the country's most visited wildlife haven. Highlights include gorilla and chimpanzee tracking, a thrilling game drive, the cultural Batwa experience, and stunning crater lake views.`,
     tourDetails: [
       {
@@ -2573,11 +2597,11 @@ const tourPackages = [
     ],
     photos: [
       {
-        url: BGT,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
         title: 'Mountain Gorilla',
       },
       {
-        url: buffalo,
+        url: 'https://images.ctfassets.net/4uh13bd20zjq/dVt2lGWjCPAhbpOMyXZO9/8b00f1791e02d7ba8a0d5f32cf000aa3/buffalo.jpg?w=1920&h=1285&fm=jpg&fl=progressive',
         title: 'buffalo',
       },
     ],

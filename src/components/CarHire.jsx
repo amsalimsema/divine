@@ -14,12 +14,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 //import Hero from './Hero'
 
-//cars
-import hiace from '../assets/dat_hiace.jpg'
-import open from '../assets/dat_open.jpg'
-import pickup from '../assets/dat_pickup.jpg'
-import suv from '../assets/dat_suv.jpg'
-
 export default function CarHireSection() {
   const [openAccordion, setOpenAccordion] = useState(null)
 
@@ -29,19 +23,19 @@ export default function CarHireSection() {
 
   const images = [
     {
-      src: hiace,
+      src: 'https://images.ctfassets.net/4uh13bd20zjq/6ggCj8r9KfTBnuwr1E6IJX/2b45f914ec5713cdbc2cc67f1ed75aa9/dat_hiace.jpg?w=1008&h=756&fm=jpg&fl=progressive',
       alt: 'hiace',
     },
     {
-      src: open,
+      src: 'https://images.ctfassets.net/4uh13bd20zjq/5iaRqEbqtcEu13laO36xoZ/fa93cb351bea144e774e64fa99848639/dat_open.jpg?w=1008&h=567&fm=jpg&fl=progressive',
       alt: 'open top',
     },
     {
-      src: pickup,
+      src: 'https://images.ctfassets.net/4uh13bd20zjq/7IoxaEHEsMzNKV5AXr8fTM/3bc769c3ee2a5b653910c6010589c0aa/dat_pickup.jpg?w=1100&h=863&fm=jpg&fl=progressive',
       alt: 'pickup truck',
     },
     {
-      src: suv,
+      src: 'https://images.ctfassets.net/4uh13bd20zjq/silfRqKUg4Urh4pJoce2N/6d918d3c2f9e32e60114b4edba3a8112/dat_suv.jpg?w=640&h=480&fm=jpg&fl=progressive',
       alt: 'suv',
     },
   ]
@@ -68,7 +62,7 @@ export default function CarHireSection() {
                         className='aspect-square overflow-hidden rounded-lg transform rotate-5 hover:scale-105 transition duration-300 ease-in-out'
                       >
                         <img
-                          src={image.src || '/placeholder.svg'}
+                          src={image.src}
                           alt={image.alt}
                           className='w-full h-full object-cover transform -rotate-5 scale-125'
                         />

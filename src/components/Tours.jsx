@@ -1,28 +1,6 @@
-'use client'
-
 import { useState, useMemo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Globe } from 'lucide-react'
-
-//tour images
-import Sunset from '../assets/Divine-African-Tours-1.jpg'
-import Chimp from '../assets/chimpanzee.jpg'
-import Gorrila from '../assets/Gorilla.jpg'
-import GoldenMonkeyRw from '../assets/uganda-golden-monkey.jpg'
-import GoldenMonkeyPrimate from '../assets/GoldenMonkey.jpg'
-import Serengeti from '../assets/serengeti.jpg'
-import Nakuru from '../assets/Nakuru.jpg'
-import Mara from '../assets/Mara.jpg'
-import Imbalu from '../assets/imbalu-celebrations.jpg'
-import MountainGorilla from '../assets/bwindi_gorilla.jpg'
-import ElephantRW from '../assets/ElephantsRw.jpg'
-
-import Chimpanzee from '../assets/chimpanzee.jpg'
-import Giraffe from '../assets/giraffe_murchision.jpg'
-import Impala from '../assets/impala_lake_mburo.jpg'
-import Lion from '../assets/lion-in-queen-elizabeth-national-park.jpg'
-
-import buffalo from '../assets/buffalo.jpg'
 
 const countries = [
   { icon: <Globe className='w-4 h-4' />, name: 'All Tours' },
@@ -36,49 +14,56 @@ const tours = [
   {
     name: '6 Days Gorilla & Chimpanzee Tracking',
     title: 'Primate Adventure',
-    image: Chimp,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Bwindi, Queen Elizabeth & Lake Bunyonyi',
   },
   {
     name: '7 days of Adventure, Wildlife & Primates',
     title: 'Wildlife & Primate Adventure',
-    image: buffalo,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/dVt2lGWjCPAhbpOMyXZO9/8b00f1791e02d7ba8a0d5f32cf000aa3/buffalo.jpg?w=1920&h=1285&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Kibale, Queen Elizabeth & Bwindi',
   },
   {
     name: '3 days Bwindi Gorilla Tracking Safari',
     title: 'Gorilla Encounter',
-    image: Gorrila,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/48HODmruh7Bg0LVd2GHZrj/5eb4b7f3b882ae618062717365f0010b/Gorilla.jpg?w=554&h=554&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Bwindi Impenetrable National Park',
   },
   {
     name: '6 days Uganda And Rwanda Primate Safari',
     title: 'Two-Country Primate Adventure',
-    image: GoldenMonkeyPrimate,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
     categories: ['Uganda', 'Rwanda'],
     location: 'Bwindi Impenetrable & Volcanoes National Park',
   },
   {
     name: '8 Days Gorilla & Golden Monkey Tracking',
     title: 'Gorilla and Monkey Expedition',
-    image: GoldenMonkeyRw,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/7MuHpS3ZODAgG9kOR9A90z/09f58ea10ce1043e1d99187693a2244b/uganda-golden-monkey.jpg?w=750&h=450&fm=jpg&fl=progressive',
     categories: ['Uganda', 'Rwanda'],
     location: 'Bwindi, Queen Elizabeth & Volcanoes',
   },
   {
     name: '4 days Uganda wildlife safari',
     title: 'Uganda Wildlife Express',
-    image: Lion,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/VIK94LoqQbQEtKR5MDarV/86aed5f208320bc5e9f18ca1fd20e5ab/lion-in-queen-elizabeth-national-park.jpg?w=850&h=500&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Bwindi & Queen Elizabeth National Park',
   },
   {
     name: '10 days Uganda wildlife safari',
     title: 'Comprehensive Uganda Wildlife Tour',
-    image: Giraffe,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/59fQJ4qa1dCEsZmr62CpqX/57e4ad9cd9f27e7c3b702f9638c043c9/giraffe_murchision.jpg?w=1080&h=721&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location:
       'Murchision Falls, Kibale, Bwindi & Queen Elizabeth National Park',
@@ -86,28 +71,32 @@ const tours = [
   {
     name: '7 Days Uganda Safari',
     title: 'Uganda Highlights Safari',
-    image: Impala,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2fydVAZeIT9I1JRJM0GyKQ/740e24744bffecede023f1ae5d2e3141/impala_lake_mburo.jpg?w=1920&h=1280&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Lake Mburo, Bwindi & Queen Elizabeth National Park',
   },
   {
     name: '5 Days Uganda Safari',
     title: 'Uganda Safari Essentials',
-    image: MountainGorilla,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Bwindi & Queen Elizabeth National Park',
   },
   {
     name: '3 Days Murchison Falls National Park Safari',
     title: 'Murchison Falls Express',
-    image: Giraffe,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/59fQJ4qa1dCEsZmr62CpqX/57e4ad9cd9f27e7c3b702f9638c043c9/giraffe_murchision.jpg?w=1080&h=721&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Murchison Falls National Park',
   },
   {
     name: '15 Days Eastern and Northern Cultural Tour to Uganda',
     title: 'Comprehensive Uganda Cultural Expedition',
-    image: Imbalu,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/cnloa5euUBWbXBYYtJcLJ/62c2ad334c6e3b8bf4f103d13d121775/imbalu-celebrations.jpg?w=1240&h=600&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location:
       'Murchision Falls, Kidepo, Lake Kyoga, Mt.Elgon, West, East & North Uganda',
@@ -115,63 +104,72 @@ const tours = [
   {
     name: 'Sunset Cruise To Equator Island',
     title: 'Equator Island Adventure',
-    image: Sunset,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2ElTCbC4xxpOdilTXIaknG/0afd2e2f44c9b5b496613fc2c2217305/Divine-African-Tours-1.webp?w=1200&h=800&fm=jpg&fl=progressive',
     categories: ['Uganda'],
     location: 'Equator Island - Lake Victoria',
   },
   {
     name: '4 Days Explore Lake Nakuru & Masai Mara National Parks',
     title: 'Lake and Savannah Adventure',
-    image: Nakuru,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/3u3vx1VmdZ2IPHuAi71uD6/073cead2ca20cbff399d8c405e8339fc/Nakuru.jpg?w=640&h=427&fm=jpg&fl=progressive',
     categories: ['Kenya'],
     location: 'Lake Nakuru & Masai Mara National Parks',
   },
   {
     name: '3 Days Masai Mara Safari',
     title: 'Masai Mara Express',
-    image: Mara,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/D90honCWvEP4KUV82EO1r/bc28b3404d9278f795f5f74f1576e2aa/Mara.jpg?w=640&h=427&fm=jpg&fl=progressive',
     categories: ['Kenya'],
     location: 'Masai Mara National Park',
   },
   {
     name: '15 Days Climb Kilimanjaro & Tanzania Safari',
     title: 'Kilimanjaro Climb and Serengeti Safari',
-    image: Serengeti,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/1v7WtV63auHflMGmFvDIas/b99e15db26d925dd2530de8ca1570f3e/serengeti.jpg?w=640&h=427&fm=jpg&fl=progressive',
     categories: ['Tanzania'],
     location: 'Serengeti National Park, Mount Kilimanjaro',
   },
   {
     name: '6 Days Uganda And Rwanda Primate Safari',
     title: 'Two-Country Primate Adventure',
-    image: GoldenMonkeyPrimate,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/2tBADC3vvAVR2cs2jRTlwP/757526e4d48a17c54514dfa6af2eab6f/GoldenMonkey.jpg?w=1200&h=1021&fm=jpg&fl=progressive',
     categories: ['Uganda', 'Rwanda'],
     location: 'Bwindi Impenetrable & Volcanoes National Park',
   },
   {
     name: '5 Days Rwanda Primate Safari',
     title: 'Rwanda Primate Expedition',
-    image: Chimpanzee,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/1sqIyoXPoindIetpSA4ZrT/1d27b6d049fe16e0bfd6943cd4d4e353/chimpanzee.jpg?w=800&h=450&fm=jpg&fl=progressive',
     categories: ['Rwanda'],
     location: 'Nyungwe National Park & Chamudong',
   },
   {
     name: '2 Days Gorilla Tracking at Volcanoes National Park',
     title: 'Volcanoes Gorilla Trek',
-    image: MountainGorilla,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6GFicKthut49pcvHyWueAU/5872d6f2ebceaa72bda04a23f0d7cfd7/bwindi_gorilla.jpg?w=1920&h=1503&fm=jpg&fl=progressive',
     categories: ['Rwanda'],
     location: 'Volcanoes National Park',
   },
   {
     name: '7 Days Rwanda Safari',
     title: 'Comprehensive Rwanda Adventure',
-    image: ElephantRW,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/6iCZd9em4DK2hp2pazcESz/fe570bb03db847e3330ee9df4f749692/ElephantsRw.jpg?w=1200&h=675&fm=jpg&fl=progressive',
     categories: ['Rwanda'],
     location: 'All Rwanda National Parks',
   },
   {
     name: '8 Days Gorilla & Golden Monkey Tracking',
     title: 'Gorilla and Monkey Expedition',
-    image: GoldenMonkeyRw,
+    image:
+      'https://images.ctfassets.net/4uh13bd20zjq/7MuHpS3ZODAgG9kOR9A90z/09f58ea10ce1043e1d99187693a2244b/uganda-golden-monkey.jpg?w=750&h=450&fm=jpg&fl=progressive',
     categories: ['Uganda', 'Rwanda'],
     location: 'Bwindi, Queen Elizabeth & Volcanoes',
   },
@@ -310,7 +308,7 @@ export default function TourismPlatform() {
                       <div className='relative h-[75%] overflow-hidden group'>
                         <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50' />
                         <img
-                          src={tour.image || '/placeholder.svg'}
+                          src={tour.image}
                           alt={tour.name}
                           className='object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110'
                         />
