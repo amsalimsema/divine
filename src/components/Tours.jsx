@@ -253,7 +253,7 @@ export default function TourismPlatform() {
     <div className='bg-white text-black px-2 sm:px-8 py-6' id='tours-section'>
       {/* Hero Section */}
       <div className='text-center mb-12'>
-        <h1 className='text-3xl sm:text-4xl md:text-5xl  max-w-2xl mx-auto leading-tight'>
+        <h1 className='font-light text-3xl sm:text-4xl md:text-5xl  max-w-2xl mx-auto leading-tight'>
           Unforgettable adventures,
           <br />
           in the heart of East Africa.

@@ -20,7 +20,7 @@ export default function Footer() {
                 alt='Divine African Tours Logo'
                 className='h-auto w-30 mb-4'
               />
-              <h3 className='text-sm font-semibold mb-2 text-white'>
+              <h3 className='text-sm font-medium mb-2 text-white'>
                 Memberships
               </h3>
               <a
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div className='col-span-1 flex flex-col items-start'>
-            <h2 className='text-white font-bold mb-4'>Quick Links</h2>
+            <h2 className='text-white font-medium mb-4'>Quick Links</h2>
             <ul className='space-y-2 text-sm'>
               <li>
                 <Link to='/about' className='hover:underline'>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Social Column */}
           <div className='col-span-1 flex flex-col items-start'>
-            <h2 className='text-white font-bold mb-4'>Social</h2>
+            <h2 className='text-white font-medium mb-4'>Social</h2>
             <ul className='space-y-3 flex flex-col items-start text-sm'>
               <li>
                 <a
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div className='col-span-2 lg:col-span-1 flex flex-col items-start'>
-            <h2 className='text-white font-bold mb-4'>Offices</h2>
+            <h2 className='text-white font-medium mb-4'>Offices</h2>
             <ul className='space-y-3 flex flex-col items-start text-sm'>
               <li className='flex items-center text-sm gap-2'>
                 <MapPin className='h-4 w-4 mt-1 flex-shrink-0' />

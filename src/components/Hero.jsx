@@ -58,7 +58,7 @@ const Hero = ({ heading, sub }) => {
 
       {/* Content */}
       <div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
-        <h2 className='text-4xl md:text-5xl lg:text-6xl font-medium mb-4 text-white drop-shadow-lg'>
+        <h2 className='text-4xl md:text-5xl lg:text-6xl font-light mb-4 text-white drop-shadow-lg'>
           {heading}
           {/* Discover African Adventures */}
         </h2>

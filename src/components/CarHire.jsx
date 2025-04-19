@@ -72,7 +72,7 @@ export default function CarHireSection() {
                 </div>
                 {/* Left Column - Copy */}
                 <div className='lg:w-1/2 space-y-6'>
-                  <h2 className='text-3xl font-bold text-gray-900'>
+                  <h2 className='text-3xl font-light text-gray-900'>
                     Divine African Tours Car Hire
                   </h2>
                   <p className='text-lg text-gray-700'>
@@ -121,7 +121,7 @@ export default function CarHireSection() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className='bg-gray-50 rounded-lg shadow-lg p-8 mb-12 py-12'
           >
-            <h3 className='text-2xl font-semibold mb-6'>
+            <h3 className='text-2xl font-light mb-6'>
               Why Choose Divine African Tours for Your Car Hire?
             </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -176,9 +176,7 @@ export default function CarHireSection() {
                   >
                     {feature.icon}
                   </motion.div>
-                  <h4 className='text-xl font-semibold mb-2'>
-                    {feature.title}
-                  </h4>
+                  <h4 className='text-xl font-light mb-2'>{feature.title}</h4>
                   <p className='text-black'>{feature.description}</p>
                 </motion.div>
               ))}
@@ -191,7 +189,7 @@ export default function CarHireSection() {
             transition={{ delay: 0.7, duration: 0.5 }}
             className='bg-gray-100 rounded-lg shadow-lg p-8'
           >
-            <h3 className='text-2xl font-semibold mb-6'>
+            <h3 className='text-2xl font-light mb-6'>
               Frequently Asked Questions
             </h3>
             <div className='space-y-4'>
@@ -238,9 +236,7 @@ export default function CarHireSection() {
                     onClick={() => toggleAccordion(item.id)}
                     className='flex justify-between items-center w-full text-left'
                   >
-                    <span className='text-lg font-semibold'>
-                      {item.question}
-                    </span>
+                    <span className='text-lg font-medium'>{item.question}</span>
                     <motion.div
                       animate={{ rotate: openAccordion === item.id ? 180 : 0 }}
                       transition={{ duration: 0.3 }}

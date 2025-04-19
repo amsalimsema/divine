@@ -12,7 +12,7 @@ const AboutCard = ({ icon: Icon, title, content }) => (
   <div className='flex items-center space-x-4 p-4 bg-white rounded-lg shadow-md'>
     <Icon className='w-12 h-12 text-[#2ba924] flex-shrink-0' />
     <div>
-      <h3 className='text-lg font-semibold mb-1'>{title}</h3>
+      <h3 className='text-lg font-light mb-1'>{title}</h3>
       <p className='text-sm text-gray-600'>{content}</p>
     </div>
   </div>
@@ -25,7 +25,7 @@ export default function About() {
 
       <motion.div {...fadeIn} className='py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
-          <h2 className='text-3xl font-medium text-center text-gray-900 mb-8'>
+          <h2 className='text-3xl font-light text-center text-gray-900 mb-8'>
             About Divine African Tours
           </h2>
           <div className='bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-6 space-y-8'>
