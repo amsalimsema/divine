@@ -17,8 +17,9 @@ import TourDetails from './components/TourDetails'
 import { useEffect } from 'react'
 import About from './components/About'
 import CarHire from './components/CarHire'
-//import CountryTours from './components/CountryTours'
+
 import Destinations from './components/Destinations'
+import NotFound from './components/NotFound'
 
 function App() {
   //ScrollToTop component to handle scrolling on route change
@@ -46,7 +47,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/car-hire' element={<CarHire />} />
           <Route path='/tour/:slug' element={<TourDetails />} />
-          {/* <Route path='/tours/:slug' element={<CountryTours />} /> */}
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <CTA />
         <Footer />
